@@ -1,3 +1,7 @@
 *.pyc
 *.sqlite3
+bin
+include
+lib
+local
 
