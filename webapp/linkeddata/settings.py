@@ -41,6 +41,8 @@ INSTALLED_APPS = (
     'diseases',
     'allergen',
     'recipes',
+    'nutrients',
+    'usda',
 )
 
 MIDDLEWARE_CLASSES = (
