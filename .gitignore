@@ -9,4 +9,4 @@ nginx
 supervisor
 webapp/static
 webapp/linkeddata/local_*
-
+.Python
