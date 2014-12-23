@@ -1,7 +1,6 @@
 from django.db import models
 
-
-class Food(models.Model):
+class NutritionFact(models.Model):
     name = models.CharField(max_length=255)
 
     def __unicode__(self):
