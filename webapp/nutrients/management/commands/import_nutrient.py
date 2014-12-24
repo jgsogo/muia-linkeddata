@@ -8,10 +8,10 @@ import codecs
 
 from django.core.management.base import CommandError
 
-from allergen.management.commands import AllergenCommand
-from allergen import models as allergen_models
+from nutrients.management.commands import NutrientCommand
+from nutrients import models as nutrients_models
 
-class AllergenImportError(Exception):
+class NutrientImportError(Exception):
     def __init__(self, message):
         self.message = message
 
@@ -19,11 +19,11 @@ class AllergenImportError(Exception):
         return self.message
 
 
-class Command(AllergenCommand):
+class Command(NutrientCommand):
     args = '<directory>'
 
     """
-    option_list = AllergenCommand.option_list + (
+    option_list = NutrientCommand.option_list + (
         make_option('--format', '-f', action='store', dest='format', default='json',
             help='Format of file to import from.'),
         )
@@ -54,7 +54,7 @@ class Command(AllergenCommand):
                 try:
                     data = self._parse_line(line)
                     model_class.objects.create_from_list(data)
-                except AllergenImportError as e:
+                except NutrientImportError as e:
                     errors +=1
                     errors_message = ' (%d errors)' % errors
                     message = 'ERROR - %s' % e
@@ -80,17 +80,17 @@ class Command(AllergenCommand):
         super(Command, self).handle(*args, **options)
 
         if len(args) != 1:
-            raise CommandError('Directory for Allergen files is needed.')
+            raise CommandError('Directory for Nutrients Data files is needed.')
 
         t1 = time.time()
 
         path = args[0]
-        self.v('Importing Allergen Database from dir %r' % path)
+        self.v('Importing Nutrients Database from dir %r' % path)
 
         errors = 0
 
-        self.v(' - Importing Allergens Description File')
-        errors += self._handle_model(path, allergen_models.Allergen)
+        self.v(' - Importing Nutrients Description File')
+        errors += self._handle_model(path, nutrients_models.Nutrient)
 
         t2 = time.time()
         self.v('Exec time: ' + str(round(t2 - t1)), 1)
