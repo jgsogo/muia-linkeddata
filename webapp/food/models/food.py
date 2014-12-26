@@ -22,5 +22,4 @@ class Food(models.Model):
     objects = FoodManager()
 
     def __unicode__(self):
-        return self.Long_Desc
-    
+        return u"%s, %s" % (self.NDB_No, self.Long_Desc)

@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models, migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('food', '0002_auto_20141226_1913'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='weight',
+            name='NDB_No',
+            field=models.ForeignKey(to='food.Food'),
+            preserve_default=True,
+        ),
+    ]

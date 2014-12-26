@@ -12,6 +12,7 @@ class DiseaseManager(models.Manager):
         instance.Food = Food.objects.get(NDB_No = list[2])
         instance.Nutrient = Nutrient.objects.get(Nutr_No = list[3])
         instance.Allergen = Allergen.objects.get(Group = list[4])
+        instance.DOID = list[5]
         instance.save()
         return instance
 
@@ -23,6 +24,9 @@ class Disease(models.Model):
     Food        = models.ForeignKey(Food)
     Nutrient    = models.ForeignKey(Nutrient)
     Allergen    = models.ForeignKey(Allergen)
-
+    DOID        = models.CharField(max_length=15, null=True, blank=True)
+    
     objects = DiseaseManager()
 
+    def __unicode__(self):
+        return u"%s, %s" % (self.Disease, self.Description)

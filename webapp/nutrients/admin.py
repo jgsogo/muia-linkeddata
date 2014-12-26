@@ -2,5 +2,7 @@ from django.contrib import admin
 
 from nutrients.models import *
 
-admin.site.register(Nutrient)
-
+class NutrientAdmin(admin.ModelAdmin):
+    list_display = ['Nutr_No', 'Description']
+    
+admin.site.register(Nutrient, NutrientAdmin)

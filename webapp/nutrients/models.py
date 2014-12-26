@@ -25,3 +25,6 @@ class Nutrient(models.Model):
     Num_Dec     = models.IntegerField()
     
     objects = NutrientManager()
+    
+    def __unicode__(self):
+        return u"%s, %s" % (self.Nutr_No, self.Description)

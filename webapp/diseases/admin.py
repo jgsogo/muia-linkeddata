@@ -1,5 +1,7 @@
 from django.contrib import admin
-
 from diseases.models import *
 
-admin.site.register(Disease)
+class DiseaseAdmin(admin.ModelAdmin):
+    list_display = ['Disease', 'DOID']
+
+admin.site.register(Disease, DiseaseAdmin)

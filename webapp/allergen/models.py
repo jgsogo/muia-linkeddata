@@ -24,3 +24,5 @@ class Allergen(models.Model):
 
     objects = AllergenManager()
 
+    def __unicode__(self):
+        return u"%s, Allergy: %s" % (self.Group, self.Common)
