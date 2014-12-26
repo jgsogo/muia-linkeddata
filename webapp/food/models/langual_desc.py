@@ -1,21 +1,19 @@
 from django.db import models
-from .food import Food
-from .langual_desc import LangualDesc
 
-class LangualManager(models.Manager):
+class LangualDescManager(models.Manager):
 
     def create_from_list(self, list):
         instance = self.model()
-        instance.NDB_No = list[0]
-        instance.Factor_Code = LangualDesc.objects.get(Factor_Code = list[1])
+        instance.Factor_Code = list[0]
+        instance.Description = list[1]
         instance.save()
         return instance
 
-class Langual(models.Model):
-    filename = 'LANGUAL'
+class LangualDesc(models.Model):
+    filename = 'LANGDESC'
 
-    NDB_No = models.CharField(max_length=5, primary_key=True)
-    Factor_Code = models.ForeignKey(LangualDesc)
+    Factor_Code = models.CharField(max_length=5, primary_key=True)
+    Description = models.CharField(max_length=140)
     
-    objects = LangualManager()
+    objects = LangualDescManager()
 

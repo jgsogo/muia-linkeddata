@@ -56,7 +56,7 @@ class Command(RAFCOCommand):
                 try:
                     data = self._parse_line(line)
                     model_class.objects.create_from_list(data)
-                except FoodImportError as e:
+                except RAFCOImportError as e:
                     errors +=1
                     errors_message = ' (%d errors)' % errors
                     message = 'ERROR - %s' % e
@@ -91,23 +91,26 @@ class Command(RAFCOCommand):
 
         errors = 0
 
-        self.v(' - Importing Allergen File')
-        errors += self._handle_model(path, allergen_models.Allergen)
+#        self.v(' - Importing Allergen File')
+#        errors += self._handle_model(path, allergen_models.Allergen)
 
-        self.v(' - Importing Nutrients File')
-        errors += self._handle_model(path, nutrients_models.Nutrients)
+#        self.v(' - Importing Nutrients File')
+#        errors += self._handle_model(path, nutrients_models.Nutrient)
 
-        self.v(' - Importing Weight File')
-        errors += self._handle_model(path, food_models.Weight)
+#        self.v(' - Importing Weight File')
+#        errors += self._handle_model(path, food_models.Weight)
 
-        self.v(' - Importing Nutrition Facts File')
-        errors += self._handle_model(path, food_models.NutritionFact)
+        self.v(' - Importing Food Nutrients Composition File')
+        errors += self._handle_model(path, food_models.FoodNutrients)
 
-        self.v(' - Importing Food Group File')
-        errors += self._handle_model(path, food_models.FoodGroup)
+        self.v(' - Importing Langual Description File')
+        errors += self._handle_model(path, food_models.LangualDesc)
 
         self.v(' - Importing Food Description File')
         errors += self._handle_model(path, food_models.Food)
+
+        self.v(' - Importing Langual Data File')
+        errors += self._handle_model(path, food_models.Langual)
 
         t2 = time.time()
         self.v('Exec time: ' + str(round(t2 - t1)), 1)

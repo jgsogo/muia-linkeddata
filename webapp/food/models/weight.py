@@ -1,6 +1,6 @@
 from django.db import models
 
-class WeightManager(models.Model):
+class WeightManager(models.Manager):
 
     def create_from_list(self, list):
         instance = self.model()
