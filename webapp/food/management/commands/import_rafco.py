@@ -8,10 +8,12 @@ import codecs
 
 from django.core.management.base import CommandError
 
-from food.management.commands import FoodCommand
+from food.management.commands import RAFCOCommand
 from food import models as food_models
+from allergen import models as allergen_models
+from nutrients import models as nutrients_models
 
-class FoodImportError(Exception):
+class RAFCOImportError(Exception):
     def __init__(self, message):
         self.message = message
 
@@ -19,7 +21,7 @@ class FoodImportError(Exception):
         return self.message
 
 
-class Command(FoodCommand):
+class Command(RAFCOCommand):
     args = '<directory>'
 
     """
@@ -80,14 +82,20 @@ class Command(FoodCommand):
         super(Command, self).handle(*args, **options)
 
         if len(args) != 1:
-            raise CommandError('Directory for Food files is needed.')
+            raise CommandError('Directory for RAFCO files is needed.')
 
         t1 = time.time()
 
         path = args[0]
-        self.v('Importing Food Data, Food Group, Nutrient Facts and Weight %r' % path)
+        self.v('Importing RAFCO DATA from %r' % path)
 
         errors = 0
+
+        self.v(' - Importing Allergen File')
+        errors += self._handle_model(path, allergen_models.Allergen)
+
+        self.v(' - Importing Nutrients File')
+        errors += self._handle_model(path, nutrients_models.Nutrients)
 
         self.v(' - Importing Weight File')
         errors += self._handle_model(path, food_models.Weight)

@@ -4,7 +4,7 @@
 import sys
 from django.core.management.base import BaseCommand, CommandError
 
-class FoodCommand(BaseCommand):
+class RAFCOCommand(BaseCommand):
 
     def v(self, message, level=1, inplace=False):
         if level<=self.verbosity:
