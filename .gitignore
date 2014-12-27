@@ -12,4 +12,5 @@ webapp/static
 webapp/linkeddata/local_*
 elda
 .Python
+r2rml
 
