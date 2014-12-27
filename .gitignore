@@ -1,5 +1,6 @@
 *.pyc
 *.sqlite3
+*sqlite3-journal
 bin
 include
 lib
@@ -10,3 +11,5 @@ supervisor
 webapp/static
 webapp/linkeddata/local_*
 elda
+.Python
+
