@@ -38,7 +38,10 @@ server {
 	include /etc/nginx/proxy.conf;
         }
 
-
+    # Ontology
+    location /spec/ {
+        root /home/javi/projects/muia_linkeddata/ontology/;
+	}
 
     # Elda
     location / {

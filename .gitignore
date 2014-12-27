@@ -13,4 +13,4 @@ webapp/linkeddata/local_*
 elda
 .Python
 r2rml
-
+virtuoso/*.nt
