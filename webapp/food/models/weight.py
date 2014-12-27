@@ -16,8 +16,6 @@ class WeightManager(models.Manager):
 class Weight(models.Model):
     filename = 'WEIGHT'
 
-# Incluye los campos de WEIGHT: 1o, 2o, 3o, 4o y 5o
-
     NDB_No    = models.ForeignKey(Food)
     Seq       = models.CharField(max_length=2)
     Amount    = Amount = models.DecimalField(max_digits=8, decimal_places=3)

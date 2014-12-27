@@ -91,23 +91,23 @@ class Command(RAFCOCommand):
 
         errors = 0
 
-#        self.v(' - Importing Allergen File')
-#        errors += self._handle_model(path, allergen_models.Allergen)
+        self.v(' - Importing Allergen File')
+        errors += self._handle_model(path, allergen_models.Allergen)
 
-#        self.v(' - Importing Nutrients File')
-#        errors += self._handle_model(path, nutrients_models.Nutrient)
+        self.v(' - Importing Nutrients File')
+        errors += self._handle_model(path, nutrients_models.Nutrient)
 
-#        self.v(' - Importing Weight File')
-#        errors += self._handle_model(path, food_models.Weight)
+        self.v(' - Importing Food Description File')
+        errors += self._handle_model(path, food_models.Food)
+
+        self.v(' - Importing Weight File')
+        errors += self._handle_model(path, food_models.Weight)
 
         self.v(' - Importing Food Nutrients Composition File')
         errors += self._handle_model(path, food_models.FoodNutrients)
 
         self.v(' - Importing Langual Description File')
         errors += self._handle_model(path, food_models.LangualDesc)
-
-        self.v(' - Importing Food Description File')
-        errors += self._handle_model(path, food_models.Food)
 
         self.v(' - Importing Langual Data File')
         errors += self._handle_model(path, food_models.Langual)
