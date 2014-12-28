@@ -6,9 +6,9 @@ from .recipe import Recipe
 
 
 class IngredientWithAmount(models.Model):
-    recipe = models.ForeignKey(Recipe)
-    ingredient = models.ForeignKey(Ingredient)
-    quantity = models.FloatField()
+    Recipe = models.ForeignKey(Recipe)
+    Ingredient = models.ForeignKey(Ingredient)
+    Quantity = models.FloatField()
 
     def __unicode__(self):
         return u"%s %s" % (self.quantity, self.ingredient)
