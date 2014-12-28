@@ -1,0 +1,57 @@
+@base <http://rafco.jgsogo.es/spec/ontology#>.
+
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rafco: <http://rafco.jgsogo.es/spec/ontology#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+
+# Recipes
+rafco:ingredient
+
+    # Ingredients -- Food
+    #   Meto todos los de la tabla foods, es cierto que no todos ellos se utilizarán en
+    #   las recetas, pero no sé cómo discriminarlos en esta importación.
+    rr:logicalTable [ rr:tableName '"food_food"'; ];
+    rr:subjectMap [
+        rr:template 'http://rafco.jgsogo.es/resource/ingredient/{"NDB_no"}';
+        rr:class rafco:Ingredient;
+        ].
+    
+rafco:recipe
+    # Recipe
+    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:subjectMap [ 
+        rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}';
+        rr:class rafco:Recipe;
+        ];
+
+    rr:predicateObjectMap [
+        rr:predicate rafco:hasTitle;
+        rr:objectMap [rr:column "Title"];
+        ];
+    rr:predicateObjectMap [
+        rr:predicate rafco:hasDescription;
+        rr:objectMap [  rr:column "Description"];
+        ];
+    rr:predicateObjectMap [
+        rr:predicate rafco:cookTime;
+        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}' ]
+        ].
+
+rafco:recipe-cooktime
+    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:subjectMap [ 
+        rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}';
+        rr:class time:DurationDescription;
+        ];
+    rr:predicateObjectMap [
+        rr:predicate time:minutes;
+        rr:objectMap [  rr:column "CookTime"];
+        ].
+
+
+# Recipe::author -- es una instance de foaf:Person a través de la herencia de schema.org > Recipe
+
+    
