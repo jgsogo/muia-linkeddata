@@ -126,7 +126,7 @@ rafco:recipe-image
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
         rr:template '{"Image"}';
-        rr:class foaf:Document;
+        rr:class foaf:Image;
         ].
 
 rafco:recipe-author
