@@ -1,10 +1,13 @@
 from django.db import models
+from .recipe import Recipe
 
 class Direction(models.Model):
     filename = 'DIRECTION'
-
-    Direction   = models.CharField(max_length=255, primary_key=True)
+    
+    Recipe    = models.ForeignKey(Recipe)
+    StepNumber  = models.IntegerField(null=True, blank=True)
     Description = models.TextField(null=True, blank=True)
 
+
     def __unicode__(self):
-        return self.title
+        return u"%s. %s" % (self.StepNumber, self.Description[:80])
