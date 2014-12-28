@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
                 ('Title', models.CharField(max_length=255)),
                 ('Description', models.TextField(null=True, blank=True)),
                 ('Author', models.CharField(max_length=255, null=True, blank=True)),
-                ('TotalTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
+                ('CookTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
                 ('PrepTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
                 ('Image', models.URLField(null=True, blank=True)),
                 ('Rating', models.FloatField(null=True, blank=True)),
