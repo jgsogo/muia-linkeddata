@@ -2,7 +2,7 @@ from django.contrib import admin
 from diseases.models import *
 
 class DiseaseAdmin(admin.ModelAdmin):
-    list_display = ['Disease', 'DOID']
+    list_display = ['DiseaseName', 'DOID']
 
 class FoodCausesDiseaseAdmin(admin.ModelAdmin):
     list_display = ['FoodID', 'DiseaseName']

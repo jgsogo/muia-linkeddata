@@ -2,10 +2,10 @@ from django.db import models
 
 from food.models import Food
 from .direction import Direction
-from .direction_for_recipe import DirectionForRecipe
 from .ingredient import Ingredient
 
 class RecipeManager(models.Manager):
+
     def create_from_list(self, list):
         instance = self.model()
         instance.Title = list[0]
@@ -16,7 +16,6 @@ class RecipeManager(models.Manager):
         instance.Yields = list[5]
         instance.save()
         return instance
-
 
 class Recipe(models.Model):
     filename = 'RECIPE'
@@ -29,8 +28,8 @@ class Recipe(models.Model):
     Produces    = models.ForeignKey(Food, related_name='is_produced')
     Yields      = models.IntegerField(null=True, blank=True)
     
-    Directions  = models.ManyToManyField(Direction, through='recipes.DirectionForRecipe')
-    Ingredients = models.ManyToManyField(Ingredient, through='recipes.IngredientWithAmount')
+    Directions  = models.ManyToManyField(Direction, through='DirectionForRecipe')
+    Ingredients = models.ManyToManyField(Ingredient, through='IngredientWithAmount')
 
     def __unicode__(self):
         return self.title

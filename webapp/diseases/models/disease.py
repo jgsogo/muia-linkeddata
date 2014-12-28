@@ -21,9 +21,9 @@ class Disease(models.Model):
 
     DiseaseName = models.CharField(max_length=100, primary_key=True)
     Description = models.TextField(null=True, blank=True)
-    FoodCauses  = models.ManyToManyField(Food, through='disease.FoodCausesDisease')
-    NutrCauses  = models.ManyToManyField(Nutrient, through='disease.NutrientCausesDisease')
-    AlleCauses  = models.ManyToManyField(Allergen, through='disease.AllergenCausesDisease')
+    FoodCauses  = models.ManyToManyField(Food, through='FoodCausesDisease')
+    NutrCauses  = models.ManyToManyField(Nutrient, through='NutrientCausesDisease')
+    AlleCauses  = models.ManyToManyField(Allergen, through='AllergenCausesDisease')
     DOID        = models.CharField(max_length=15, null=True, blank=True)
     
     objects = DiseaseManager()
