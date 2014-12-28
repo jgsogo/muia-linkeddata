@@ -23,7 +23,17 @@ rafco:ingredient
         rr:class rafco:Ingredient;
         ].
 
-  
+rafco:ingredient-isProduced
+    # Recipe
+    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:subjectMap [ 
+        rr:template 'http://rafco.jgsogo.es/resource/ingredient/{"Produces_id"}';
+        ];
+    rr:predicateObjectMap [
+        rr:predicate rafco:isProduced;
+        rr:objectMap [rr:template 'http://rafco.jgsogo.es/resource/recipe/{"id"}';];
+        ].
+
 rafco:recipe
     # Recipe
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
@@ -65,12 +75,12 @@ rafco:recipe
      # URL
      rr:predicateObjectMap [
          rr:predicate rafco:seeAlso;
-         rr:objectMap [  rr:column "URL"];
+         rr:objectMap [  rr:column '{"URL"}'];
          ];
      # Image
      rr:predicateObjectMap [
          rr:predicate rafco:hasImage;
-         rr:objectMap [  rr:column "Image"];
+         rr:objectMap [  rr:template '{"Image"}'];
          ];
      # Author
      rr:predicateObjectMap [
@@ -108,14 +118,14 @@ rafco:recipe
 rafco:recipe-url
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:column "URL";
+        rr:template '{"URL"}';
         rr:class foaf:Document;
         ].
 
 rafco:recipe-image
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:column "Image";
+        rr:template '{"Image"}';
         rr:class foaf:Document;
         ].
 
