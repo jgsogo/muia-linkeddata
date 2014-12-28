@@ -6,7 +6,7 @@ class RecipeAdmin(admin.ModelAdmin):
     list_display = ['Title']
 
 class IngredientAdmin(admin.ModelAdmin):
-    list_display = ['Long_Desc']
+    list_display = ['NDB_No', 'Long_Desc']
 
 class IngredientWithAmountAdmin(admin.ModelAdmin):
     list_display = ['Ingredient', 'Quantity']

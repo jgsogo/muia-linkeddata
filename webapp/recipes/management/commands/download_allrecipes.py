@@ -6,6 +6,8 @@ import time
 import chardet
 import codecs
 import json
+import random
+import string
 
 from optparse import make_option
 from fractions import Fraction
@@ -41,6 +43,13 @@ class Command(BaseCommand):
     scraper = APIScraper()
     create_foods = False
 
+    def ingredient_NDB_No_generator(self, id_size=5, chars=string.ascii_uppercase + string.digits):
+        id_size = id_size -1 # 'x' char will be prepended
+        c = ''.join(random.choice(chars) for _ in range(id_size))
+        while Ingredient.objects.filter(NDB_No='x'+c).exists():
+            c = ''.join(random.choice(chars) for _ in range(id_size))
+        return 'x'+c
+
     def handle_ingredient(self, recipe, name, amount, ingredientid, grams):
         self.stdout.write(u"\t - ingredient: %s | %s" % (amount, name))
         # Look for food
@@ -48,7 +57,7 @@ class Command(BaseCommand):
         if not ingredient:
             if self.create_foods:
                 ingredient = Ingredient()
-                ingredient.NDB_No = 0;
+                ingredient.NDB_No = self.ingredient_NDB_No_generator();
                 ingredient.Shrt_Desc = name
                 ingredient.Long_Desc = name
                 ingredient.save()
@@ -93,7 +102,7 @@ class Command(BaseCommand):
         if not ingredient:
             if self.create_foods:
                 ingredient = Ingredient()
-                ingredient.NDB_No = 0;
+                ingredient.NDB_No = self.ingredient_NDB_No_generator();
                 ingredient.Shrt_Desc = data[u"name"]
                 ingredient.Long_Desc = data[u"name"]
                 ingredient.save()
@@ -115,7 +124,7 @@ class Command(BaseCommand):
             if value_str:
                 t = parse_duration(value_str)
                 return int(t.seconds/60.)
-            return None, False
+            return None
         self.stdout.write(u"\t - prepTime: %s" % minutes(data.get(u"prepTime", None)))
         self.stdout.write(u"\t - cookTime: %s" % minutes(data.get(u"cookTime", None)))
         recipe.PrepTime = minutes(data.get(u"prepTime", None))
