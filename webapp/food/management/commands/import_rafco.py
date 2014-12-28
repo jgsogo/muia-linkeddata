@@ -12,6 +12,7 @@ from food.management.commands import RAFCOCommand
 from food import models as food_models
 from allergen import models as allergen_models
 from nutrients import models as nutrients_models
+from diseases import models as diseases_models
 
 class RAFCOImportError(Exception):
     def __init__(self, message):
@@ -91,26 +92,32 @@ class Command(RAFCOCommand):
 
         errors = 0
 
-        self.v(' - Importing Allergen File')
-        errors += self._handle_model(path, allergen_models.Allergen)
+#        self.v(' - Importing Allergen File')
+#        errors += self._handle_model(path, allergen_models.Allergen)
 
-        self.v(' - Importing Nutrients File')
-        errors += self._handle_model(path, nutrients_models.Nutrient)
+#        self.v(' - Importing Nutrients File')
+#        errors += self._handle_model(path, nutrients_models.Nutrient)
 
-        self.v(' - Importing Food Description File')
-        errors += self._handle_model(path, food_models.Food)
+#        self.v(' - Importing Food Description File')
+#        errors += self._handle_model(path, food_models.Food)
 
-        self.v(' - Importing Weight File')
-        errors += self._handle_model(path, food_models.Weight)
+#        self.v(' - Importing Weight File')
+#        errors += self._handle_model(path, food_models.Weight)
 
-        self.v(' - Importing Food Nutrients Composition File')
-        errors += self._handle_model(path, food_models.FoodNutrients)
+#        self.v(' - Importing Food Nutrients Composition File')
+#        errors += self._handle_model(path, food_models.FoodNutrients)
 
-        self.v(' - Importing Langual Description File')
-        errors += self._handle_model(path, food_models.LangualDesc)
+#        self.v(' - Importing Langual Description File')
+#        errors += self._handle_model(path, food_models.LangualDesc)
 
         self.v(' - Importing Langual Data File')
         errors += self._handle_model(path, food_models.Langual)
+
+#        self.v(' - Importing Disease Data File')
+#        errors += self._handle_model(path, diseases_models.Disease)
+
+#        self.v(' - Importing Allergen Causes Disease Data File')
+#        errors += self._handle_model(path, diseases_models.AllergenCausesDisease)
 
         t2 = time.time()
         self.v('Exec time: ' + str(round(t2 - t1)), 1)

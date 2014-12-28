@@ -1,21 +1,13 @@
-Egg Allergy;Allergy to Egg Disorder;;;;DOID:4377
-Gluten Allergy;Gluten Allergic Reaction;;;;DOID:0060057
-Milk Allergy;Milk Allergic Reaction;;;;DOID:4376
-Nut Allergy;Nut Allergic Reaction;;;;DOID:4379
-Peanut Allergy;Peaunt Allergic Reaction;;;;DOID:4378
-Wheat Allergy;Wheat Allergic Reaction;;;;DOID:3660
-Lactose Intolerance;Malabsorption of Lactose Disorder;;;;DOID:10604
-Glucose Intolerance;Malabsorption of Glucose Disorder;;;;DOID:10603
-Fructose Intolerance;Malabsorption of Fructose Disorder or Fructosaemia;;;;DOID:9869
-Galactose Intolerance;Malabsorption of Galactose Disorder or Galactosaemia;;;;DOID:9870
-Celiac Disease;autoimmune disease of gastrointestinal tract caused by a reaction to Gliadin;;;;DOID:10608
-Soybean Allergy;Soybean Allergic Reaction;;;;
-Fish Allergy;Fish Allergy Reaction;;;;
-
-
-
-
-
-
-
-
+Egg Allergy;Allergy to Egg Disorder;DOID:4377
+Gluten Allergy;Gluten Allergic Reaction;DOID:0060057
+Milk Allergy;Milk Allergic Reaction;DOID:4376
+Nut Allergy;Nut Allergic Reaction;DOID:4379
+Peanut Allergy;Peaunt Allergic Reaction;DOID:4378
+Wheat Allergy;Wheat Allergic Reaction;DOID:3660
+Lactose Intolerance;Malabsorption of Lactose Disorder;DOID:10604
+Glucose Intolerance;Malabsorption of Glucose Disorder;DOID:10603
+Fructose Intolerance;Malabsorption of Fructose Disorder or Fructosaemia;DOID:9869
+Galactose Intolerance;Malabsorption of Galactose Disorder or Galactosaemia;DOID:9870
+Celiac Disease;autoimmune disease of gastrointestinal tract caused by a reaction to Gliadin;DOID:10608
+Soybean Allergy;Soybean Allergic Reaction;
+Fish Allergy;Fish Allergy Reaction;

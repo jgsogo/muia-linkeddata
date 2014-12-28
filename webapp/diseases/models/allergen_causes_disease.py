@@ -5,9 +5,10 @@ from allergen.models import Allergen
 from .disease import Disease
 
 class AllergenCausesDiseaseManager(models.Manager):
+
     def create_from_list(self, list):
         instance = self.model()
-        instance.AllergenID = Allergen.objects.get(Group = list[0])
+        instance.GI_No = Allergen.objects.get(GI_No = list[0])
         instance.DiseaseName = Disease.objects.get(DiseaseName = list[1])
         instance.save()
         return instance
@@ -15,7 +16,7 @@ class AllergenCausesDiseaseManager(models.Manager):
 class AllergenCausesDisease(models.Model):
     filename = 'ALLECAUSES'
 
-    AllergenID  = models.ForeignKey(Allergen)
+    GI_No       = models.ForeignKey(Allergen)
     DiseaseName = models.ForeignKey(Disease)
 
     objects = AllergenCausesDiseaseManager()

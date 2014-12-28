@@ -1,4 +1,5 @@
 from django.db import models
+
 from .food import Food
 from .langual_desc import LangualDesc
 
@@ -14,8 +15,7 @@ class LangualManager(models.Manager):
 class Langual(models.Model):
     filename = 'LANGUAL'
 
-    id = models.AutoField(primary_key=True)
-    NDB_No = models.ForeignKey(Food)
+    NDB_No      = models.ForeignKey(Food)
     Factor_Code = models.ForeignKey(LangualDesc)
     
     objects = LangualManager()

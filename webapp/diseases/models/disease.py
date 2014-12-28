@@ -9,10 +9,7 @@ class DiseaseManager(models.Manager):
         instance = self.model()
         instance.DiseaseName = list[0]
         instance.Description = list[1]
-        instance.FoodCauses = list[2]
-        instance.NutrCauses = list[3]
-        instance.AlleCauses = list[4]
-        instance.DOID = list[5]
+        instance.DOID = list[2]
         instance.save()
         return instance
 
@@ -21,12 +18,12 @@ class Disease(models.Model):
 
     DiseaseName = models.CharField(max_length=100, primary_key=True)
     Description = models.TextField(null=True, blank=True)
-    FoodCauses  = models.ManyToManyField(Food, through='FoodCausesDisease')
-    NutrCauses  = models.ManyToManyField(Nutrient, through='NutrientCausesDisease')
-    AlleCauses  = models.ManyToManyField(Allergen, through='AllergenCausesDisease')
+    FoodList    = models.ManyToManyField(Food, through='FoodCausesDisease')
+    NutrList    = models.ManyToManyField(Nutrient, through='NutrientCausesDisease')
+    AlleList    = models.ManyToManyField(Allergen, through='AllergenCausesDisease')
     DOID        = models.CharField(max_length=15, null=True, blank=True)
     
     objects = DiseaseManager()
 
     def __unicode__(self):
-        return u"%s, %s" % (self.Disease, self.Description)
+        return u"%s, %s" % (self.DiseaseName, self.Description)
