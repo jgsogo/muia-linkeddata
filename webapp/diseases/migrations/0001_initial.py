@@ -7,21 +7,46 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('allergen', '0001_initial'),
-        ('food', '0001_initial'),
         ('nutrients', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
+            name='AllergenCausesDisease',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
             name='Disease',
             fields=[
-                ('Disease', models.CharField(max_length=255, serialize=False, primary_key=True)),
+                ('DiseaseName', models.CharField(max_length=100, serialize=False, primary_key=True)),
                 ('Description', models.TextField(null=True, blank=True)),
                 ('DOID', models.CharField(max_length=15, null=True, blank=True)),
-                ('Allergen', models.ForeignKey(to='allergen.Allergen')),
-                ('Food', models.ForeignKey(to='food.Food')),
-                ('Nutrient', models.ForeignKey(to='nutrients.Nutrient')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='FoodCausesDisease',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('DiseaseName', models.ForeignKey(to='diseases.Disease')),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
+            name='NutrientCausesDisease',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('DiseaseName', models.ForeignKey(to='diseases.Disease')),
+                ('NutrientID', models.ForeignKey(to='nutrients.Nutrient')),
             ],
             options={
             },

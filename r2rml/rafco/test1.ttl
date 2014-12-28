@@ -1,16 +1,23 @@
-@prefix map: <#>.
+#@prefix map: <#>.
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rafco: <http://rafco.jgsogo.es/spec/ontology#>.
 
 # Comentario
-map:foods
+rafco:foods
     rr:logicalTable [ rr:tableName '"food_food"'; ];
     rr:subjectMap [
-        rr:template 'http://data.example.org/repository/group/{"NDB_no"}'
-    ];
+      rr:template 'http://rafco.jgsogo.es/resource/food/{"NDB_no"}'
+      ];
     
     rr:predicateObjectMap [
-      rr:predicate foaf:name;
+      rr:predicate rafco:long_name;
+      rr:objectMap [ rr:template '{"Long_Desc"}' ;
+                      rr:termType rr:Literal; ]
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate rafco:name;
       rr:objectMap [ rr:template '{"Shrt_Desc"}' ;
                       rr:termType rr:Literal; ]
     ].
