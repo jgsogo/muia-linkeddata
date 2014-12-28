@@ -6,10 +6,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 # Recipes
 rafco:ingredient
-
     # Ingredients -- Food
     #   Meto todos los de la tabla foods, es cierto que no todos ellos se utilizarán en
     #   las recetas, pero no sé cómo discriminarlos en esta importación.
@@ -18,7 +18,8 @@ rafco:ingredient
         rr:template 'http://rafco.jgsogo.es/resource/ingredient/{"NDB_no"}';
         rr:class rafco:Ingredient;
         ].
-    
+
+  
 rafco:recipe
     # Recipe
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
@@ -26,7 +27,10 @@ rafco:recipe
         rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}';
         rr:class rafco:Recipe;
         ];
-
+    rr:predicateObjectMap [
+        rr:predicate rafco:produces;
+        rr:objectMap [rr:template 'http://rafco.jgsogo.es/resource/ingredient/{"Produces_id"}';];
+        ];
     rr:predicateObjectMap [
         rr:predicate rafco:hasTitle;
         rr:objectMap [rr:column "Title"];
@@ -36,22 +40,83 @@ rafco:recipe
         rr:objectMap [  rr:column "Description"];
         ];
     rr:predicateObjectMap [
-        rr:predicate rafco:cookTime;
-        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}' ]
-        ].
+        rr:predicate rafco:hasRating;
+        rr:objectMap [  rr:column "Rating" ; 
+                        rr:termType rr:Literal; ]; #! TODO: Esto es un float/double, pero no sé cómo ponerlo.
+        ];
+     rr:predicateObjectMap [
+         rr:predicate rafco:recipeYields;
+         rr:objectMap [  rr:column "Yields"];
+         ];
+     # CookTime
+     rr:predicateObjectMap [
+         rr:predicate rafco:cookTime;
+         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}' ]
+         ];
+     # PrepTime
+     rr:predicateObjectMap [
+         rr:predicate rafco:prepTime;
+         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/prepTime/{"PrepTime"}' ]
+         ];
+     # URL
+     rr:predicateObjectMap [
+         rr:predicate rafco:seeAlso;
+         rr:objectMap [  rr:column "URL"];
+         ];
+     # Image
+     rr:predicateObjectMap [
+         rr:predicate rafco:hasImage;
+         rr:objectMap [  rr:column "Image"];
+         ];
+     # Author
+     rr:predicateObjectMap [
+         rr:predicate rafco:hasAuthor; #! TODO: Cambiar por foaf:isAuthor o schema:isAuthor (buscar)
+         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/resource/author/{"Author"}'];
+         ].
 
-rafco:recipe-cooktime
+
+ rafco:recipe-cooktime
+     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+     rr:subjectMap [ 
+         rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}';
+         rr:class time:DurationDescription;
+         ];
+     rr:predicateObjectMap [
+         rr:predicate time:minutes;
+         rr:objectMap [  rr:column "CookTime"];
+         ].
+
+ rafco:recipe-preptime
+     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+     rr:subjectMap [ 
+         rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/prepTime/{"PrepTime"}';
+         rr:class time:DurationDescription;
+         ];
+     rr:predicateObjectMap [
+         rr:predicate time:minutes;
+         rr:objectMap [  rr:column "PrepTime"];
+         ].
+
+rafco:recipe-url
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:template 'http://rafco.jgsogo.es/resource/recipe/{"Id"}/cookTime/{"CookTime"}';
-        rr:class time:DurationDescription;
-        ];
-    rr:predicateObjectMap [
-        rr:predicate time:minutes;
-        rr:objectMap [  rr:column "CookTime"];
+        rr:column "URL";
+        rr:class foaf:Document;
         ].
 
+rafco:recipe-image
+    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:subjectMap [ 
+        rr:column "Image";
+        rr:class foaf:Document;
+        ].
 
-# Recipe::author -- es una instance de foaf:Person a través de la herencia de schema.org > Recipe
+rafco:recipe-author
+    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:subjectMap [ 
+        rr:template 'http://rafco.jgsogo.es/resource/author/{"Author"}';
+        rr:class foaf:Person;
+        ].
+
 
     
