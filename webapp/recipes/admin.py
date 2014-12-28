@@ -11,7 +11,10 @@ class IngredientAdmin(admin.ModelAdmin):
 class IngredientWithAmountAdmin(admin.ModelAdmin):
     list_display = ['Ingredient', 'Quantity']
 
+class DirectionAdmin(admin.ModelAdmin):
+    list_display = ['Recipe', 'StepNumber', 'Description',]
+
 admin.site.register(Recipe, RecipeAdmin)
 admin.site.register(Ingredient, IngredientAdmin)
 admin.site.register(IngredientWithAmount, IngredientWithAmountAdmin)
-admin.site.register(Direction)
+admin.site.register(Direction, DirectionAdmin)
