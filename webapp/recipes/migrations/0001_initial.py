@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='Direction',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('StepNumber', models.IntegerField(null=True, blank=True)),
-                ('Description', models.TextField(null=True, blank=True)),
+                ('StepNumber', models.IntegerField()),
+                ('Description', models.TextField()),
             ],
             options={
             },
@@ -27,8 +27,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('Quantity', models.FloatField(null=True, blank=True)),
-                ('Units', models.CharField(max_length=7, null=True, blank=True)),
+                ('Units', models.CharField(max_length=25, null=True, blank=True)),
                 ('GramsEquiv', models.FloatField(null=True, blank=True)),
+                ('HumanReadable', models.CharField(max_length=512, null=True, blank=True)),
             ],
             options={
             },
@@ -38,10 +39,11 @@ class Migration(migrations.Migration):
             name='Recipe',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('URL', models.URLField(null=True, blank=True)),
                 ('Title', models.CharField(max_length=255)),
                 ('Description', models.TextField(null=True, blank=True)),
                 ('Author', models.CharField(max_length=255, null=True, blank=True)),
-                ('TotalTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
+                ('CookTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
                 ('PrepTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
                 ('Image', models.URLField(null=True, blank=True)),
                 ('Rating', models.FloatField(null=True, blank=True)),

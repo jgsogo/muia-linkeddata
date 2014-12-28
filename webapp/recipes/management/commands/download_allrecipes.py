@@ -93,7 +93,7 @@ class Command(BaseCommand):
         self.stdout.write(u"\t - ratingValue: %s" % data.get(u"ratingValue", None))
         recipe.Rating = data.get(u"ratingValue", None)
         self.stdout.write(u"\t - description: %s" % data.get(u"description", '')[:60])
-        recipe.Descriptions = data.get(u"description", None)
+        recipe.Description = data.get(u"description", None)
 
 
         # Produces
@@ -119,7 +119,7 @@ class Command(BaseCommand):
                 recipe.Yields = items[0]
             self.stdout.write(u"\t   + yields: %s -> %s" % (yields, recipe.Yields))
 
-        # PrepTime and TotalTime
+        # PrepTime and CookTime
         def minutes(value_str):
             if value_str:
                 t = parse_duration(value_str)

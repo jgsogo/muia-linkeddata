@@ -11,7 +11,7 @@ class Recipe(models.Model):
     Title       = models.CharField(max_length=255)
     Description = models.TextField(null=True, blank=True)
     Author      = models.CharField(max_length=255, null=True, blank=True)
-    TotalTime   = models.IntegerField(null=True, blank=True, help_text=u"Time in minutes")
+    CookTime   = models.IntegerField(null=True, blank=True, help_text=u"Time in minutes")
     PrepTime    = models.IntegerField(null=True, blank=True, help_text=u"Time in minutes")
     Image       = models.URLField(null=True, blank=True)
     Rating      = models.FloatField(null=True, blank=True)
