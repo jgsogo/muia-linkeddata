@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Food',
             fields=[
-                ('NDB_No', models.CharField(max_length=5, serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('NDB_No', models.CharField(max_length=5)),
                 ('Long_Desc', models.CharField(max_length=200)),
                 ('Shrt_Desc', models.CharField(max_length=60)),
                 ('SciName', models.CharField(max_length=65, null=True, blank=True)),

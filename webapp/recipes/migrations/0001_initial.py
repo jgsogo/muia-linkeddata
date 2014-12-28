@@ -14,20 +14,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Direction',
             fields=[
-                ('Direction', models.CharField(max_length=255, serialize=False, primary_key=True)),
-                ('Description', models.TextField(null=True, blank=True)),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='DirectionForRecipe',
-            fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('StepNumber', models.IntegerField(null=True, blank=True)),
-                ('TotalTime', models.IntegerField(null=True, blank=True)),
-                ('DirectionID', models.ForeignKey(to='recipes.Direction')),
+                ('Description', models.TextField(null=True, blank=True)),
             ],
             options={
             },
@@ -37,7 +26,9 @@ class Migration(migrations.Migration):
             name='IngredientWithAmount',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('Quantity', models.FloatField()),
+                ('Quantity', models.FloatField(null=True, blank=True)),
+                ('Units', models.CharField(max_length=7, null=True, blank=True)),
+                ('GramsEquiv', models.FloatField(null=True, blank=True)),
             ],
             options={
             },
@@ -46,12 +37,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Recipe',
             fields=[
-                ('Title', models.CharField(max_length=255, serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('Title', models.CharField(max_length=255)),
                 ('Description', models.TextField(null=True, blank=True)),
-                ('Author', models.CharField(max_length=255)),
-                ('TotalTime', models.IntegerField(null=True, blank=True)),
+                ('Author', models.CharField(max_length=255, null=True, blank=True)),
+                ('TotalTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
+                ('PrepTime', models.IntegerField(help_text='Time in minutes', null=True, blank=True)),
+                ('Image', models.URLField(null=True, blank=True)),
+                ('Rating', models.FloatField(null=True, blank=True)),
                 ('Yields', models.IntegerField(null=True, blank=True)),
-                ('Directions', models.ManyToManyField(to='recipes.Direction', through='recipes.DirectionForRecipe')),
                 ('Produces', models.ForeignKey(related_name='is_produced', to='food.Food')),
             ],
             options={
@@ -65,8 +59,8 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.AddField(
-            model_name='directionforrecipe',
-            name='RecipeID',
+            model_name='direction',
+            name='Recipe',
             field=models.ForeignKey(to='recipes.Recipe'),
             preserve_default=True,
         ),

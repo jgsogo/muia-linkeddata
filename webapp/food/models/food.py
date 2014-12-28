@@ -11,10 +11,23 @@ class FoodManager(models.Manager):
         instance.save()
         return instance
 
+    def search(self, name, single_instance=True):
+        #! TODO: Look for the best candidate based on 'name'
+        #   - single_instance = True ==> return just one instance (or None)
+        #   - single_instance = False ==> return a list/queryset of instances (can be empty)
+        if single_instance:
+            try:
+                return self.get(Shrt_Desc=name)
+            except self.model.DoesNotExist:
+                return None
+        else:
+            return self.filter(Shrt_Desc=name)
+
+
 class Food(models.Model):
     filename = 'FOOD'
 
-    NDB_No    = models.CharField(max_length=5, primary_key=True)
+    NDB_No    = models.CharField(max_length=5)
     Long_Desc = models.CharField(max_length=200)
     Shrt_Desc = models.CharField(max_length=60)
     SciName   = models.CharField(max_length=65, blank=True, null=True)
