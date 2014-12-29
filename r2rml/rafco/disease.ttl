@@ -2,28 +2,82 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 # Namespace of RAFCO vocabulary/ontology
-@prefix rafcov: <http://rafco.jgsogo.es/linkeddata/def#>.
+@prefix base: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
 
 # Namespace of RAFCO resources
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso#>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/>.
 
-# Triples map for Food table
-rafco:foods
-    rr:logicalTable [ rr:tableName "Food"; ];
+#########
+# Disease
+#########
+base:disease
+    rr:logicalTable [ rr:tableName "diseases_disease"; ];
     rr:subjectMap [
-      rr:template rafco:food/{NDB_no}
-      ];
+      rr:template rafco:disease/{DiseaseName} ;
+      rr:class base:Disease ;
+    ];
     
     rr:predicateObjectMap [
-      rr:predicate rafcov:long_name;
-      rr:objectMap [ rr:column "Long_Desc" ] ;
-      ];
-
-    rr:predicateObjectMap [
-      rr:predicate rafcov:name;
-      rr:objectMap [ rr:column "Shrt_Desc" ] ;
+      rr:predicate base:description;
+      rr:objectMap [ rr:column "Description" ] ;
+    ] ;
                       
     rr:predicateObjectMap [
-      rr:predicate rafcov:sci_name;
-      rr:objectMap [ rr:column "SciName" ] ;
+      rr:predicate base:doid;
+      rr:objectMap [ rr:column "DOID" ] ;
     ].
+    
+
+#########
+# Food causes Disease - Many to many
+#########
+base:food_causes_disease
+    rr:logicalTable [ rr:tableName "disease_foodcausesdisease" ];
+    
+    rr:subjectMap [
+        rr:template rafco:food/{NDB_No} ;
+    ] ;
+    
+    rr:predicateObjectMap [
+      rr:predicate base:food-causes ;
+      rr:objectMap [ 
+        rr:template rafco:disease/{DiseaseName} ;
+      ] ;
+    ] .
+    
+
+#########
+# Nutrient causes Disease - Many to many
+#########
+base:nutrient_causes_disease
+    rr:logicalTable [ rr:tableName "disease_nutrientcausesdisease" ];
+
+    rr:subjectMap [
+        rr:template rafco:nutrient/{NutrientID} ;
+    ] ;
+    
+    rr:predicateObjectMap [
+      rr:predicate base:nutrient-causes ;
+      rr:objectMap [ 
+        rr:template rafco:disease/{DiseaseName} ;
+      ] ;
+    ] .
+
+#########
+# Allergen causes Disease - Many to many
+#########
+base:allergen_causes_disease
+    rr:logicalTable [ rr:tableName "disease_allergencausesdisease" ];
+
+    rr:subjectMap [
+        rr:template rafco:allergen/{GI_No} ;
+    ] ;
+    
+    rr:predicateObjectMap [
+      rr:predicate base:allergen-causes ;
+      rr:objectMap [ 
+        rr:template rafco:disease/{DiseaseName} ;
+      ] ;
+    ] .
+
+    

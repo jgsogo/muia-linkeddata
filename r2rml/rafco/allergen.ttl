@@ -12,10 +12,16 @@
 #########
 base:allergen
     rr:logicalTable [ rr:tableName "allergen_allergen"; ];
+    
     rr:subjectMap [
-      rr:template rafco:allergen/{Group} ;
+      rr:template rafco:allergen/{GI_No} ;
       rr:class base:Allergen ;
     ];
+
+    rr:predicateObjectMap [
+      rr:predicate base:group;
+      rr:objectMap [ rr:column "Group" ] ;
+    ] ;
 
     rr:predicateObjectMap [
       rr:predicate base:main;

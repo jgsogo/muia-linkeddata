@@ -12,6 +12,7 @@
 #########
 base:nutrient
     rr:logicalTable [ rr:tableName "nutrients_nutrient"; ];
+    
     rr:subjectMap [
       rr:template rafco:nutrient/{Nutr_no} ;
       rr:class base:Nutrient ;
