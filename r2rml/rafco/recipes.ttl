@@ -31,14 +31,14 @@
         ];
     rr:predicateObjectMap [
         rr:predicate :isProduced;
-        rr:objectMap [rr:template rafco:recipes/{"id"};];
+        rr:objectMap [rr:template rafco:recipe/{"id"};];
         ].
 
 :recipe
     # Recipe
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipes/{"id"};
+        rr:template rafco:recipe/{"id"};
         rr:class :Recipe;
         ];
     rr:predicateObjectMap [
@@ -65,12 +65,12 @@
      # CookTime
      rr:predicateObjectMap [
          rr:predicate :cookTime;
-         rr:objectMap [  rr:template rafco:recipes/{"id"}/cookTime/{"CookTime"} ]
+         rr:objectMap [  rr:template rafco:recipe/{"id"}/cookTime/{"CookTime"} ]
          ];
      # PrepTime
      rr:predicateObjectMap [
          rr:predicate :prepTime;
-         rr:objectMap [  rr:template rafco:recipes/{"id"}/prepTime/{"PrepTime"} ]
+         rr:objectMap [  rr:template rafco:recipe/{"id"}/prepTime/{"PrepTime"} ]
          ];
      # URL
      rr:predicateObjectMap [
@@ -90,13 +90,13 @@
      # List
      rr:predicateObjectMap [
          rr:predicate :hasInstructions; 
-         rr:objectMap [  rr:template rafco:recipes/{"id"}/Instructions'];
+         rr:objectMap [  rr:template rafco:recipe/{"id"}/Instructions'];
          ].
 
  :recipe-cooktime
      rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
      rr:subjectMap [ 
-         rr:template rafco:recipes/{"id"}/cookTime/{"CookTime"};
+         rr:template rafco:recipe/{"id"}/cookTime/{"CookTime"};
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
@@ -107,7 +107,7 @@
  :recipe-preptime
      rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
      rr:subjectMap [ 
-         rr:template rafco:recipes/{"id"}/prepTime/{"PrepTime"};
+         rr:template rafco:recipe/{"id"}/prepTime/{"PrepTime"};
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
@@ -139,7 +139,7 @@
 :recipe-instructions
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipes/{"id"}/Instructions';
+        rr:template rafco:recipe/{"id"}/Instructions';
         rr:class list:List;
         ].
 
@@ -165,7 +165,7 @@
 :recipe-ingredient-with-amount
     rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipes/{"Recipe_id"};        
+        rr:template rafco:recipe/{"Recipe_id"};        
         ];
     rr:predicateObjectMap [
         rr:predicate :hasIngredientWithAmount;
