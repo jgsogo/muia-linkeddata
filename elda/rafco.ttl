@@ -7,19 +7,22 @@
 #
 
 @prefix api:                <http://purl.org/linked-data/api/vocab#> .
-@prefix dct:	            <http://purl.org/dc/terms/> .
+@prefix dc:                 <http://purl.org/dc/elements/1.1/> .
 
 @prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:               <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+
+@prefix foaf:               <http://xmlns.com/foaf/0.1/> .
 
 # The elda namespace/prefix is for Elda extensions to the LDA specification.
 @prefix elda:               <http://www.epimorphics.com/vocabularies/lda#> .
 
-# Prefix for example-local entities.
+# Prefix for rafco entities.
 @prefix rafco:		<http://rafco.jgsogo.es/spec/rafco.ttl#>.
-@prefix spec:           <http://rafco.jgsogo.es/spec/rafco.ttl#>.
-@prefix foaf:		<http://xmlns.com/foaf/0.1/>.
+@prefix spec:       <http://rafco.jgsogo.es/spec/rafco.ttl#>.
 
 # ---------------------------------------------------------------------
 # API config
@@ -31,8 +34,7 @@ rafco:rafco a api:API
 	; api:defaultPageSize 10
 	; api:defaultViewer api:labelledDescribeViewer
 	; api:defaultFormatter spec:HtmlFormatter 
-	; api:endpoint rafco:recipes 
-
+	; api:endpoint rafco:recipes, rafco:recipe
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
 	; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
@@ -43,21 +45,20 @@ rafco:recipes a api:ListEndpoint
 	; rdfs:label "Recipes" 
 	; api:uriTemplate "/recipes" 
 	; api:selector [api:filter "type=Recipe"]
-	; api:defaultViewer rafco:RecipeViewer
-	; api:viewer rafco:RecipeViewer
+	; api:defaultViewer rafco:RecipeListViewer
+	; api:viewer rafco:RecipeListViewer
 	.
+
+spec:recipe a api:ItemEndpoint 
+  	; rdfs:label "Recipe" 
+  	; api:uriTemplate "/recipe/{number}" 
+  	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recursos/recipe/{number}" 
+  	; api:defaultViewer rafco:RecipeViewer 
+  	; api:viewer rafco:RecipeViewer
+    .
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
 <http://rafco.jgsogo.es/sparql/> elda:supportsNestedSelect true.
-
-#
-# This XSLT formatter produces rich HTML from the viewer properties.
-#
-
-rafco:RecipeViewer a api:Viewer
-	; api:name "recipeviewer"
-	; api:properties "label,hasTitle,hasDescription,hasAuthor"
-	.
 
 #
 # This XSLT formatter produces rich HTML from the viewer properties.
@@ -70,12 +71,21 @@ spec:HtmlFormatter a api:XsltFormatter
 	.
 
 #
-# Vocabulary definitions
+# This XSLT formatter produces rich HTML from the viewer properties.
 #
-rafco:Recipe a rdfs:Class
-	; rdfs:label "Recipe"
-	; api:label "Recipe"
+
+rafco:RecipeListViewer a api:Viewer
+	; api:name "recipelistviewer"
+	; api:properties "label,hasTitle,hasDescription,hasAuthor"
 	.
+
+rafco:RecipeViewer a api:Viewer
+	; api:name "recipeviewer"
+	; api:properties "label,hasTitle"
+
+
+############################################################################
+# The rest of this config is vocabulary definitions.
 
 rdf:Property api:label "Property" .
 
@@ -83,9 +93,82 @@ rdf:type api:label "type"
     ; api:multiValued true 
     ; rdfs:range rdfs:Class 
     .
-	
-#rdfs:label api:label "label" ; api:multiValued true .
-#rdfs:comment api:label "description" .
+
+rdf:value api:label "value" .
+
+rdfs:Class api:label "Class" .
+
+rdfs:label api:label "label" ; api:multiValued true .
+
+rdfs:seeAlso api:label "seeAlso" ; api:multiValued true .
+
+rdfs:comment api:label "comment" .
+
+rdfs:range api:label "range" .
+
+rdfs:domain api:label "domain" .
+
+rdfs:isDefinedBy api:label "isDefinedBy" .
+
+rdfs:subClassOf api:label "subClassOf" .
+
+rdfs:subPropertyOf api:label "subPropertyOf" .
+
+owl:sameAs api:label "sameAs" .
+
+owl:imports api:label "imports" .
+
+owl:versionInfo api:label "versionInfo" .
+
+foaf:isPrimaryTopicOf a rdf:Property
+    ; api:label "isPrimaryTopicOf"
+    .
+
+# appears (incorrectly) in some transport data. 
+skos:prefName api:label "prefName".
+
+skos:Concept api:label "Concept" .
+
+skos:ConceptScheme api:label "ConceptScheme" .
+
+skos:prefLabel api:label "prefLabel" .
+
+skos:altLabel api:label "altLabel" 
+	; api:multiValued true .
+
+skos:note api:label "note" .
+
+skos:notation api:label "notation" .
+
+skos:scopeNote api:label "scopeNote" .
+
+skos:topConceptOf api:label "topConceptOf" 
+	; rdfs:range rdfs:Resource
+	.
+
+skos:hasTopConcept api:label "topConcept"  
+	; rdfs:range rdfs:Resource 
+	; api:multiValued true 
+	.
+
+skos:broader api:label "broader"  
+	; rdfs:range rdfs:Resource
+	.
+
+skos:narrower api:label "narrower"  
+	; rdfs:range rdfs:Resource
+	; api:multiValued true 
+	.
+
+
+############################################################################
+# Vocabulary definitions related to RAFCO
+
+
+rafco:Recipe a rdfs:Class
+	; rdfs:label "Recipe"
+	; api:label "Recipe"
+	.
 
 rafco:hasTitle api:label "Title"  
 	; rdfs:range rdfs:Resource .
