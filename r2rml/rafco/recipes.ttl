@@ -195,3 +195,11 @@ rafco:ingredient-with-amount
         rr:predicate rdf:label;
         rr:objectMap [  rr:column "HumanReadable";];
         ].
+
+rafco:ingredient-with-amount-unit
+    rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
+    rr:subjectMap [ 
+        rr:template 'http://qudt.org/vocab/unit/{"Units"}';
+        rr:class <http://qudt.org/schema/qudt#VolumeUnit>;
+        rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
+        ];
