@@ -1,5 +1,5 @@
 # Namespace of RAFCO vocabulary/ontology
-@prefix base: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
@@ -10,43 +10,43 @@
 #########
 # Nutrient
 #########
-base:nutrient
+:nutrient
     rr:logicalTable [ rr:tableName "nutrients_nutrient"; ];
     
     rr:subjectMap [
       rr:template rafco:nutrient/{Nutr_no} ;
-      rr:class base:Nutrient ;
+      rr:class :Nutrient ;
       ];
     
     rr:predicateObjectMap [
-      rr:predicate base:description;
+      rr:predicate :nutDesc;
       rr:objectMap [ rr:column "Description" ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate base:type;
+      rr:predicate :type;
       rr:objectMap [ rr:column "Type" ] ;
     ] ;
                     
     rr:predicateObjectMap [
-      rr:predicate base:main;
+      rr:predicate :main;
       rr:objectMap [ rr:column "Main" ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate base:tagname;
+      rr:predicate :tagname;
       rr:objectMap [ rr:column "Tagname" ] ;
     ] ;
       
     rr:predicateObjectMap [
-      rr:predicate base:units;
+      rr:predicate :units;
       rr:objectMap [ 
         rr:template 'http://qudt.org/vocab/unit/{"Units"}' 
       ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate base:num_dec;
+      rr:predicate :numDec;
       rr:objectMap [ rr:column "Num_Dec" ] ;
     ] .
     

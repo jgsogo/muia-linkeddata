@@ -13,90 +13,90 @@
 #########
 # Recipes
 #########
-base:ingredient
+:ingredient
     # Ingredients -- Food
     #   Meto todos los de la tabla foods, es cierto que no todos ellos se utilizarán en
     #   las recetas, pero no sé cómo discriminarlos en esta importación.
     rr:logicalTable [ rr:tableName '"food_food"'; ];
     rr:subjectMap [
         rr:template rafco:ingredient/{"NDB_no"};
-        rr:class base:Ingredient;
+        rr:class :Ingredient;
         ].
 
-base:ingredient-isProduced
+:ingredient-isProduced
     # Recipe
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
         rr:template rafco:ingredient/{"Produces_id"};
         ];
     rr:predicateObjectMap [
-        rr:predicate base:isProduced;
-        rr:objectMap [rr:template rafco:recipe/{"id"};];
+        rr:predicate :isProduced;
+        rr:objectMap [rr:template rafco:recipes/{"id"};];
         ].
 
-base:recipe
+:recipe
     # Recipe
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipe/{"id"};
-        rr:class base:Recipe;
+        rr:template rafco:recipes/{"id"};
+        rr:class :Recipe;
         ];
     rr:predicateObjectMap [
-        rr:predicate base:produces;
+        rr:predicate :produces;
         rr:objectMap [rr:template rafco:ingredient/{"Produces_id"};];
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasTitle;
+        rr:predicate :hasTitle;
         rr:objectMap [rr:column "Title"];
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasDescription;
+        rr:predicate :hasDescription;
         rr:objectMap [  rr:column "Description"];
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasRating;
+        rr:predicate :hasRating;
         rr:objectMap [  rr:column "Rating" ; 
                         rr:termType rr:Literal; ]; #! TODO: Esto es un float/double, pero no sé cómo ponerlo.
         ];
      rr:predicateObjectMap [
-         rr:predicate base:recipeYields;
+         rr:predicate :recipeYields;
          rr:objectMap [  rr:column "Yields"];
          ];
      # CookTime
      rr:predicateObjectMap [
-         rr:predicate base:cookTime;
-         rr:objectMap [  rr:template rafco:recipe/{"id"}/cookTime/{"CookTime"} ]
+         rr:predicate :cookTime;
+         rr:objectMap [  rr:template rafco:recipes/{"id"}/cookTime/{"CookTime"} ]
          ];
      # PrepTime
      rr:predicateObjectMap [
-         rr:predicate base:prepTime;
-         rr:objectMap [  rr:template rafco:recipe/{"id"}/prepTime/{"PrepTime"} ]
+         rr:predicate :prepTime;
+         rr:objectMap [  rr:template rafco:recipes/{"id"}/prepTime/{"PrepTime"} ]
          ];
      # URL
      rr:predicateObjectMap [
-         rr:predicate base:seeAlso;
+         rr:predicate :seeAlso;
          rr:objectMap [  rr:column '{"URL"}'];
          ];
      # Image
      rr:predicateObjectMap [
-         rr:predicate base:hasImage;
+         rr:predicate :hasImage;
          rr:objectMap [  rr:template '{"Image"}'];
          ];
      # Author
      rr:predicateObjectMap [
-         rr:predicate base:hasAuthor; #! TODO: Cambiar por foaf:isAuthor o schema:isAuthor (buscar)
+         rr:predicate :hasAuthor; #! TODO: Cambiar por foaf:isAuthor o schema:isAuthor (buscar)
          rr:objectMap [  rr:template rafco:author/{"Author"}];
          ];
      # List
      rr:predicateObjectMap [
-         rr:predicate base:hasInstructions; 
-         rr:objectMap [  rr:template rafco:recipe/{"id"}/Instructions'];
+         rr:predicate :hasInstructions; 
+         rr:objectMap [  rr:template rafco:recipes/{"id"}/Instructions'];
          ].
 
- base:recipe-cooktime
+ :recipe-cooktime
      rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
      rr:subjectMap [ 
-         rr:template rafco:recipe/{"id"}/cookTime/{"CookTime"};
+         rr:template rafco:recipes/{"id"}/cookTime/{"CookTime"};
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
@@ -104,10 +104,10 @@ base:recipe
          rr:objectMap [  rr:column "CookTime"];
          ].
 
- base:recipe-preptime
+ :recipe-preptime
      rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
      rr:subjectMap [ 
-         rr:template rafco:recipe/{"id"}/prepTime/{"PrepTime"};
+         rr:template rafco:recipes/{"id"}/prepTime/{"PrepTime"};
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
@@ -115,45 +115,45 @@ base:recipe
          rr:objectMap [  rr:column "PrepTime"];
          ].
 
-base:recipe-url
+:recipe-url
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
         rr:template '{"URL"}';
         rr:class foaf:Document;
         ].
 
-base:recipe-image
+:recipe-image
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
         rr:template '{"Image"}';
         rr:class foaf:Image;
         ].
 
-base:recipe-author
+:recipe-author
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
         rr:template rafco:author/{"Author"};
         rr:class foaf:Person;
         ].
 
-base:recipe-instructions
+:recipe-instructions
     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipe/{"id"}/Instructions';
+        rr:template rafco:recipes/{"id"}/Instructions';
         rr:class list:List;
         ].
 
 ############
 # Directions
 ############
-base:directions
+:directions
     rr:logicalTable [ rr:tableName '"recipes_direction"'; ];
     rr:subjectMap [ 
         rr:template rafco:direction/{"id"};
         rr:class list:ListItem;
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasText;
+        rr:predicate :hasText;
         rr:objectMap [  rr:column "Description"];
         ].
     #! TODO: Realmente no sé cómo poner el firstItem, lastItem, nextItem,...
@@ -162,33 +162,33 @@ base:directions
 ######################
 # IngredientWithAmount
 ######################
-base:recipe-ingredient-with-amount
+:recipe-ingredient-with-amount
     rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
     rr:subjectMap [ 
-        rr:template rafco:recipe/{"Recipe_id"};        
+        rr:template rafco:recipes/{"Recipe_id"};        
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasIngredientWithAmount;
+        rr:predicate :hasIngredientWithAmount;
         rr:objectMap [  rr:template rafco:ingredientwithamount/{"id"}];
         ].
 
-base:ingredient-with-amount
+:ingredient-with-amount
     rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
     rr:subjectMap [ 
         rr:template rafco:ingredientwithamount/{"id"};
-        rr:class base:IngredientWithAmount;
+        rr:class :IngredientWithAmount;
         ];
     rr:predicateObjectMap [
-        rr:predicate base:hasIngredient;
+        rr:predicate :hasIngredient;
         rr:objectMap [  rr:template rafco:ingredient/{"Ingredient_id"}];
         ];
     rr:predicateObjectMap [
-        rr:predicate base:value;
+        rr:predicate :value;
         rr:objectMap [  rr:column "Quantity";
                         rr:termType rr:Literal;];
         ];
     rr:predicateObjectMap [
-        rr:predicate base:unit;
+        rr:predicate :unit;
         rr:objectMap [  rr:template 'http://qudt.org/vocab/unit/{"Units"}';];
         ];
     rr:predicateObjectMap [
