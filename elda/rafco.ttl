@@ -42,7 +42,8 @@ rafco:recipes a api:ListEndpoint
 	; rdfs:label "Recipes" 
 	; api:uriTemplate "/recipes" 
 	; api:selector [api:filter "type=Recipe"]
-	#TODO: Add at least a viewer, e.g. RecipeViewer
+	; api:defaultViewer rafco:RecipeViewer
+	; api:viewer rafco:RecipeViewer
 	.
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
@@ -52,10 +53,10 @@ rafco:recipes a api:ListEndpoint
 # This XSLT formatter produces rich HTML from the viewer properties.
 #
 
-rafco:RecipeViewer
-    a api:Viewer ;
-    api:name "recipeviewer" ;
-    api:properties "label,description".
+rafco:RecipeViewer a api:Viewer
+	; api:name "recipeviewer"
+	; api:properties "label,description"
+	.
 
 #
 # This XSLT formatter produces rich HTML from the viewer properties.
