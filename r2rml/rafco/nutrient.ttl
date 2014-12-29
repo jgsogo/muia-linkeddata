@@ -40,7 +40,9 @@ base:nutrient
       
     rr:predicateObjectMap [
       rr:predicate base:units;
-      rr:objectMap [ rr:column "Units" ] ;
+      rr:objectMap [ 
+        rr:template 'http://qudt.org/vocab/unit/{"Units"}' 
+      ] ;
     ] ;
 
     rr:predicateObjectMap [
