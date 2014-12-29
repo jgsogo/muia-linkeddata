@@ -44,8 +44,14 @@ server {
 	}
 
     # Elda
-    location / {
-        proxy_pass http://localhost:8891;
-        include /etc/nginx/proxy.conf;
+    location /standalone/ {
+	rewrite ^/standalone/(.*)$ /linkeddata/$1 permanent;
+	}
+    location /linkeddata/ {
+	proxy_set_header Host $http_host;
+        proxy_pass http://localhost:8891/standalone/;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        #include /etc/nginx/proxy.conf;
         }
 }

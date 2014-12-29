@@ -36,14 +36,14 @@ rafco:rafco a api:API
 	; api:defaultFormatter spec:HtmlFormatter 
 	; api:endpoint rafco:recipes, rafco:recipe
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
-	; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
+	#; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
 	
 # Endpoint definition	
 	
 rafco:recipes a api:ListEndpoint 
 	; rdfs:label "Recipes" 
-	; api:uriTemplate "/recipes" 
+	; api:uriTemplate "/recurso/recipes" 
 	; api:selector [api:filter "type=Recipe"]
 	; api:defaultViewer rafco:RecipeListViewer
 	; api:viewer rafco:RecipeListViewer
@@ -51,8 +51,8 @@ rafco:recipes a api:ListEndpoint
 
 spec:recipe a api:ItemEndpoint 
   	; rdfs:label "Recipe" 
-  	; api:uriTemplate "/recipe/{number}" 
-  	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recursos/recipe/{number}" 
+  	; api:uriTemplate "/recurso/recipe/{number}"
+  	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/recipe/{number}" 
   	; api:defaultViewer rafco:RecipeViewer 
   	; api:viewer rafco:RecipeViewer
     .
@@ -82,6 +82,7 @@ rafco:RecipeListViewer a api:Viewer
 rafco:RecipeViewer a api:Viewer
 	; api:name "recipeviewer"
 	; api:properties "label,hasTitle"
+	.
 
 
 ############################################################################
