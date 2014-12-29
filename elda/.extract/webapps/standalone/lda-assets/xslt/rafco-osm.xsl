@@ -334,7 +334,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<xsl:apply-templates select="." mode="formats" />
 	</nav>
 	<header>
-		<h1><a href="/">RAFCO Ontology API</a></h1>
+		<h1><a href="/linkeddata/recurso/recipes">RAFCO Ontology API</a></h1>
 	</header>
 </xsl:template>
 
