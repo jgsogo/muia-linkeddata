@@ -39,7 +39,7 @@ server {
         }
 
     # Ontology
-    location /spec/ {
+    location /linkeddata/def/ {
         root /home/javi/projects/muia_linkeddata/ontology/;
 	}
 
