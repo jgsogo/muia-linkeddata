@@ -64,8 +64,7 @@ class Command(RAFCOCommand):
                 except Exception as e:
                     errors +=1
                     errors_message = ' (%d errors)' % errors
-                    message = 'ERROR - Unexpected %s' % e
-
+                    message = 'ERROR - Unexpected %s' % e            
                 if len(errors_message):
                     self.v('', 1, True)
                 message = '%d%% [%d/%d] %s' % (int(round(float(i) / total * 100)), i, total, errors_message) + message
@@ -92,32 +91,38 @@ class Command(RAFCOCommand):
 
         errors = 0
 
-#        self.v(' - Importing Allergen File')
-#        errors += self._handle_model(path, allergen_models.Allergen)
+        self.v(' - Importing Allergen File')
+        errors += self._handle_model(path, allergen_models.Allergen)
 
-#        self.v(' - Importing Nutrients File')
-#        errors += self._handle_model(path, nutrients_models.Nutrient)
+        self.v(' - Importing Nutrients File')
+        errors += self._handle_model(path, nutrients_models.Nutrient)
 
-#        self.v(' - Importing Food Description File')
-#        errors += self._handle_model(path, food_models.Food)
+        self.v(' - Importing Food Description File')
+        errors += self._handle_model(path, food_models.Food)
 
-#        self.v(' - Importing Weight File')
-#        errors += self._handle_model(path, food_models.Weight)
+        self.v(' - Importing Weight File')
+        errors += self._handle_model(path, food_models.Weight)
 
-#        self.v(' - Importing Food Nutrients Composition File')
-#        errors += self._handle_model(path, food_models.FoodNutrients)
+        self.v(' - Importing Food Nutrients Composition File')
+        errors += self._handle_model(path, food_models.FoodNutrients)
 
-#        self.v(' - Importing Langual Description File')
-#        errors += self._handle_model(path, food_models.LangualDesc)
+        self.v(' - Importing Langual Description File')
+        errors += self._handle_model(path, food_models.LangualDesc)
 
         self.v(' - Importing Langual Data File')
         errors += self._handle_model(path, food_models.Langual)
 
-#        self.v(' - Importing Disease Data File')
-#        errors += self._handle_model(path, diseases_models.Disease)
+       self.v(' - Importing Disease Data File')
+        errors += self._handle_model(path, diseases_models.Disease)
 
-#        self.v(' - Importing Allergen Causes Disease Data File')
-#        errors += self._handle_model(path, diseases_models.AllergenCausesDisease)
+        self.v(' - Importing Allergen Causes Disease Data File')
+        errors += self._handle_model(path, diseases_models.AllergenCausesDisease)
+
+        self.v(' - Importing Allergen Causes Disease Data File')
+        errors += self._handle_model(path, diseases_models.FoodCausesDisease)
+
+        self.v(' - Importing Allergen Causes Disease Data File')
+        errors += self._handle_model(path, diseases_models.NutrientCausesDisease)
 
         t2 = time.time()
         self.v('Exec time: ' + str(round(t2 - t1)), 1)

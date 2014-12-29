@@ -16,7 +16,7 @@ class AllergenManager(models.Manager):
 class Allergen(models.Model):
     filename = 'ALLERGEN'
 
-    GI_No   = models.CharField(max_length=15, primary_key=True)
+    GI_No   = models.CharField(max_length=25, primary_key=True)
     Group   = models.CharField(max_length=100)
     Main    = models.CharField(max_length=10, choices=(('Non Food', 'Non Food Allergen'), ('Food','Food Allergen')))
     Type    = models.CharField(max_length=100)

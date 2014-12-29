@@ -1,0 +1,3 @@
+211;Glucose Intolerance
+212;Fructose Intolerance
+213;Lactose Intolerance

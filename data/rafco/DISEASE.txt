@@ -1,13 +1,70 @@
+Abalone Allergy;Abalone Allergic Reaction;
+Alaska pollock Allergy;Alaska pollock Allergic Reaction;
+Almond Allergy;Almond Allergic Reaction;
+American  oyster Allergy;American  oyster Allergic Reaction;
+American lobster Allergy;American lobster Allergic Reaction;
+Apple Allergy;Apple Allergic Reaction;
+Apricot Allergy;Apricot Allergic Reaction;
+Atlantic cod Allergy;Atlantic cod Allergic Reaction;
+Avocado Allergy;Avocado Allergic Reaction;
+Baltic cod Allergy;Baltic cod Allergic Reaction;
+Banana Allergy;Banana Allergic Reaction;
+Barley Allergy;Barley Allergic Reaction;
+Black tiger shrimp Allergy;Black tiger shrimp Allergic Reaction;
+Black walnut Allergy;Black walnut Allergic Reaction;
+Bovine Allergy;Bovine Allergic Reaction;
+Brown garden snail Allergy;Brown garden snail Allergic Reaction;
+Brown shrimp Allergy;Brown shrimp Allergic Reaction;
+Carp Allergy;Carp Allergic Reaction;
+Carrot Allergy;Carrot Allergic Reaction;
+Cashew Allergy;Cashew Allergic Reaction;
+Castor bean Allergy;Castor bean Allergic Reaction;
+Celery Allergy;Celery Allergic Reaction;
+Celiac Disease;Autoimmune disease of gastrointestinal tract caused by a reaction to Gliadin;DOID:10608
+Cherry Allergy;Cherry Allergic Reaction;
+Chicken Allergy;Chicken Allergic Reaction;
+Corn Allergy;Corn Allergic Reaction;
+Crab Allergy;Crab Allergic Reaction;
+Disk abalone Allergy;Disk abalone Allergic Reaction;
+Eastern oyster Allergy;Eastern oyster Allergic Reaction;
 Egg Allergy;Allergy to Egg Disorder;DOID:4377
-Gluten Allergy;Gluten Allergic Reaction;DOID:0060057
-Milk Allergy;Milk Allergic Reaction;DOID:4376
-Nut Allergy;Nut Allergic Reaction;DOID:4379
-Peanut Allergy;Peaunt Allergic Reaction;DOID:4378
-Wheat Allergy;Wheat Allergic Reaction;DOID:3660
-Lactose Intolerance;Malabsorption of Lactose Disorder;DOID:10604
-Glucose Intolerance;Malabsorption of Glucose Disorder;DOID:10603
+Fish Allergy;Fish Allergic Reaction;
+Frog Allergy;Frog Allergic Reaction;
 Fructose Intolerance;Malabsorption of Fructose Disorder or Fructosaemia;DOID:9869
 Galactose Intolerance;Malabsorption of Galactose Disorder or Galactosaemia;DOID:9870
-Celiac Disease;autoimmune disease of gastrointestinal tract caused by a reaction to Gliadin;DOID:10608
+Glucose Intolerance;Malabsorption of Glucose Disorder;DOID:10603
+Gluten Allergy;Gluten Allergic Reaction;DOID:0060057
+Grape Allergy;Grape Allergic Reaction;
+Kidney bean Allergy;Kidney bean Allergic Reaction;
+Kiwi Allergy;Kiwi Allergic Reaction;
+Lactose Intolerance;Malabsorption of Lactose Disorder;DOID:10604
+Lemon Allergy;Lemon Allergic Reaction;
+Lentil Allergy;Lentil Allergic Reaction;
+Lobster Allergy;Lobster Allergic Reaction;
+Lychee nut Allergy;Lychee nut Allergic Reaction;
+Milk Allergy;Milk Allergic Reaction;DOID:4376
+Muskmelon Allergy;Muskmelon Allergic Reaction;
+Mustard Allergy;Mustard Allergic Reaction;
+Nut Allergy;Nut Allergic Reaction;DOID:4379
+Olive tree Allergy;Olive tree Allergic Reaction;
+Papaya Allergy;Papaya Allergic Reaction;
+Pea Allergy;Pea Allergic Reaction;
+Peach Allergy;Peach Allergic Reaction;
+Peanut Allergy;Peaunt Allergic Reaction;DOID:4378
+Pear Allergy;Pear Allergic Reaction;
+Pecan Allergy;Pecan Allergic Reaction;
+Pineapple Allergy;Pineapple Allergic Reaction;
+Plum Allergy;Plum Allergic Reaction;
+Potato Allergy;Potato Allergic Reaction;
+Rape Allergy;Rape Allergic Reaction;
+Rice Allergy;Rice Allergic Reaction;
+Rye Allergy;Rye Allergic Reaction;
+Salmon Allergy;Salmon Allergic Reaction;
+Sesame Allergy;Sesame Allergic Reaction;
 Soybean Allergy;Soybean Allergic Reaction;
-Fish Allergy;Fish Allergy Reaction;
+Strawberry Allergy;Strawberry Allergic Reaction;
+Sunflower Allergy;Sunflower Allergic Reaction;
+Tomato Allergy;Tomato Allergic Reaction;
+Wheat Allergy;Wheat Allergic Reaction;DOID:3660
+White mustard Allergy;White mustard Allergic Reaction;
+Yellowfin tuna Allergy;Yellowfin tuna Allergic Reaction;

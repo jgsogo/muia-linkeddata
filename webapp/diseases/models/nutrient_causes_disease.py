@@ -13,6 +13,8 @@ class NutrientCausesDiseaseManager(models.Manager):
         return instance
 
 class NutrientCausesDisease(models.Model):
+    filename = 'NUTRCAUSES'
+
     NutrientID  = models.ForeignKey(Nutrient)
     DiseaseName = models.ForeignKey(Disease)
 
