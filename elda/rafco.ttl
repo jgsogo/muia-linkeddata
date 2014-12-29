@@ -17,8 +17,9 @@
 @prefix elda:               <http://www.epimorphics.com/vocabularies/lda#> .
 
 # Prefix for example-local entities.
-@prefix rafco:		    <http://rafco.jgsogo.es/spec/rafco.ttl#>.
-@prefix spec:               <http://rafco.jgsogo.es/spec/rafco.ttl#>.
+@prefix rafco:		<http://rafco.jgsogo.es/spec/rafco.ttl#>.
+@prefix spec:           <http://rafco.jgsogo.es/spec/rafco.ttl#>.
+@prefix foaf:		<http://xmlns.com/foaf/0.1/>.
 
 # ---------------------------------------------------------------------
 # API config
@@ -55,7 +56,7 @@ rafco:recipes a api:ListEndpoint
 
 rafco:RecipeViewer a api:Viewer
 	; api:name "recipeviewer"
-	; api:properties "label,description"
+	; api:properties "label,hasTitle,hasDescription,hasAuthor"
 	.
 
 #
@@ -68,11 +69,29 @@ spec:HtmlFormatter a api:XsltFormatter
 	; api:stylesheet "lda-assets/xslt/result-osm.xsl"
 	.
 
+#
+# Vocabulary definitions
+#
 rafco:Recipe a rdfs:Class
 	; rdfs:label "Recipe"
 	; api:label "Recipe"
 	.
-	
-rdfs:label api:label "label" ; api:multiValued true .
-rdfs:comment api:label "description" .
 
+rdf:Property api:label "Property" .
+
+rdf:type api:label "type" 
+    ; api:multiValued true 
+    ; rdfs:range rdfs:Class 
+    .
+	
+#rdfs:label api:label "label" ; api:multiValued true .
+#rdfs:comment api:label "description" .
+
+rafco:hasTitle api:label "Title"  
+	; rdfs:range rdfs:Resource .
+
+rafco:hasDescription api:label "Description"
+	; rdfs:range rdfs:Resource .
+
+rafco:hasAuthor api:label "Author"
+	; rdfs:range foaf:Person .

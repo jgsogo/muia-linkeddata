@@ -10,7 +10,8 @@ nginx
 supervisor
 webapp/static
 webapp/linkeddata/local_*
-elda
+elda/elda-master
+elda/.extract
 .Python
 r2rml
 virtuoso/*.nt
