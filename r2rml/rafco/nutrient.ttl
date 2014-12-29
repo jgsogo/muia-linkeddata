@@ -1,0 +1,29 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+# Namespace of RAFCO vocabulary/ontology, nutrient part
+@prefix rafcov: <http://rafco.jgsogo.es/linkeddata/def/nutrient#>.
+
+# Namespace of RAFCO resources, nutrient part
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/nutrient#>.
+
+# Triples map for Nutrient table
+rafco:foods
+    rr:logicalTable [ rr:tableName "Nutrient"; ];
+    rr:subjectMap [
+      rr:template rafco:{Nutr_no}
+      ];
+    
+    rr:predicateObjectMap [
+      rr:predicate rafcov:description;
+      rr:objectMap [ rr:column "Long_Desc" ] ;
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate rafcov:name;
+      rr:objectMap [ rr:column "Shrt_Desc" ] ;
+                      
+    rr:predicateObjectMap [
+      rr:predicate rafcov:sci_name;
+      rr:objectMap [ rr:column "SciName" ] ;
+    ].

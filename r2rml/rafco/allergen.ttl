@@ -1,0 +1,42 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+# Namespace of RAFCO vocabulary/ontology, allergen part
+@prefix rafcov: <http://rafco.jgsogo.es/linkeddata/def/allergen#>.
+
+# Namespace of RAFCO resources, allergen part
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/allergen#>.
+
+# Triples map for Allergen table
+rafco:foods
+    rr:logicalTable [ rr:tableName "Allergen"; ];
+    rr:subjectMap [
+      rr:template rafco:{GI_no}
+      ];
+    
+    rr:predicateObjectMap [
+      rr:predicate rafcov:group;
+      rr:objectMap [ rr:column "Group" ] ;
+      ];
+
+    rr:predicateObjectMap [
+      rr:predicate rafcov:main;
+      rr:objectMap [ rr:column "Main" ] ;
+                      
+    rr:predicateObjectMap [
+      rr:predicate rafcov:type;
+      rr:objectMap [ rr:column "Type" ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafcov:species;
+      rr:objectMap [ rr:column "Species" ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafcov:common;
+      rr:objectMap [ rr:column "Common" ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafcov:iuis;
+      rr:objectMap [ rr:column "IUIS" ] ; 
+     
+    ].
