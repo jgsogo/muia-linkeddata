@@ -56,7 +56,7 @@ rafco:nutrient-with-amount
     rr:logicalTable [ rr:tableName "food_foodnutrients" ];
     
     rr:subjectMap [
-        rr:template rafco:nutrientwithamount/{id} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrientwithamount/{"id"}' ;
         rr:class rafco:NutrientWithAmount ;
     ] ;
     

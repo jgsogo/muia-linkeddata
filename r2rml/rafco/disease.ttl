@@ -34,7 +34,7 @@ rafco:disease
 # Food causes Disease - Many to many
 #########
 rafco:food_causes_disease
-    rr:logicalTable [ rr:tableName "disease_foodcausesdisease" ];
+    rr:logicalTable [ rr:tableName "diseases_foodcausesdisease" ];
     
     rr:subjectMap [
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No"}' ;
@@ -52,7 +52,7 @@ rafco:food_causes_disease
 # Nutrient causes Disease - Many to many
 #########
 rafco:nutrient_causes_disease
-    rr:logicalTable [ rr:tableName "disease_nutrientcausesdisease" ];
+    rr:logicalTable [ rr:tableName "diseases_nutrientcausesdisease" ];
 
     rr:subjectMap [
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"NutrientID"}' ;
@@ -69,7 +69,7 @@ rafco:nutrient_causes_disease
 # Allergen causes Disease - Many to many
 #########
 rafco:allergen_causes_disease
-    rr:logicalTable [ rr:tableName "disease_allergencausesdisease" ];
+    rr:logicalTable [ rr:tableName "diseases_allergencausesdisease" ];
 
     rr:subjectMap [
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/allergen/{"GI_No"}' ;
