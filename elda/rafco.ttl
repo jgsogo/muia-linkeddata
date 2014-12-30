@@ -102,12 +102,12 @@ rafco:RecipeViewer a api:Viewer
 
 rafco:FoodListViewer a api:Viewer
 	; api:name "foodlistviwer"
-	; api:properties "label"
+	; api:properties "label,shrtDesc,sciName"
 	.
 
 rafco:FoodViewer a api:Viewer
 	; api:name "foodviewer"
-	; api:properties "label"
+	; api:properties "label,shrtDesc,sciName,longDesc"
 	.
 
 ############################################################################
@@ -191,6 +191,7 @@ skos:narrower api:label "narrower"
 # Vocabulary definitions related to RAFCO
 
 
+# Recipe
 rafco:Recipe a rdfs:Class
 	; rdfs:label "Recipe"
 	; api:label "Recipe"
@@ -205,7 +206,17 @@ rafco:hasDescription api:label "Description"
 rafco:hasAuthor api:label "Author"
 	; rdfs:range foaf:Person .
 
+# Food
 rafco:Food a rdfs:Class
 	; rdfs:label "Food"
 	; api:label "Food"
 	.
+
+rafco:shrtDesc api:label "ShortDescription"
+	; rdfs:range rdfs:Resource .
+
+rafco:longDesc api:label "LongDescription"
+	; rdfs:range rdfs:Resource .
+
+rafco:sciName api:label "ScientificName"
+	; rdfs:range rdfs:Resource .
