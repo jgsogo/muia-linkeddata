@@ -34,7 +34,7 @@ rafco:rafco a api:API
 	; api:defaultPageSize 10
 	; api:defaultViewer api:labelledDescribeViewer
 	; api:defaultFormatter spec:HtmlFormatter 
-	; api:endpoint rafco:recipes, rafco:recipe
+	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
 	#; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
@@ -55,7 +55,23 @@ spec:recipe a api:ItemEndpoint
   	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/recipe/{number}" 
   	; api:defaultViewer rafco:RecipeViewer 
   	; api:viewer rafco:RecipeViewer
-    .
+	.
+
+rafco:foods a api:ListEndpoint
+	; rdfs:label "Foods"
+	; api:uriTemplate "/recurso/foods"
+	; api:selector [api:filter "type=Food"]
+	; api:defaultViewer rafco:FoodListViewer
+	; api:viewer rafco:FoodListViewer
+	.
+
+rafco:food a api:ItemEndpoint
+	; rdfs:label "Food"
+	; api:uriTemplate "/recurso/food/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/food/{number}"
+	; api:defaultViewer rafco:FoodViewer
+	; api:viewer rafco:FoodViewer
+	.
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
 <http://rafco.jgsogo.es/sparql/> elda:supportsNestedSelect true.
@@ -84,6 +100,15 @@ rafco:RecipeViewer a api:Viewer
 	; api:properties "label,hasTitle"
 	.
 
+rafco:FoodListViewer a api:Viewer
+	; api:name "foodlistviwer"
+	; api:properties "label"
+	.
+
+rafco:FoodViewer a api:Viewer
+	; api:name "foodviewer"
+	; api:properties "label"
+	.
 
 ############################################################################
 # The rest of this config is vocabulary definitions.
@@ -179,3 +204,8 @@ rafco:hasDescription api:label "Description"
 
 rafco:hasAuthor api:label "Author"
 	; rdfs:range foaf:Person .
+
+rafco:Food a rdfs:Class
+	; rdfs:label "Food"
+	; api:label "Food"
+	.
