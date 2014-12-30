@@ -13,7 +13,7 @@
 # Food
 #########
 rafco:food
-    rr:logicalTable [ rr:tableName "Food" ];
+    rr:logicalTable [ rr:tableName "food_food" ];
     
     rr:subjectMap [
       rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_no"}' ;
