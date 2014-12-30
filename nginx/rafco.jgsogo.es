@@ -22,16 +22,6 @@ server {
 	include /etc/nginx/proxy.conf;
 	}
 
-    # Django admin
-    location /admin/ {
-        proxy_pass http://127.0.0.1:9011;
-	include /etc/nginx/proxy.conf;
-        }
-
-    location /static/ {
-        root /home/javi/projects/muia_linkeddata/webapp/;
-        }
-
     # phpMyAdmin
     location /phpmyadmin/ {
 	proxy_pass http://127.0.0.1:8080;
@@ -54,4 +44,14 @@ server {
 	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         #include /etc/nginx/proxy.conf;
         }
+
+    # Django
+    location / {
+        proxy_pass http://127.0.0.1:9011;
+        include /etc/nginx/proxy.conf;
+        }
+    location /static/ {
+        root /home/javi/projects/muia_linkeddata/webapp/;
+        }
+
 }
