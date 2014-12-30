@@ -1,7 +1,7 @@
-@base <http://rafco.jgsogo.es/def/rafco.ttl#>.
+@base <http://rafco.jgsogo.es/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .

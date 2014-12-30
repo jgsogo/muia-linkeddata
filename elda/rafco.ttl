@@ -21,8 +21,8 @@
 @prefix elda:               <http://www.epimorphics.com/vocabularies/lda#> .
 
 # Prefix for rafco entities.
-@prefix rafco:		<http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
-@prefix spec:       <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rafco:		<http://rafco.jgsogo.es/linkeddata/def/rafco#>.
+@prefix spec:       <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 # ---------------------------------------------------------------------
 # API config
