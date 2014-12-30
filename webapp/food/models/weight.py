@@ -16,7 +16,7 @@ class WeightManager(models.Manager):
 class Weight(models.Model):
     filename = 'WEIGHT'
 
-    NDB_No    = models.ForeignKey(Food)
+    NDB_No    = models.ForeignKey(Food) #! TODO: Esto debería ser 'primary_key', pero entonces hay que cambiarlo en muchos más sitios (NO CORREGIR)
     Seq       = models.CharField(max_length=2)
     Amount    = Amount = models.DecimalField(max_digits=8, decimal_places=3)
     Msre_Desc = models.CharField(max_length=84)
