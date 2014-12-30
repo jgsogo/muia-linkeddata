@@ -1,0 +1,19 @@
+
+body {
+
+    }
+
+ #wrapper {
+      width: 100%;
+      height: auto;
+ }
+ .centered {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+ }
+
+ .indent {
+    margin-left: 60px;
+    margin-right: 60px;
+ }

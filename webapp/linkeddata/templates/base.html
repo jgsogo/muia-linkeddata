@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>RAFCO Ontology</title>
+        <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="header">
+        {% block header %}
+        {% endblock %}
+        </div>
+
+        <h1 class="centered">The RAFCO Ontology Project</h1>
+
+        <div id="wrapper">
+            {% block content %}
+            <div id="content" class="centered">
+                <p>
+                    <a href="/linkeddata/recurso/diseases">Allergies</a>
+                    | <a href="/linkeddata/recurso/recipes">Recipes</a>
+                    | <a href="/linkeddata/recurso/foods">Foods</a>
+                    | <a href="{% url "about" %}">About</a>
+                </p>
+
+                <img src="{% static "logo.jpg" %}" alt="RAFCO"/>
+
+                <h3>Ontological Engineering (MUIA 2014-2015)</h3>
+            </div>
+            {% endblock %}
+        </div>
+
+        <div id="footer">
+        {% block footer %}
+        {% endblock %}
+        </div>
+    </body>
+</html>
+

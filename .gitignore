@@ -16,3 +16,4 @@ elda/.extract
 r2rml
 virtuoso/*.nt
 webapp/recipes.json
+webapp/.idea
