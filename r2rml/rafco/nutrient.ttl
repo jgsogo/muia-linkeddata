@@ -20,7 +20,10 @@ rafco:nutrient
       rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"Nutr_no"}';
       rr:class rafco:Nutrient ;
       ];
-    
+    rr:predicateObjectMap [
+      rr:predicate rdf:label;
+      rr:objectMap [rr:column "Description";];
+    ];
     rr:predicateObjectMap [
       rr:predicate rafco:nutDesc;
       rr:objectMap [ rr:column "Description" ] ;

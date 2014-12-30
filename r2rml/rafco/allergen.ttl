@@ -19,7 +19,10 @@ rafco:allergen
       rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/allergen/{"GI_No"}' ;
       rr:class rafco:Allergen ;
     ];
-
+    rr:predicateObjectMap [
+      rr:predicate rdf:label;
+      rr:objectMap [rr:column "Group";];
+    ];
     rr:predicateObjectMap [
       rr:predicate rafco:group;
       rr:objectMap [ rr:column "Group" ] ;

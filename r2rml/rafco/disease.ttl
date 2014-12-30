@@ -18,7 +18,10 @@ rafco:disease
       rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
       rr:class rafco:Disease ;
     ];
-    
+    rr:predicateObjectMap [
+      rr:predicate rdf:label;
+      rr:objectMap [rr:column "Description";];
+    ];
     rr:predicateObjectMap [
       rr:predicate rafco:diseaseDesc;
       rr:objectMap [ rr:column "Description" ] ;

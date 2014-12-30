@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# encoding: utf-8
+
 from django.db import models
 
 from .food import Food
@@ -15,7 +18,7 @@ class LangualManager(models.Manager):
 class Langual(models.Model):
     filename = 'LANGUAL'
 
-    NDB_No      = models.ForeignKey(Food)
+    NDB_No      = models.ForeignKey(Food) #! TODO: Esto debería ser 'primary_key', pero entonces hay que cambiarlo en muchos más sitios (NO CORREGIR)
     Factor_Code = models.ForeignKey(LangualDesc)
     
     objects = LangualManager()
