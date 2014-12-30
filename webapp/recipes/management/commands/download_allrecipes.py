@@ -70,7 +70,10 @@ class Command(BaseCommand):
         items = amount.split()
         try:
             ing_amount.Quantity = float(sum(Fraction(part) for part in items[0].split()))
-            ing_amount.Units = items[-1]
+            if len(items) == 1:
+                ing_amount.Units = u"unit"
+            else:
+                ing_amount.Units = items[-1]
             self.stdout.write(u"\t   + ingredient: %s" % (ingredient.Shrt_Desc))
             self.stdout.write(u"\t   + quantity: %s" % (ing_amount.Quantity))
             self.stdout.write(u"\t   + units: %s" % (ing_amount.Units))
@@ -172,7 +175,7 @@ class Command(BaseCommand):
         next = "http://allrecipes.com/recipes/main.aspx?Page=1"
 
         to_print = []
-        while n_recipes < max_recipes:
+        while i < max_recipes:
             # Call index
             self.stdout.write("Calling next index page %r" % next)
             data = self.scraper.scrape_url(next)
@@ -197,6 +200,9 @@ class Command(BaseCommand):
                     break
                 #except Exception as e:
                 #    self.stderr(e)
+
+            if i >= max_recipes:
+                break
 
         with open(filename, "w") as out:
             serializers.serialize('json', to_print, indent=4, stream=out)

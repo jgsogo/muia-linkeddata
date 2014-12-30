@@ -1,0 +1,51 @@
+@base <http://rafco.jgsogo.es/def/rafco.ttl#>.
+
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+#########
+# Allergen
+#########
+rafco:allergen
+    rr:logicalTable [ rr:tableName "allergen_allergen"; ];
+    
+    rr:subjectMap [
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/allergen/{"GI_No"}' ;
+      rr:class rafco:Allergen ;
+    ];
+
+    rr:predicateObjectMap [
+      rr:predicate rafco:group;
+      rr:objectMap [ rr:column "Group" ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+      rr:predicate rafco:main;
+      rr:objectMap [ rr:column "Main" ] ;
+    ] ;
+                      
+    rr:predicateObjectMap [
+      rr:predicate rafco:type;
+      rr:objectMap [ rr:column "Type"] ;
+    ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafco:species;
+      rr:objectMap [ rr:column "Species" ] ;
+    ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafco:common;
+      rr:objectMap [ rr:column "Common" ] ;
+    ] ;
+      
+    rr:predicateObjectMap [
+      rr:predicate rafco:iuis;
+      rr:objectMap [ rr:column "IUIS" ] ;  
+    ].

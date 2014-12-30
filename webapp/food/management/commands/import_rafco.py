@@ -112,16 +112,16 @@ class Command(RAFCOCommand):
         self.v(' - Importing Langual Data File')
         errors += self._handle_model(path, food_models.Langual)
 
-       self.v(' - Importing Disease Data File')
+        self.v(' - Importing Disease Data File')
         errors += self._handle_model(path, diseases_models.Disease)
 
         self.v(' - Importing Allergen Causes Disease Data File')
         errors += self._handle_model(path, diseases_models.AllergenCausesDisease)
 
-        self.v(' - Importing Allergen Causes Disease Data File')
+        self.v(' - Importing Food Causes Disease Data File')
         errors += self._handle_model(path, diseases_models.FoodCausesDisease)
 
-        self.v(' - Importing Allergen Causes Disease Data File')
+        self.v(' - Importing Nutrient Causes Disease Data File')
         errors += self._handle_model(path, diseases_models.NutrientCausesDisease)
 
         t2 = time.time()

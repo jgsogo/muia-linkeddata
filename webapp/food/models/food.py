@@ -28,8 +28,8 @@ class Food(models.Model):
     filename = 'FOOD'
 
     NDB_No    = models.CharField(max_length=5, primary_key=True)
-    Long_Desc = models.CharField(max_length=200)
-    Shrt_Desc = models.CharField(max_length=60)
+    Long_Desc = models.CharField(max_length=512)
+    Shrt_Desc = models.CharField(max_length=140)
     SciName   = models.CharField(max_length=65, blank=True, null=True)
     
     objects = FoodManager()
