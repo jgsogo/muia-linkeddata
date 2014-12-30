@@ -29,9 +29,15 @@ server {
         }
 
     # Ontology
-    location /linkeddata/def/ {
-        root /home/javi/projects/muia_linkeddata/ontology/;
-	}
+    location =/linkeddata/def/rafco.rdf { alias /home/javi/projects/muia_linkeddata/ontology/rafco.rdf;	}
+    location =/linkeddata/def/rafco.owl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.owl; }
+    location =/linkeddata/def/rafco.ttl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.ttl; }
+
+    # Django resolves content negotiation for the ontology file
+    location =/linkeddata/def/rafco {
+	proxy_pass http://127.0.0.1:9011;
+        include /etc/nginx/proxy.conf;
+        }
 
     # Elda
     location /standalone/ {
