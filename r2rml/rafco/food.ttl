@@ -1,88 +1,91 @@
-@base <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@base <http://rafco.jgsogo.es/def/rafco.ttl#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-# Namespace of RAFCO resources
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/>.
 
 #########
 # Food
 #########
-:food
+rafco:food
     rr:logicalTable [ rr:tableName "Food" ];
     
     rr:subjectMap [
-      rr:template rafco:food/{NDB_no} ;
-      rr:class :Food ;
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_no"}' ;
+      rr:class rafco:Food ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :longDesc;
+      rr:predicate rafco:longDesc;
       rr:objectMap [ rr:column "Long_Desc" ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate :shrtDesc;
+      rr:predicate rafco:shrtDesc;
       rr:objectMap [ rr:column "Shrt_Desc" ] ;
     ] ;
                       
     rr:predicateObjectMap [
-      rr:predicate :sciName;
+      rr:predicate rafco:sciName;
       rr:objectMap [ rr:column "SciName" ] ;
     ].
     
 #########
 # Food nutrients - Many to many
 #########
-:food-nutrient-with-amount
+rafco:food-nutrient-with-amount
     rr:logicalTable [ rr:tableName "food_foodnutrients" ];
     
     rr:subjectMap [
-        rr:template rafco:food/{NDB_No} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :nutrientWithAmount ;
+      rr:predicate rafco:nutrientWithAmount ;
       rr:objectMap [ 
-        rr:template rafco:nutrientwithamount/{id} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrientwithamount/{"id"}' ;
       ] ;
     ] .
 
-:nutrient-with-amount
+rafco:nutrient-with-amount
     rr:logicalTable [ rr:tableName "food_foodnutrients" ];
     
     rr:subjectMap [
         rr:template rafco:nutrientwithamount/{id} ;
-        rr:class :NutrientWithAmount ;
+        rr:class rafco:NutrientWithAmount ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :nutrient ;
+      rr:predicate rafco:nutrient ;
       rr:objectMap [ 
-        rr:template rafco:nutrient/{Nutr_No} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"Nutr_No"}' ;
       ] ;
     ] ;    
     
     rr:predicateObjectMap [
-      rr:predicate :amount ;
+      rr:predicate rafco:amount ;
       rr:objectMap [ rr:column "Nutr_Val" ] ;
     ] .
 
 #########
 # Langual - Many to many
 #########
-:langual
+rafco:langual
     rr:logicalTable [ rr:tableName "food_langual" ];
 
     rr:subjectMap [
-        rr:template rafco:food/{NDB_No} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :langual ;
+      rr:predicate rafco:langual ;
       rr:objectMap [ 
-        rr:template rafco:langual/{Factor_Code} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/langual/{"Factor_Code"}' ;
       ] ;
     ] .
 
@@ -90,54 +93,54 @@
 #########
 # Langual description
 #########
-:langual-desc
+rafco:langual-desc
     rr:logicalTable [ rr:tableName "food_langualdesc" ];
 
     rr:subjectMap [
-      rr:template rafco:langual/{Factor_Code} ;
-      rr:class :Langual ; 
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/langual/{"Factor_Code"}' ;
+      rr:class rafco:Langual ; 
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :description;
+      rr:predicate rafco:description;
       rr:objectMap [ rr:column "Description" ] ;
     ] .
     
 #########
 # Weight - N ary relation
 #########
-:food-weight
+rafco:food-weight
     rr:logicalTable [ rr:tableName "food_weight" ];
     
     rr:subjectMap [
-      rr:template rafco:food/{NDB_No} ;
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :weightPerAmount;
-      rr:objectMap [ rr:template rafco:weightperamount/{id} ] ;
+      rr:predicate rafco:weightPerAmount;
+      rr:objectMap [ rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/weightperamount/{"id"}' ] ;
     ] .
 
-:weight-per-amount
+rafco:weight-per-amount
     rr:logicalTable [ rr:tableName "food_weight" ];
     
     rr:subjectMap [
-        rr:template rafco:weightperamount/{id} ;
-        rr:class :WeightPerAmount ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/weightperamount/{"id"}' ;
+        rr:class rafco:WeightPerAmount ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :foodAmount ;
+      rr:predicate rafco:foodAmount ;
       rr:objectMap [ rr:column "Amount" ] ;
     ] ;    
 
     rr:predicateObjectMap [
-      rr:predicate :gramWeight ;
+      rr:predicate rafco:gramWeight ;
       rr:objectMap [ rr:column "Gm_Wgt" ] ;
     ] ;    
     
     rr:predicateObjectMap [
-      rr:predicate :msreDesc ;
+      rr:predicate rafco:msreDesc ;
       rr:objectMap [ rr:column "Msre_Desc" ] ;
     ] .
 

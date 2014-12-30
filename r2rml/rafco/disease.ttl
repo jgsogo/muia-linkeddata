@@ -1,28 +1,31 @@
-@base <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@base <http://rafco.jgsogo.es/def/rafco.ttl#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-# Namespace of RAFCO resources
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/>.
 
 #########
 # Disease
 #########
-:disease
+rafco:disease
     rr:logicalTable [ rr:tableName "diseases_disease"; ];
     rr:subjectMap [
-      rr:template rafco:disease/{DiseaseName} ;
-      rr:class :Disease ;
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
+      rr:class rafco:Disease ;
     ];
     
     rr:predicateObjectMap [
-      rr:predicate :diseaseDesc;
+      rr:predicate rafco:diseaseDesc;
       rr:objectMap [ rr:column "Description" ] ;
     ] ;
                       
     rr:predicateObjectMap [
-      rr:predicate :doid;
+      rr:predicate rafco:doid;
       rr:objectMap [ rr:column "DOID" ] ;
     ].
     
@@ -30,17 +33,17 @@
 #########
 # Food causes Disease - Many to many
 #########
-:food_causes_disease
+rafco:food_causes_disease
     rr:logicalTable [ rr:tableName "disease_foodcausesdisease" ];
     
     rr:subjectMap [
-        rr:template rafco:food/{NDB_No} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :foodCauses ;
+      rr:predicate rafco:foodCauses ;
       rr:objectMap [ 
-        rr:template rafco:disease/{DiseaseName} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
       ] ;
     ] .
     
@@ -48,34 +51,34 @@
 #########
 # Nutrient causes Disease - Many to many
 #########
-:nutrient_causes_disease
+rafco:nutrient_causes_disease
     rr:logicalTable [ rr:tableName "disease_nutrientcausesdisease" ];
 
     rr:subjectMap [
-        rr:template rafco:nutrient/{NutrientID} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"NutrientID"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :nutrientCauses ;
+      rr:predicate rafco:nutrientCauses ;
       rr:objectMap [ 
-        rr:template rafco:disease/{DiseaseName} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
       ] ;
     ] .
 
 #########
 # Allergen causes Disease - Many to many
 #########
-:allergen_causes_disease
+rafco:allergen_causes_disease
     rr:logicalTable [ rr:tableName "disease_allergencausesdisease" ];
 
     rr:subjectMap [
-        rr:template rafco:allergen/{GI_No} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/allergen/{"GI_No"}' ;
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate :allergenCauses ;
+      rr:predicate rafco:allergenCauses ;
       rr:objectMap [ 
-        rr:template rafco:disease/{DiseaseName} ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
       ] ;
     ] .
 

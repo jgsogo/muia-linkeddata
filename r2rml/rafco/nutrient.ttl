@@ -1,52 +1,56 @@
-# Namespace of RAFCO vocabulary/ontology
-@base <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@base <http://rafco.jgsogo.es/def/rafco.ttl#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-# Namespace of RAFCO resources
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/recurso/>.
+@prefix list: <http://www.ontologydesignpatterns.org/cp/owl/list.owl#>.
+
 
 #########
 # Nutrient
 #########
-:nutrient
+rafco:nutrient
     rr:logicalTable [ rr:tableName "nutrients_nutrient"; ];
     
     rr:subjectMap [
-      rr:template rafco:nutrient/{Nutr_no} ;
-      rr:class :Nutrient ;
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"Nutr_no"}';
+      rr:class rafco:Nutrient ;
       ];
     
     rr:predicateObjectMap [
-      rr:predicate :nutDesc;
+      rr:predicate rafco:nutDesc;
       rr:objectMap [ rr:column "Description" ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate :type;
+      rr:predicate rafco:type;
       rr:objectMap [ rr:column "Type" ] ;
     ] ;
                     
     rr:predicateObjectMap [
-      rr:predicate :main;
+      rr:predicate rafco:main;
       rr:objectMap [ rr:column "Main" ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate :tagname;
+      rr:predicate rafco:tagname;
       rr:objectMap [ rr:column "Tagname" ] ;
     ] ;
       
     rr:predicateObjectMap [
-      rr:predicate :units;
+      rr:predicate rafco:units;
       rr:objectMap [ 
         rr:template 'http://qudt.org/vocab/unit/{"Units"}' 
       ] ;
     ] ;
 
     rr:predicateObjectMap [
-      rr:predicate :numDec;
+      rr:predicate rafco:numDec;
       rr:objectMap [ rr:column "Num_Dec" ] ;
     ] .
     
