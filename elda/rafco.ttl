@@ -107,7 +107,7 @@ rafco:FoodListViewer a api:Viewer
 
 rafco:FoodViewer a api:Viewer
 	; api:name "foodviewer"
-	; api:properties "label,shrtDesc,sciName,longDesc"
+	; api:properties "label,shrtDesc,sciName,longDesc,langual,foodCauses"
 	.
 
 ############################################################################
@@ -220,3 +220,9 @@ rafco:longDesc api:label "LongDescription"
 
 rafco:sciName api:label "ScientificName"
 	; rdfs:range rdfs:Resource .
+
+rafco:langual api:label "Langual"
+	; rdfs:range rdfs:Resource ; api:multiValued true .
+
+rafco:foodCauses api:label "FoodCauses"
+	; rdfs:range rafco:Disease ; api:multiValued true .
