@@ -34,13 +34,13 @@ rafco:rafco a api:API
 	; api:defaultPageSize 10
 	; api:defaultViewer api:labelledDescribeViewer
 	; api:defaultFormatter spec:HtmlFormatter 
-	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food
+	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food, rafco:diseases, rafco:disease
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
 	#; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
 	
 # Endpoint definition	
-	
+
 rafco:recipes a api:ListEndpoint 
 	; rdfs:label "Recipes" 
 	; api:uriTemplate "/recurso/recipes" 
@@ -72,6 +72,23 @@ rafco:food a api:ItemEndpoint
 	; api:defaultViewer rafco:FoodViewer
 	; api:viewer rafco:FoodViewer
 	.
+
+rafco:diseases a api:ListEndpoint
+        ; rdfs:label "Diseases"
+        ; api:uriTemplate "/recurso/diseases"
+        ; api:selector [api:filter "type=Disease"]
+        ; api:defaultViewer rafco:DiseaseListViewer
+        ; api:viewer rafco:DiseaseListViewer
+        .
+
+rafco:disease a api:ItemEndpoint
+        ; rdfs:label "Disease"
+        ; api:uriTemplate "/recurso/disease/{number}"
+        ; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/disease/{number}"
+        ; api:defaultViewer rafco:DiseaseViewer
+        ; api:viewer rafco:DiseaseViewer
+        .
+
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
 <http://rafco.jgsogo.es/sparql/> elda:supportsNestedSelect true.
@@ -109,6 +126,17 @@ rafco:FoodViewer a api:Viewer
 	; api:name "foodviewer"
 	; api:properties "label,shrtDesc,sciName,longDesc,langual,foodCauses"
 	.
+
+rafco:DiseaseListViewer a api:Viewer
+        ; api:name "diseaselistviwer"
+        ; api:properties "label,doid"
+        .
+
+rafco:DiseaseViewer a api:Viewer
+        ; api:name "diseaseviewer"
+        ; api:properties "label,doid,diseaseDesc"
+        .
+
 
 ############################################################################
 # The rest of this config is vocabulary definitions.
@@ -226,3 +254,16 @@ rafco:langual api:label "Langual"
 
 rafco:foodCauses api:label "FoodCauses"
 	; rdfs:range rafco:Disease ; api:multiValued true .
+
+
+# Disease
+rafco:Disease a rdfs:Class
+	; rdfs:label "Disease"
+	; api:label "Disease"
+	.
+
+rafco:doid api:label "DOID"
+	; rdfs:range rdfs:Resource .
+
+rafco:diseaseDesc api:label "Description"
+	; rdfs:range rdfs:Resource .
