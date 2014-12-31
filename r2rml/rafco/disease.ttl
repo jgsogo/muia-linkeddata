@@ -1,4 +1,4 @@
-@base <http://rafco.jgsogo.es/def/rafco#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
@@ -15,12 +15,12 @@
 rafco:disease
     rr:logicalTable [ rr:tableName "diseases_disease"; ];
     rr:subjectMap [
-      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName"}' ;
+      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey"}' ;
       rr:class rafco:Disease ;
     ];
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
-      rr:objectMap [rr:column "Description";];
+      rr:predicate rdfs:label;
+      rr:objectMap [rr:column "DiseaseName";];
     ];
     rr:predicateObjectMap [
       rr:predicate rafco:diseaseDesc;
@@ -46,7 +46,7 @@ rafco:food_causes_disease
     rr:predicateObjectMap [
       rr:predicate rafco:foodCauses ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
     
@@ -64,7 +64,7 @@ rafco:nutrient_causes_disease
     rr:predicateObjectMap [
       rr:predicate rafco:nutrientCauses ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
 
@@ -81,7 +81,7 @@ rafco:allergen_causes_disease
     rr:predicateObjectMap [
       rr:predicate rafco:allergenCauses ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseName_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
 

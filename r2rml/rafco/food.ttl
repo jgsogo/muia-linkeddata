@@ -1,4 +1,4 @@
-@base <http://rafco.jgsogo.es/def/rafco#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
@@ -20,7 +20,7 @@ rafco:food
       rr:class rafco:Food ;
     ] ;
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Long_Desc";];
     ];
     rr:predicateObjectMap [
@@ -104,7 +104,7 @@ rafco:langual-desc
       rr:class rafco:Langual ; 
     ] ;
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Description";];
     ];
     rr:predicateObjectMap [

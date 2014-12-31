@@ -1,4 +1,4 @@
-@base <http://rafco.jgsogo.es/def/rafco#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
@@ -20,7 +20,7 @@ rafco:allergen
       rr:class rafco:Allergen ;
     ];
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Group";];
     ];
     rr:predicateObjectMap [

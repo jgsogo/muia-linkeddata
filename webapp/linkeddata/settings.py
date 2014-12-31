@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'allergen',
     'recipes',
     'nutrients',
-    'usda',
+    #'usda',
 )
 
 MIDDLEWARE_CLASSES = (

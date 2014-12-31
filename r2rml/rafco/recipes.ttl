@@ -1,4 +1,4 @@
-@base <http://rafco.jgsogo.es/def/rafco#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
@@ -24,7 +24,7 @@ rafco:ingredient
         rr:class rafco:Ingredient;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [rr:column "Long_Desc";];
         ].
 
@@ -47,7 +47,7 @@ rafco:recipe
         rr:class rafco:Recipe;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [rr:column "Title";];
         ];
     rr:predicateObjectMap [
@@ -109,7 +109,7 @@ rafco:recipe
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
-         rr:predicate rdf:label;
+         rr:predicate rdfs:label;
          rr:objectMap [  rr:template '{CookTime} minutes'];
          ];
      rr:predicateObjectMap [
@@ -124,7 +124,7 @@ rafco:recipe
          rr:class time:DurationDescription;
          ];
      rr:predicateObjectMap [
-         rr:predicate rdf:label;
+         rr:predicate rdfs:label;
          rr:objectMap [  rr:template '{PrepTime} minutes'];
          ];    
      rr:predicateObjectMap [
@@ -139,7 +139,7 @@ rafco:recipe-url
         rr:class foaf:Document;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [  rr:column "Title"];
         ].
 
@@ -150,7 +150,7 @@ rafco:recipe-image
         rr:class foaf:Image;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [  rr:column "Title"];
         ].
 
@@ -161,7 +161,7 @@ rafco:recipe-author
         rr:class foaf:Person;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [  rr:column "Author"];
         ].
 
@@ -221,7 +221,7 @@ rafco:ingredient-with-amount
         rr:class rafco:IngredientWithAmount;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [  rr:column "HumanReadable";];
         ];        
     rr:predicateObjectMap [
@@ -247,6 +247,6 @@ rafco:ingredient-with-amount-unit
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
     rr:predicateObjectMap [
-        rr:predicate rdf:label;
+        rr:predicate rdfs:label;
         rr:objectMap [  rr:column "Units";];
         ].
