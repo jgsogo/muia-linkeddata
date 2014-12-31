@@ -20,7 +20,7 @@ rafco:allergen
       rr:class rafco:Allergen ;
     ];
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Group";];
     ];
     rr:predicateObjectMap [

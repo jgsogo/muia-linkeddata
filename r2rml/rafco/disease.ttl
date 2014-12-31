@@ -19,7 +19,7 @@ rafco:disease
       rr:class rafco:Disease ;
     ];
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "DiseaseName";];
     ];
     rr:predicateObjectMap [

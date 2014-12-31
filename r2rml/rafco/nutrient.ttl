@@ -21,7 +21,7 @@ rafco:nutrient
       rr:class rafco:Nutrient ;
       ];
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Description";];
     ];
     rr:predicateObjectMap [

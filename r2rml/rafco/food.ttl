@@ -20,7 +20,7 @@ rafco:food
       rr:class rafco:Food ;
     ] ;
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Long_Desc";];
     ];
     rr:predicateObjectMap [
@@ -104,7 +104,7 @@ rafco:langual-desc
       rr:class rafco:Langual ; 
     ] ;
     rr:predicateObjectMap [
-      rr:predicate rdf:label;
+      rr:predicate rdfs:label;
       rr:objectMap [rr:column "Description";];
     ];
     rr:predicateObjectMap [
