@@ -1,4 +1,4 @@
-@base <http://rafco.jgsogo.es/def/rafco#>.
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
