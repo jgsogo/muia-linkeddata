@@ -1,7 +1,7 @@
 Abalone Allergy;Abalone Allergic Reaction;
 Alaska pollock Allergy;Alaska pollock Allergic Reaction;
 Almond Allergy;Almond Allergic Reaction;
-American  oyster Allergy;American  oyster Allergic Reaction;
+American oyster Allergy;American  oyster Allergic Reaction;
 American lobster Allergy;American lobster Allergic Reaction;
 Apple Allergy;Apple Allergic Reaction;
 Apricot Allergy;Apricot Allergic Reaction;
