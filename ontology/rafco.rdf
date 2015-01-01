@@ -50,6 +50,21 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#common -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#common">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#contains -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#contains">
@@ -128,22 +143,6 @@
     
 
 
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasCommonName -->
-
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasCommonName">
-        <rdfs:label rdf:datatype="&xsd;string">hasCommonName</rdfs:label>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasDescription -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasDescription">
@@ -165,22 +164,6 @@
         <rdfs:label rdf:datatype="&xsd;string">hasDisease</rdfs:label>
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
         <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasIUISDefinition -->
-
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasIUISDefinition">
-        <rdfs:label rdf:datatype="&xsd;string">hasIUISDefinition</rdfs:label>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -269,6 +252,21 @@
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
         <owl:inverseOf rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#hasRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#iuis -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#iuis">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
