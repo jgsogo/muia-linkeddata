@@ -7,8 +7,7 @@ import chardet
 import codecs
 import json
 
-from django.core.management.base import CommandError
-from django.core import serializers
+from django.core.management.base import BaseCommand, CommandError
 
 from food.management.commands import RAFCOCommand
 from food.models import Food
@@ -26,8 +25,7 @@ class RAFCOImportError(Exception):
 class Command(RAFCOCommand):
 
     args = '<directory>'
-
-    help = 'Match Foods from Recipe List'
+    help = 'Match Foods/Ingredients from Recipe List'
 
 
     def _parse_line(self, line):
@@ -38,21 +36,10 @@ class Command(RAFCOCommand):
         message = '%s' % token
         return data
 
-    def search(self, name, simple_instance=True):
-        qs = self.model.filter(Shrt_Desc__icontains=name)
-        if len(qs):
-            return qs[0]
-        items = name.split()
-        for it in items:
-            qs = self.model.filter(Shrt_Desc__icontains=it)
-            if len(qs):
-                return qs[0]
-        return None
-
 
     def _handle_model(self, path):
         try:
-            filename = os.path.join(path, 'ingredients.txt')
+            filename = os.path.join(path, 'recipes.txt')
             charenc = chardet.detect(open(filename).read())
 
             lines = codecs.open(filename, 'r', encoding=charenc['encoding']).readlines()
@@ -97,24 +84,24 @@ class Command(RAFCOCommand):
  
         super(Command, self).handle(*args, **options)
         
-
-        
         if len(args) != 1:
             raise CommandError('Directory for Recipe Ingredients List file is needed.')
 
-        t1 = time.time()
-
         path = args[0]
-        self.v('Importing Recipe Ingredients from %r' % path)
+        self.v('Importing Recipe Ingredients from %r' % (path))
 
+        t1 = time.time()
         errors = 0
 
         ingredients, errors = self._handle_model(path)
 
-        outputfile = os.path.join(path, 'list_of_foods.json')
+        outputfile = os.path.join(path, 'INGREDIENTS.txt')
+        
         with open(outputfile, "w") as out:
-            serializers.serialize('json', ingredients, indent=4, stream=out)
-
+            for ingred in ingredients:
+                out.write(u'%s\n' % ingred)
+            out.close()
+        
         t2 = time.time()
         self.v('Exec time: ' + str(round(t2 - t1)), 1)
         return 'Import end (%d matches, %d errors)' % (len(ingredients), errors)
