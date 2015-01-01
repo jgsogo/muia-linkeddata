@@ -18,24 +18,6 @@
 #################################################################
 
 
-###  http://rafco.com/household#isUsedAt
-
-<http://rafco.com/household#isUsedAt> rdf:type owl:ObjectProperty ;
-                                      
-                                      rdfs:range <http://dbpedia.org/ontology/PopulatedPlace> .
-
-
-
-###  http://rafco.com/household#usesHouseholdUnit
-
-<http://rafco.com/household#usesHouseholdUnit> rdf:type owl:ObjectProperty ;
-                                               
-                                               rdfs:domain <http://dbpedia.org/ontology/PopulatedPlace> ;
-                                               
-                                               owl:inverseOf <http://rafco.com/household#isUsedAt> .
-
-
-
 ###  http://rafco.jgsogo.es/#partOf
 
 <http://rafco.jgsogo.es/#partOf> rdf:type owl:ObjectProperty ;
@@ -133,19 +115,19 @@
 
 :hasDescription rdf:type owl:ObjectProperty ;
                 
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty owl:topDataProperty ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ;
+                
                 rdfs:domain [ rdf:type owl:Class ;
                               owl:unionOf ( :Allergen
                                             :Food
                                             :Nutrient
                                             :Recipe
                                           )
-                            ] ;
-                
-                rdfs:range [ rdf:type owl:Restriction ;
-                             owl:onProperty owl:topDataProperty ;
-                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onDataRange xsd:string
-                           ] .
+                            ] .
 
 
 
@@ -263,15 +245,11 @@
          
          rdfs:label "hasUnit"^^xsd:string ;
          
+         rdfs:range <http://qudt.org/schema/qudt#Unit> ;
+         
          rdfs:domain :Nutrient ;
          
-         rdfs:subPropertyOf owl:topObjectProperty ;
-         
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty owl:topDataProperty ;
-                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                      owl:onDataRange xsd:string
-                    ] .
+         rdfs:subPropertyOf owl:topObjectProperty .
 
 
 
@@ -528,12 +506,6 @@
 #################################################################
 
 
-###  http://dbpedia.org/ontology/PopulatedPlace
-
-<http://dbpedia.org/ontology/PopulatedPlace> rdf:type owl:Class .
-
-
-
 ###  http://purl.obolibrary.org/obo/DOID_4
 
 <http://purl.obolibrary.org/obo/DOID_4> rdf:type owl:Class .
@@ -543,6 +515,12 @@
 ###  http://qudt.org/schema/qudt#NotUsedWithSIUnit
 
 <http://qudt.org/schema/qudt#NotUsedWithSIUnit> rdf:type owl:Class .
+
+
+
+###  http://qudt.org/schema/qudt#Unit
+
+<http://qudt.org/schema/qudt#Unit> rdf:type owl:Class .
 
 
 
@@ -1265,15 +1243,11 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1134
-                :B1142
-                :B1220
-                :B1222
-                :B1374
-                :B1433
-                :B1563
-                :B1624
-                :B1625
+  owl:members ( :Alcohol
+                :Alkaloid
+                :Fiber
+                :Inorganic
+                :Sterol
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1284,24 +1258,6 @@
                 :B2345
                 :B2846
                 :B2974
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Alcohol
-                :Alkaloid
-                :Fiber
-                :Inorganic
-                :Sterol
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Aminoacid
-                :Carbohydrate
-                :Fat
-                :Mineral
-                :Protein
-                :Vitamin
-                :Water
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1316,18 +1272,40 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenFoodAnimal
-                :AllergenFoodFungi
-                :AllergenFoodInsect
-                :AllergenFoodPlant
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :B1140
                 :B1174
                 :B1213
                 :B1324
                 :B1579
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Aminoacid
+                :Carbohydrate
+                :Fat
+                :Mineral
+                :Protein
+                :Vitamin
+                :Water
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :B1134
+                :B1142
+                :B1220
+                :B1222
+                :B1374
+                :B1433
+                :B1563
+                :B1624
+                :B1625
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenFoodAnimal
+                :AllergenFoodFungi
+                :AllergenFoodInsect
+                :AllergenFoodPlant
               )
 ] .
 
