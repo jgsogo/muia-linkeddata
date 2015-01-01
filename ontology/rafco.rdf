@@ -539,6 +539,15 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasRating">
+        <rdfs:domain rdf:resource="http://www.bbc.co.uk/ontologies/fo/Recipe"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasText -->
 
     <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasText">

@@ -10,12 +10,12 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://rafco.jgsogo.es/"
+     xml:base="http://rafco.jgsogo.es/linkeddata/def/rafco#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://rafco.jgsogo.es/">
+     ontologyIRI="http://rafco.jgsogo.es/linkeddata/def/rafco#">
     <Prefix name="" IRI="http://rafco.jgsogo.es/linkeddata/def/rafco#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -35,187 +35,196 @@
         <Class IRI="http://qudt.org/schema/qudt#VolumeUnit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Alcohol"/>
+        <Class IRI="Alcohol"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Alkaloid"/>
+        <Class IRI="Alkaloid"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <Class IRI="Allergen"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
+        <Class IRI="AllergenFood"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodAnimal"/>
+        <Class IRI="AllergenFoodAnimal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodFungi"/>
+        <Class IRI="AllergenFoodFungi"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodInsect"/>
+        <Class IRI="AllergenFoodInsect"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodPlant"/>
+        <Class IRI="AllergenFoodPlant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFood"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodAero"/>
+        <Class IRI="AllergenNonFoodAero"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodBacteria"/>
+        <Class IRI="AllergenNonFoodBacteria"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodContact"/>
+        <Class IRI="AllergenNonFoodContact"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodGliadin"/>
+        <Class IRI="AllergenNonFoodGliadin"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodProtozoan"/>
+        <Class IRI="AllergenNonFoodProtozoan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVaccine"/>
+        <Class IRI="AllergenNonFoodVaccine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVenomSalivary"/>
+        <Class IRI="AllergenNonFoodVenomSalivary"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodWorm"/>
+        <Class IRI="AllergenNonFoodWorm"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Aminoacid"/>
+        <Class IRI="Aminoacid"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1134"/>
+        <Class IRI="B1134"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1140"/>
+        <Class IRI="B1140"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1142"/>
+        <Class IRI="B1142"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1174"/>
+        <Class IRI="B1174"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1213"/>
+        <Class IRI="B1213"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1217"/>
+        <Class IRI="B1217"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1220"/>
+        <Class IRI="B1220"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1222"/>
+        <Class IRI="B1222"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1261"/>
+        <Class IRI="B1261"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1297"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1301"/>
+        <Class IRI="B1301"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1324"/>
+        <Class IRI="B1324"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1347"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1374"/>
+        <Class IRI="B1374"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1433"/>
+        <Class IRI="B1433"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1563"/>
+        <Class IRI="B1563"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B1564"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1579"/>
+        <Class IRI="B1579"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1624"/>
+        <Class IRI="B1624"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B1625"/>
+        <Class IRI="B1625"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B2345"/>
+        <Class IRI="B2345"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B2846"/>
+        <Class IRI="B2846"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B2974"/>
+        <Class IRI="B2974"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#B3324"/>
+        <Class IRI="B3324"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Carbohydrate"/>
+        <Class IRI="Carbohydrate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Cuisine"/>
+        <Class IRI="Cuisine"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Disease"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Fat"/>
+        <Class IRI="Essential"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Fiber"/>
+        <Class IRI="Fat"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Food"/>
+        <Class IRI="Fiber"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Ingredient"/>
+        <Class IRI="Food"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <Class IRI="Ingredient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Inorganic"/>
+        <Class IRI="IngredientWithAmount"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Mineral"/>
+        <Class IRI="Inorganic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Langual"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <Class IRI="Mineral"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#NutrientPer100g"/>
+        <Class IRI="NonEssential"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Protein"/>
+        <Class IRI="Nutrient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <Class IRI="NutrientWithAmount"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Protein"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Sterol"/>
+        <Class IRI="Recipe"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Vitamin"/>
+        <Class IRI="Restriction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="linkeddata/def/rafco#Water"/>
+        <Class IRI="Sterol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Vitamin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WeightPerAmount"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://schema.org/Recipe"/>
@@ -248,91 +257,124 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Image"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#partOf"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#causes"/>
+        <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#contains"/>
+        <ObjectProperty IRI="allergenCauses"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#cookTime"/>
+        <ObjectProperty IRI="common"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#cuisine"/>
+        <ObjectProperty IRI="contains"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#group"/>
+        <ObjectProperty IRI="cookTime"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasCommonName"/>
+        <ObjectProperty IRI="cuisine"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasDescription"/>
+        <ObjectProperty IRI="description"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasDisease"/>
+        <ObjectProperty IRI="diseaseDesc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIUISDefinition"/>
+        <ObjectProperty IRI="doid"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasImage"/>
+        <ObjectProperty IRI="foodCauses"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredient"/>
+        <ObjectProperty IRI="group"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredientWithAmount"/>
+        <ObjectProperty IRI="hasDescription"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasInstructions"/>
+        <ObjectProperty IRI="hasDisease"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasNutrientPer100g"/>
+        <ObjectProperty IRI="hasImage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasRole"/>
+        <ObjectProperty IRI="hasIngredient"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasTagName"/>
+        <ObjectProperty IRI="hasIngredientWithAmount"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasUnit"/>
+        <ObjectProperty IRI="hasInstructions"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
+        <ObjectProperty IRI="hasRole"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#isContainedBy"/>
+        <ObjectProperty IRI="isPartOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#isProduced"/>
+        <ObjectProperty IRI="isProduced"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#isRoleAt"/>
+        <ObjectProperty IRI="isRoleAt"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#numDecimals"/>
+        <ObjectProperty IRI="iuis"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#nutrient"/>
+        <ObjectProperty IRI="langual"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#prepTime"/>
+        <ObjectProperty IRI="longDesc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
+        <ObjectProperty IRI="numDec"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#seeAlso"/>
+        <ObjectProperty IRI="nutDesc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#species"/>
+        <ObjectProperty IRI="nutrient"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="linkeddata/def/rafco#unit"/>
+        <ObjectProperty IRI="nutrientCauses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="nutrientWithAmount"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="prepTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="sciName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="seeAlso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="shrtDesc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="species"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="tagname"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="units"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="weightPerAmount"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/cuisine"/>
@@ -344,19 +386,31 @@
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/produces"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="linkeddata/def/rafco#hasText"/>
+        <DataProperty IRI="amount"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="linkeddata/def/rafco#hasTitle"/>
+        <DataProperty IRI="foodAmount"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="linkeddata/def/rafco#quantity"/>
+        <DataProperty IRI="gramWeight"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="linkeddata/def/rafco#recipeYields"/>
+        <DataProperty IRI="hasRating"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="linkeddata/def/rafco#value"/>
+        <DataProperty IRI="hasText"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="msreDesc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="recipeYields"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="value"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://www.bbc.co.uk/ontologies/fo/instruction"/>
@@ -365,27 +419,27 @@
         <DataProperty IRI="http://www.bbc.co.uk/ontologies/fo/quantity"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
-        <Class IRI="linkeddata/def/rafco#Food"/>
+        <Class IRI="B1564"/>
+        <Class IRI="Food"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#Cuisine"/>
+        <Class IRI="Cuisine"/>
         <Class IRI="http://www.bbc.co.uk/ontologies/fo/Cuisine"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#Food"/>
-        <Class IRI="linkeddata/def/rafco#Ingredient"/>
+        <Class IRI="Food"/>
+        <Class IRI="Ingredient"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#Food"/>
+        <Class IRI="Food"/>
         <Class IRI="http://www.bbc.co.uk/ontologies/fo/Food"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <Class IRI="IngredientWithAmount"/>
         <Class IRI="http://www.bbc.co.uk/ontologies/fo/Ingredient"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <Class IRI="Recipe"/>
         <Class IRI="http://schema.org/Recipe"/>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -401,1059 +455,1126 @@
         <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Alcohol"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Alcohol"/>
+        <Class IRI="NonEssential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Alkaloid"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Alkaloid"/>
+        <Class IRI="NonEssential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <Class IRI="AllergenFood"/>
+        <Class IRI="Allergen"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodAnimal"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
+        <Class IRI="AllergenFoodAnimal"/>
+        <Class IRI="AllergenFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodFungi"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
+        <Class IRI="AllergenFoodFungi"/>
+        <Class IRI="AllergenFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodInsect"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
+        <Class IRI="AllergenFoodInsect"/>
+        <Class IRI="AllergenFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodPlant"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
+        <Class IRI="AllergenFoodPlant"/>
+        <Class IRI="AllergenFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <Class IRI="AllergenNonFood"/>
+        <Class IRI="Allergen"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodAero"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodAero"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodBacteria"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodBacteria"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodContact"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodContact"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodGliadin"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodGliadin"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodProtozoan"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodProtozoan"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVaccine"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodVaccine"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVenomSalivary"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodVenomSalivary"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodWorm"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenNonFoodWorm"/>
+        <Class IRI="AllergenNonFood"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Aminoacid"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Aminoacid"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1134"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1134"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1140"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1140"/>
+        <Class IRI="B1347"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1142"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1142"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1174"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1174"/>
+        <Class IRI="B1347"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1213"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1213"/>
+        <Class IRI="B1347"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1217"/>
-        <Class IRI="linkeddata/def/rafco#B2974"/>
+        <Class IRI="B1217"/>
+        <Class IRI="B2974"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1220"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1220"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1222"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1222"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1261"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B1261"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B1297"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1301"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B1301"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1324"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1324"/>
+        <Class IRI="B1347"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B1347"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1374"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1374"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1433"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1433"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1563"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1563"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1579"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
+        <Class IRI="B1579"/>
+        <Class IRI="B1347"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1624"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1624"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B1625"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
+        <Class IRI="B1625"/>
+        <Class IRI="B1297"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B2345"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B2345"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B2846"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B2846"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B2974"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <Class IRI="B2974"/>
+        <Class IRI="B1564"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#B3324"/>
-        <Class IRI="linkeddata/def/rafco#B2974"/>
+        <Class IRI="B3324"/>
+        <Class IRI="B2974"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Carbohydrate"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Carbohydrate"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <Class IRI="Essential"/>
+        <Class IRI="Nutrient"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Fat"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Fat"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Fiber"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Fiber"/>
+        <Class IRI="NonEssential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Inorganic"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Inorganic"/>
+        <Class IRI="NonEssential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Mineral"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Mineral"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <Class IRI="NonEssential"/>
+        <Class IRI="Nutrient"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Protein"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Protein"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Sterol"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Sterol"/>
+        <Class IRI="NonEssential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Vitamin"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Vitamin"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="linkeddata/def/rafco#Water"/>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
+        <Class IRI="Water"/>
+        <Class IRI="Essential"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#Alcohol"/>
-        <Class IRI="linkeddata/def/rafco#Alkaloid"/>
-        <Class IRI="linkeddata/def/rafco#Fiber"/>
-        <Class IRI="linkeddata/def/rafco#Inorganic"/>
-        <Class IRI="linkeddata/def/rafco#Sterol"/>
+        <Class IRI="Alcohol"/>
+        <Class IRI="Alkaloid"/>
+        <Class IRI="Fiber"/>
+        <Class IRI="Inorganic"/>
+        <Class IRI="Sterol"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#AllergenFood"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFood"/>
+        <Class IRI="AllergenFood"/>
+        <Class IRI="AllergenNonFood"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodAnimal"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodFungi"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodInsect"/>
-        <Class IRI="linkeddata/def/rafco#AllergenFoodPlant"/>
+        <Class IRI="AllergenFoodAnimal"/>
+        <Class IRI="AllergenFoodFungi"/>
+        <Class IRI="AllergenFoodInsect"/>
+        <Class IRI="AllergenFoodPlant"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodAero"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodBacteria"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodContact"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodGliadin"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodProtozoan"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVaccine"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodVenomSalivary"/>
-        <Class IRI="linkeddata/def/rafco#AllergenNonFoodWorm"/>
+        <Class IRI="AllergenNonFoodAero"/>
+        <Class IRI="AllergenNonFoodBacteria"/>
+        <Class IRI="AllergenNonFoodContact"/>
+        <Class IRI="AllergenNonFoodGliadin"/>
+        <Class IRI="AllergenNonFoodProtozoan"/>
+        <Class IRI="AllergenNonFoodVaccine"/>
+        <Class IRI="AllergenNonFoodVenomSalivary"/>
+        <Class IRI="AllergenNonFoodWorm"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#Aminoacid"/>
-        <Class IRI="linkeddata/def/rafco#Carbohydrate"/>
-        <Class IRI="linkeddata/def/rafco#Fat"/>
-        <Class IRI="linkeddata/def/rafco#Mineral"/>
-        <Class IRI="linkeddata/def/rafco#Protein"/>
-        <Class IRI="linkeddata/def/rafco#Vitamin"/>
-        <Class IRI="linkeddata/def/rafco#Water"/>
+        <Class IRI="Aminoacid"/>
+        <Class IRI="Carbohydrate"/>
+        <Class IRI="Fat"/>
+        <Class IRI="Mineral"/>
+        <Class IRI="Protein"/>
+        <Class IRI="Vitamin"/>
+        <Class IRI="Water"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#B1134"/>
-        <Class IRI="linkeddata/def/rafco#B1142"/>
-        <Class IRI="linkeddata/def/rafco#B1220"/>
-        <Class IRI="linkeddata/def/rafco#B1222"/>
-        <Class IRI="linkeddata/def/rafco#B1374"/>
-        <Class IRI="linkeddata/def/rafco#B1433"/>
-        <Class IRI="linkeddata/def/rafco#B1563"/>
-        <Class IRI="linkeddata/def/rafco#B1624"/>
-        <Class IRI="linkeddata/def/rafco#B1625"/>
+        <Class IRI="B1134"/>
+        <Class IRI="B1142"/>
+        <Class IRI="B1220"/>
+        <Class IRI="B1222"/>
+        <Class IRI="B1374"/>
+        <Class IRI="B1433"/>
+        <Class IRI="B1563"/>
+        <Class IRI="B1624"/>
+        <Class IRI="B1625"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#B1140"/>
-        <Class IRI="linkeddata/def/rafco#B1174"/>
-        <Class IRI="linkeddata/def/rafco#B1213"/>
-        <Class IRI="linkeddata/def/rafco#B1324"/>
-        <Class IRI="linkeddata/def/rafco#B1579"/>
+        <Class IRI="B1140"/>
+        <Class IRI="B1174"/>
+        <Class IRI="B1213"/>
+        <Class IRI="B1324"/>
+        <Class IRI="B1579"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#B1217"/>
-        <Class IRI="linkeddata/def/rafco#B3324"/>
+        <Class IRI="B1217"/>
+        <Class IRI="B3324"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#B1261"/>
-        <Class IRI="linkeddata/def/rafco#B1297"/>
-        <Class IRI="linkeddata/def/rafco#B1301"/>
-        <Class IRI="linkeddata/def/rafco#B1347"/>
-        <Class IRI="linkeddata/def/rafco#B2345"/>
-        <Class IRI="linkeddata/def/rafco#B2846"/>
-        <Class IRI="linkeddata/def/rafco#B2974"/>
+        <Class IRI="B1261"/>
+        <Class IRI="B1297"/>
+        <Class IRI="B1301"/>
+        <Class IRI="B1347"/>
+        <Class IRI="B2345"/>
+        <Class IRI="B2846"/>
+        <Class IRI="B2974"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="linkeddata/def/rafco#Essential"/>
-        <Class IRI="linkeddata/def/rafco#NonEssential"/>
+        <Class IRI="Essential"/>
+        <Class IRI="NonEssential"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid27"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid28"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid29"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid30"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid31"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid32"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid33"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
-        <AnonymousIndividual nodeID="_:genid34"/>
-    </ClassAssertion>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#cuisine"/>
+        <ObjectProperty IRI="cuisine"/>
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/cuisine"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredient"/>
+        <ObjectProperty IRI="hasIngredient"/>
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/food"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
+        <ObjectProperty IRI="produces"/>
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/produces"/>
     </EquivalentObjectProperties>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasUnit"/>
+        <ObjectProperty IRI="numDec"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="linkeddata/def/rafco#numDecimals"/>
+        <ObjectProperty IRI="units"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
-        <ObjectProperty IRI="linkeddata/def/rafco#causes"/>
+        <ObjectProperty IRI="isPartOf"/>
+        <ObjectProperty IRI="contains"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#isContainedBy"/>
-        <ObjectProperty IRI="linkeddata/def/rafco#contains"/>
+        <ObjectProperty IRI="isRoleAt"/>
+        <ObjectProperty IRI="hasRole"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#isRoleAt"/>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasRole"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="linkeddata/def/rafco#isProduced"/>
-        <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
+        <ObjectProperty IRI="isProduced"/>
+        <ObjectProperty IRI="produces"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
+        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#causes"/>
-        <ObjectUnionOf>
-            <Class IRI="linkeddata/def/rafco#Allergen"/>
-            <Class IRI="linkeddata/def/rafco#Food"/>
-            <Class IRI="linkeddata/def/rafco#Nutrient"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="allergenCauses"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#contains"/>
-        <Class IRI="linkeddata/def/rafco#Food"/>
+        <ObjectProperty IRI="common"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#cookTime"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="contains"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#cuisine"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="cookTime"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#group"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="cuisine"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasCommonName"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="description"/>
+        <Class IRI="Langual"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasDescription"/>
-        <ObjectUnionOf>
-            <Class IRI="linkeddata/def/rafco#Allergen"/>
-            <Class IRI="linkeddata/def/rafco#Food"/>
-            <Class IRI="linkeddata/def/rafco#Nutrient"/>
-            <Class IRI="linkeddata/def/rafco#Recipe"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="diseaseDesc"/>
+        <Class IRI="Disease"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIUISDefinition"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="doid"/>
+        <Class IRI="Disease"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasImage"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="foodCauses"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredient"/>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <ObjectProperty IRI="group"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredientWithAmount"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="hasDescription"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasInstructions"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="hasDisease"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasNutrientPer100g"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <ObjectProperty IRI="hasImage"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasRole"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="hasIngredient"/>
+        <Class IRI="IngredientWithAmount"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasTagName"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="hasIngredientWithAmount"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasUnit"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="hasInstructions"/>
+        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
-        <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
+        <ObjectProperty IRI="hasRole"/>
+        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#isContainedBy"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="isPartOf"/>
+        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#isProduced"/>
-        <Class IRI="linkeddata/def/rafco#Food"/>
+        <ObjectProperty IRI="isProduced"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#isRoleAt"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="isRoleAt"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#numDecimals"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="iuis"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#nutrient"/>
-        <Class IRI="linkeddata/def/rafco#NutrientPer100g"/>
+        <ObjectProperty IRI="langual"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#prepTime"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="longDesc"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="numDec"/>
+        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#seeAlso"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <ObjectProperty IRI="nutDesc"/>
+        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#species"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="nutrient"/>
+        <Class IRI="NutrientWithAmount"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="linkeddata/def/rafco#unit"/>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <ObjectProperty IRI="nutrientCauses"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="nutrientWithAmount"/>
+        <Class IRI="B1564"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="prepTime"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="produces"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="sciName"/>
+        <Class IRI="Food"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="seeAlso"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="shrtDesc"/>
+        <Class IRI="Food"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="species"/>
+        <Class IRI="Allergen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="tagname"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="unit"/>
+        <Class IRI="IngredientWithAmount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="units"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="weightPerAmount"/>
+        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#partOf"/>
-        <Class IRI="linkeddata/def/rafco#B1564"/>
+        <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
+        <Class IRI="B1564"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#causes"/>
-        <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
+        <ObjectProperty IRI="allergenCauses"/>
+        <Class IRI="Disease"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#contains"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
+        <ObjectProperty IRI="common"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#cookTime"/>
+        <ObjectProperty IRI="contains"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="cookTime"/>
         <Class IRI="http://www.w3.org/TR/owl-time/#DurationDescription"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#cuisine"/>
-        <Class IRI="linkeddata/def/rafco#Cuisine"/>
+        <ObjectProperty IRI="cuisine"/>
+        <Class IRI="Cuisine"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#group"/>
+        <ObjectProperty IRI="description"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasCommonName"/>
+        <ObjectProperty IRI="diseaseDesc"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasDescription"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasDisease"/>
+        <ObjectProperty IRI="doid"/>
         <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIUISDefinition"/>
+        <ObjectProperty IRI="foodCauses"/>
+        <Class IRI="Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="group"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasImage"/>
+        <ObjectProperty IRI="hasDescription"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasDisease"/>
+        <Class IRI="Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasImage"/>
         <Class IRI="http://xmlns.com/foaf/0.1/Image"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredient"/>
-        <Class IRI="linkeddata/def/rafco#Ingredient"/>
+        <ObjectProperty IRI="hasIngredient"/>
+        <Class IRI="Ingredient"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasIngredientWithAmount"/>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <ObjectProperty IRI="hasIngredientWithAmount"/>
+        <Class IRI="IngredientWithAmount"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasInstructions"/>
+        <ObjectProperty IRI="hasInstructions"/>
         <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasNutrientPer100g"/>
-        <Class IRI="linkeddata/def/rafco#NutrientPer100g"/>
+        <ObjectProperty IRI="hasRole"/>
+        <Class IRI="Allergen"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasRole"/>
-        <Class IRI="linkeddata/def/rafco#Allergen"/>
+        <ObjectProperty IRI="isPartOf"/>
+        <Class IRI="Food"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasTagName"/>
+        <ObjectProperty IRI="isProduced"/>
+        <Class IRI="Recipe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isRoleAt"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="iuis"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#hasUnit"/>
-        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        <ObjectProperty IRI="langual"/>
+        <Class IRI="Langual"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
-        <ObjectUnionOf>
-            <Class IRI="linkeddata/def/rafco#Allergen"/>
-            <Class IRI="linkeddata/def/rafco#Food"/>
-            <Class IRI="linkeddata/def/rafco#Nutrient"/>
-        </ObjectUnionOf>
+        <ObjectProperty IRI="longDesc"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#isContainedBy"/>
-        <Class IRI="linkeddata/def/rafco#Food"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#isProduced"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#isRoleAt"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#numDecimals"/>
+        <ObjectProperty IRI="numDec"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#nutrient"/>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#prepTime"/>
-        <Class IRI="http://www.w3.org/TR/owl-time/#DurationDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
-        <Class IRI="linkeddata/def/rafco#Food"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#seeAlso"/>
-        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#species"/>
+        <ObjectProperty IRI="nutDesc"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="linkeddata/def/rafco#unit"/>
+        <ObjectProperty IRI="nutrient"/>
+        <Class IRI="Nutrient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="nutrientCauses"/>
+        <Class IRI="Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="nutrientWithAmount"/>
+        <Class IRI="NutrientWithAmount"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="prepTime"/>
+        <Class IRI="http://www.w3.org/TR/owl-time/#DurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="produces"/>
+        <Class IRI="Food"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="sciName"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="seeAlso"/>
+        <Class IRI="http://xmlns.com/foaf/0.1/Document"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="shrtDesc"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="species"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="tagname"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="unit"/>
         <ObjectUnionOf>
             <Class IRI="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
             <Class IRI="http://qudt.org/schema/qudt#VolumeUnit"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="units"/>
+        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="weightPerAmount"/>
+        <Class IRI="WeightPerAmount"/>
+    </ObjectPropertyRange>
     <EquivalentDataProperties>
-        <DataProperty IRI="linkeddata/def/rafco#hasText"/>
+        <DataProperty IRI="hasText"/>
         <DataProperty IRI="http://www.bbc.co.uk/ontologies/fo/instruction"/>
     </EquivalentDataProperties>
     <EquivalentDataProperties>
-        <DataProperty IRI="linkeddata/def/rafco#value"/>
+        <DataProperty IRI="value"/>
         <DataProperty IRI="http://www.bbc.co.uk/ontologies/fo/quantity"/>
     </EquivalentDataProperties>
     <DataPropertyDomain>
-        <DataProperty IRI="linkeddata/def/rafco#hasText"/>
+        <DataProperty IRI="amount"/>
+        <Class IRI="NutrientWithAmount"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="foodAmount"/>
+        <Class IRI="WeightPerAmount"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="gramWeight"/>
+        <Class IRI="WeightPerAmount"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasRating"/>
+        <Class IRI="http://www.bbc.co.uk/ontologies/fo/Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasText"/>
         <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="linkeddata/def/rafco#hasTitle"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <DataProperty IRI="hasTitle"/>
+        <Class IRI="Recipe"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="linkeddata/def/rafco#quantity"/>
-        <Class IRI="linkeddata/def/rafco#NutrientPer100g"/>
+        <DataProperty IRI="msreDesc"/>
+        <Class IRI="WeightPerAmount"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="linkeddata/def/rafco#recipeYields"/>
-        <Class IRI="linkeddata/def/rafco#Recipe"/>
+        <DataProperty IRI="recipeYields"/>
+        <Class IRI="Recipe"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="linkeddata/def/rafco#value"/>
-        <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
+        <DataProperty IRI="value"/>
+        <Class IRI="IngredientWithAmount"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="linkeddata/def/rafco#hasText"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="linkeddata/def/rafco#hasTitle"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="linkeddata/def/rafco#quantity"/>
+        <DataProperty IRI="amount"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="linkeddata/def/rafco#recipeYields"/>
+        <DataProperty IRI="foodAmount"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="gramWeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasRating"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasText"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasTitle"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="msreDesc"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="recipeYields"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="linkeddata/def/rafco#value"/>
+        <DataProperty IRI="value"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Alcohol</IRI>
+        <IRI>Alcohol</IRI>
         <Literal datatypeIRI="&xsd;string">Alcohol</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Alkaloid</IRI>
+        <IRI>Alkaloid</IRI>
         <Literal datatypeIRI="&xsd;string">Alkaloid</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Allergen</IRI>
+        <IRI>Allergen</IRI>
         <Literal datatypeIRI="&xsd;string">Allergen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenFood</IRI>
+        <IRI>AllergenFood</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenFood</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenFoodAnimal</IRI>
+        <IRI>AllergenFoodAnimal</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenFoodAnimal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenFoodFungi</IRI>
+        <IRI>AllergenFoodFungi</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenFoodFungi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenFoodInsect</IRI>
+        <IRI>AllergenFoodInsect</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenFoodInsect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenFoodPlant</IRI>
+        <IRI>AllergenFoodPlant</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenFoodPlant</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFood</IRI>
+        <IRI>AllergenNonFood</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFood</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodAero</IRI>
+        <IRI>AllergenNonFoodAero</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodAero</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodBacteria</IRI>
+        <IRI>AllergenNonFoodBacteria</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodBacteria</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodContact</IRI>
+        <IRI>AllergenNonFoodContact</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodContact</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodGliadin</IRI>
+        <IRI>AllergenNonFoodGliadin</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodGliadin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodProtozoan</IRI>
+        <IRI>AllergenNonFoodProtozoan</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodProtozoan</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodVaccine</IRI>
+        <IRI>AllergenNonFoodVaccine</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodVaccine</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodVenomSalivary</IRI>
+        <IRI>AllergenNonFoodVenomSalivary</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodVenomSalivary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#AllergenNonFoodWorm</IRI>
+        <IRI>AllergenNonFoodWorm</IRI>
         <Literal datatypeIRI="&xsd;string">AllergenNonFoodWorm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>linkeddata/def/rafco#Aminoacid</IRI>
+        <IRI>Aminoacid</IRI>
         <Literal datatypeIRI="&xsd;string">Aminoacid</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Aminoacid</IRI>
+        <IRI>Aminoacid</IRI>
         <Literal datatypeIRI="&xsd;string">Aminoacid</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1134</IRI>
+        <IRI>B1134</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MAMMAL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1140</IRI>
+        <IRI>B1140</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">FRUIT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1142</IRI>
+        <IRI>B1142</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AQUATIC</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1174</IRI>
+        <IRI>B1174</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SEED</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1213</IRI>
+        <IRI>B1213</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">NUT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1217</IRI>
+        <IRI>B1217</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">WATER</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1220</IRI>
+        <IRI>B1220</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">INSECT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1222</IRI>
+        <IRI>B1222</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">FISH</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1261</IRI>
+        <IRI>B1261</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">FUNGUS</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1297</IRI>
+        <IRI>B1297</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ANIMAL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1301</IRI>
+        <IRI>B1301</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ALGAE</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1324</IRI>
+        <IRI>B1324</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">GRAIN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1347</IRI>
+        <IRI>B1347</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PLANT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1374</IRI>
+        <IRI>B1374</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CRUSTACEAN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1433</IRI>
+        <IRI>B1433</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SHELLFISH</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1563</IRI>
+        <IRI>B1563</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BIRD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1564</IRI>
+        <IRI>B1564</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">FOOD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1579</IRI>
+        <IRI>B1579</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">VEGETABLE</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1624</IRI>
+        <IRI>B1624</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AMPHIBIAN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B1625</IRI>
+        <IRI>B1625</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">REPTILE</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B2345</IRI>
+        <IRI>B2345</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LICHEN</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B2846</IRI>
+        <IRI>B2846</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BACTERIA</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B2974</IRI>
+        <IRI>B2974</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LIQUID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#B3324</IRI>
+        <IRI>B3324</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ALCOHOL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>linkeddata/def/rafco#Carbohydrate</IRI>
+        <IRI>Carbohydrate</IRI>
         <Literal datatypeIRI="&xsd;string">Carbohydrate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Carbohydrate</IRI>
+        <IRI>Carbohydrate</IRI>
         <Literal datatypeIRI="&xsd;string">Carbohydrate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Cuisine</IRI>
+        <IRI>Cuisine</IRI>
         <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Cocina</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Essential</IRI>
+        <IRI>Essential</IRI>
         <Literal datatypeIRI="&xsd;string">Essential</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>linkeddata/def/rafco#Fat</IRI>
+        <IRI>Fat</IRI>
         <Literal datatypeIRI="&xsd;string">Fat</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Fat</IRI>
+        <IRI>Fat</IRI>
         <Literal datatypeIRI="&xsd;string">Fat</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Fiber</IRI>
+        <IRI>Fiber</IRI>
         <Literal datatypeIRI="&xsd;string">Fiber</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Food</IRI>
+        <IRI>Food</IRI>
         <Literal datatypeIRI="&xsd;string">Food</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Inorganic</IRI>
+        <IRI>Inorganic</IRI>
         <Literal datatypeIRI="&xsd;string">Inorganic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Mineral</IRI>
+        <IRI>Mineral</IRI>
         <Literal datatypeIRI="&xsd;string">Mineral</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#NonEssential</IRI>
+        <IRI>NonEssential</IRI>
         <Literal datatypeIRI="&xsd;string">NonEssential</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Nutrient</IRI>
+        <IRI>Nutrient</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">NUTRIENT</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Nutrient</IRI>
+        <IRI>Nutrient</IRI>
         <Literal datatypeIRI="&xsd;string">Nutrient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#NutrientPer100g</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NUTRIENT PER 100G</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>linkeddata/def/rafco#Protein</IRI>
+        <IRI>Protein</IRI>
         <Literal datatypeIRI="&xsd;string">Protein</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Protein</IRI>
+        <IRI>Protein</IRI>
         <Literal datatypeIRI="&xsd;string">Protein</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Recipe</IRI>
+        <IRI>Recipe</IRI>
         <Literal xml:lang="es" datatypeIRI="&rdf;PlainLiteral">Receta</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Recipe</IRI>
+        <IRI>Recipe</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Recipe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Sterol</IRI>
+        <IRI>Sterol</IRI>
         <Literal datatypeIRI="&xsd;string">Sterol</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Vitamin</IRI>
+        <IRI>Vitamin</IRI>
         <Literal datatypeIRI="&xsd;string">Vitamin</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#Water</IRI>
+        <IRI>Water</IRI>
         <Literal datatypeIRI="&xsd;string">Water</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#causes</IRI>
-        <Literal datatypeIRI="&xsd;string">causes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#contains</IRI>
+        <IRI>contains</IRI>
         <Literal datatypeIRI="&xsd;string">contains</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#group</IRI>
+        <IRI>group</IRI>
         <Literal datatypeIRI="&xsd;string">group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasCommonName</IRI>
-        <Literal datatypeIRI="&xsd;string">hasCommonName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasDisease</IRI>
+        <IRI>hasDisease</IRI>
         <Literal datatypeIRI="&xsd;string">hasDisease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasIUISDefinition</IRI>
-        <Literal datatypeIRI="&xsd;string">hasIUISDefinition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasNutrientPer100g</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">has nutrient per 100g</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasRole</IRI>
+        <IRI>hasRole</IRI>
         <Literal datatypeIRI="&xsd;string">hasRole</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasTagName</IRI>
-        <Literal datatypeIRI="&xsd;string">hasTagName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#hasUnit</IRI>
-        <Literal datatypeIRI="&xsd;string">hasUnit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#isCausedBy</IRI>
-        <Literal datatypeIRI="&xsd;string">isCausedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#isContainedBy</IRI>
-        <Literal datatypeIRI="&xsd;string">isContainebBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#isRoleAt</IRI>
+        <IRI>isRoleAt</IRI>
         <Literal datatypeIRI="&xsd;string">isRoleAt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#numDecimals</IRI>
-        <Literal datatypeIRI="&xsd;unsignedInt">numDecimals</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#nutrient</IRI>
+        <IRI>nutrient</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">nutrient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>linkeddata/def/rafco#species</IRI>
+        <IRI>species</IRI>
         <Literal datatypeIRI="&xsd;string">species</Literal>
     </AnnotationAssertion>
 </Ontology>

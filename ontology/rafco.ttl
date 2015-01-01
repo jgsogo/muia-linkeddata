@@ -4,11 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://rafco.jgsogo.es/> .
+@base <http://rafco.jgsogo.es/linkeddata/def/rafco#> .
 
-<http://rafco.jgsogo.es/> rdf:type owl:Ontology ;
-                          
-                          owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> .
+<http://rafco.jgsogo.es/linkeddata/def/rafco#> rdf:type owl:Ontology ;
+                                               
+                                               owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> .
 
 
 #################################################################
@@ -28,20 +28,27 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#causes
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#allergenCauses
 
-:causes rdf:type owl:ObjectProperty ;
+:allergenCauses rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :Allergen ;
+                
+                rdfs:range :Disease .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#common
+
+:common rdf:type owl:ObjectProperty ;
         
-        rdfs:label "causes"^^xsd:string ;
+        rdfs:domain :Allergen ;
         
-        rdfs:range <http://purl.obolibrary.org/obo/DOID_4> ;
-        
-        rdfs:domain [ rdf:type owl:Class ;
-                      owl:unionOf ( :Allergen
-                                    :Food
-                                    :Nutrient
-                                  )
-                    ] .
+        rdfs:range [ rdf:type owl:Restriction ;
+                     owl:onProperty owl:topDataProperty ;
+                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                     owl:onDataRange xsd:string
+                   ] .
 
 
 
@@ -79,6 +86,54 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#description
+
+:description rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Langual ;
+             
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty owl:topDataProperty ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#diseaseDesc
+
+:diseaseDesc rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :Disease ;
+             
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty owl:topDataProperty ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#doid
+
+:doid rdf:type owl:ObjectProperty ;
+      
+      rdfs:range <http://purl.obolibrary.org/obo/DOID_4> ;
+      
+      rdfs:domain :Disease .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#foodCauses
+
+:foodCauses rdf:type owl:ObjectProperty ;
+            
+            rdfs:range :Disease ;
+            
+            rdfs:domain :Food .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#group
 
 :group rdf:type owl:ObjectProperty ;
@@ -95,39 +150,17 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasCommonName
-
-:hasCommonName rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "hasCommonName"^^xsd:string ;
-               
-               rdfs:domain :Allergen ;
-               
-               rdfs:range [ rdf:type owl:Restriction ;
-                            owl:onProperty owl:topDataProperty ;
-                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onDataRange xsd:string
-                          ] .
-
-
-
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasDescription
 
 :hasDescription rdf:type owl:ObjectProperty ;
+                
+                rdfs:domain :Recipe ;
                 
                 rdfs:range [ rdf:type owl:Restriction ;
                              owl:onProperty owl:topDataProperty ;
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
-                           ] ;
-                
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( :Allergen
-                                            :Food
-                                            :Nutrient
-                                            :Recipe
-                                          )
-                            ] .
+                           ] .
 
 
 
@@ -137,23 +170,9 @@
             
             rdfs:label "hasDisease"^^xsd:string ;
             
-            rdfs:range <http://purl.obolibrary.org/obo/DOID_4> .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasIUISDefinition
-
-:hasIUISDefinition rdf:type owl:ObjectProperty ;
-                   
-                   rdfs:label "hasIUISDefinition"^^xsd:string ;
-                   
-                   rdfs:domain :Allergen ;
-                   
-                   rdfs:range [ rdf:type owl:Restriction ;
-                                owl:onProperty owl:topDataProperty ;
-                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onDataRange xsd:string
-                              ] .
+            rdfs:range :Disease ;
+            
+            rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
 
 
 
@@ -199,18 +218,6 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasNutrientPer100g
-
-:hasNutrientPer100g rdf:type owl:ObjectProperty ;
-                    
-                    rdfs:label "has nutrient per 100g" ;
-                    
-                    rdfs:domain :B1564 ;
-                    
-                    rdfs:range :NutrientPer100g .
-
-
-
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasRole
 
 :hasRole rdf:type owl:ObjectProperty ;
@@ -223,66 +230,15 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasTagName
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#isPartOf
 
-:hasTagName rdf:type owl:ObjectProperty ;
-            
-            rdfs:label "hasTagName"^^xsd:string ;
-            
-            rdfs:domain :Nutrient ;
-            
-            rdfs:range [ rdf:type owl:Restriction ;
-                         owl:onProperty owl:topDataProperty ;
-                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onDataRange xsd:string
-                       ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasUnit
-
-:hasUnit rdf:type owl:ObjectProperty ;
-         
-         rdfs:label "hasUnit"^^xsd:string ;
-         
-         rdfs:range <http://qudt.org/schema/qudt#Unit> ;
-         
-         rdfs:domain :Nutrient ;
-         
-         rdfs:subPropertyOf owl:topObjectProperty .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#isCausedBy
-
-:isCausedBy rdf:type owl:ObjectProperty ;
-            
-            rdfs:label "isCausedBy"^^xsd:string ;
-            
-            rdfs:domain <http://purl.obolibrary.org/obo/DOID_4> ;
-            
-            owl:inverseOf :causes ;
-            
-            rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :Allergen
-                                       :Food
-                                       :Nutrient
-                                     )
-                       ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#isContainedBy
-
-:isContainedBy rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "isContainebBy"^^xsd:string ;
-               
-               rdfs:range :Food ;
-               
-               rdfs:domain :Nutrient ;
-               
-               owl:inverseOf :contains .
+:isPartOf rdf:type owl:ObjectProperty ;
+          
+          rdfs:range :Food ;
+          
+          rdfs:domain :Nutrient ;
+          
+          owl:inverseOf :contains .
 
 
 
@@ -312,21 +268,71 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#numDecimals
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#iuis
 
-:numDecimals rdf:type owl:ObjectProperty ;
-             
-             rdfs:label "numDecimals"^^xsd:unsignedInt ;
-             
-             rdfs:domain :Nutrient ;
-             
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             
-             rdfs:range [ rdf:type owl:Restriction ;
-                          owl:onProperty owl:topDataProperty ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:positiveInteger
-                        ] .
+:iuis rdf:type owl:ObjectProperty ;
+      
+      rdfs:domain :Allergen ;
+      
+      rdfs:range [ rdf:type owl:Restriction ;
+                   owl:onProperty owl:topDataProperty ;
+                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                   owl:onDataRange xsd:string
+                 ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#langual
+
+:langual rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Food ;
+         
+         rdfs:range :Langual .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#longDesc
+
+:longDesc rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Food ;
+          
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty owl:topDataProperty ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:string
+                     ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#numDec
+
+:numDec rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Nutrient ;
+        
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        
+        rdfs:range [ rdf:type owl:Restriction ;
+                     owl:onProperty owl:topDataProperty ;
+                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                     owl:onDataRange xsd:positiveInteger
+                   ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutDesc
+
+:nutDesc rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Nutrient ;
+         
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty owl:topDataProperty ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:string
+                    ] .
 
 
 
@@ -338,7 +344,27 @@
           
           rdfs:range :Nutrient ;
           
-          rdfs:domain :NutrientPer100g .
+          rdfs:domain :NutrientWithAmount .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientCauses
+
+:nutrientCauses rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :Disease ;
+                
+                rdfs:domain :Nutrient .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientWithAmount
+
+:nutrientWithAmount rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:domain :B1564 ;
+                    
+                    rdfs:range :NutrientWithAmount .
 
 
 
@@ -364,6 +390,20 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#sciName
+
+:sciName rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Food ;
+         
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty owl:topDataProperty ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:string
+                    ] .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#seeAlso
 
 :seeAlso rdf:type owl:ObjectProperty ;
@@ -374,6 +414,20 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#shrtDesc
+
+:shrtDesc rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Food ;
+          
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty owl:topDataProperty ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:string
+                     ] .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#species
 
 :species rdf:type owl:ObjectProperty ;
@@ -381,6 +435,20 @@
          rdfs:label "species"^^xsd:string ;
          
          rdfs:domain :Allergen ;
+         
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty owl:topDataProperty ;
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onDataRange xsd:string
+                    ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#tagname
+
+:tagname rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :Nutrient ;
          
          rdfs:range [ rdf:type owl:Restriction ;
                       owl:onProperty owl:topDataProperty ;
@@ -401,6 +469,28 @@
                                  <http://qudt.org/schema/qudt#VolumeUnit>
                                )
                  ] .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#units
+
+:units rdf:type owl:ObjectProperty ;
+       
+       rdfs:range <http://qudt.org/schema/qudt#Unit> ;
+       
+       rdfs:domain :Nutrient ;
+       
+       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#weightPerAmount
+
+:weightPerAmount rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:domain :Food ;
+                 
+                 rdfs:range :WeightPerAmount .
 
 
 
@@ -431,6 +521,46 @@
 #################################################################
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#amount
+
+:amount rdf:type owl:DatatypeProperty ;
+        
+        rdfs:domain :NutrientWithAmount ;
+        
+        rdfs:range xsd:float .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#foodAmount
+
+:foodAmount rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :WeightPerAmount ;
+            
+            rdfs:range xsd:unsignedInt .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#gramWeight
+
+:gramWeight rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :WeightPerAmount ;
+            
+            rdfs:range xsd:float .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasRating
+
+:hasRating rdf:type owl:DatatypeProperty ;
+           
+           rdfs:domain <http://www.bbc.co.uk/ontologies/fo/Recipe> ;
+           
+           rdfs:range xsd:int .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasText
 
 :hasText rdf:type owl:DatatypeProperty ;
@@ -453,13 +583,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#quantity
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc
 
-:quantity rdf:type owl:DatatypeProperty ;
+:msreDesc rdf:type owl:DatatypeProperty ;
           
-          rdfs:domain :NutrientPer100g ;
+          rdfs:domain :WeightPerAmount ;
           
-          rdfs:range xsd:float .
+          rdfs:range xsd:string .
 
 
 
@@ -976,6 +1106,12 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#Disease
+
+:Disease rdf:type owl:Class .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#Essential
 
 :Essential rdf:type owl:Class ;
@@ -1045,6 +1181,12 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#Langual
+
+:Langual rdf:type owl:Class .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#Mineral
 
 :Mineral rdf:type owl:Class ;
@@ -1074,11 +1216,9 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount
 
-:NutrientPer100g rdf:type owl:Class ;
-                 
-                 rdfs:label "NUTRIENT PER 100G" .
+:NutrientWithAmount rdf:type owl:Class .
 
 
 
@@ -1138,6 +1278,12 @@
        rdfs:label "Water"^^xsd:string ;
        
        rdfs:subClassOf :Essential .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount
+
+:WeightPerAmount rdf:type owl:Class .
 
 
 
@@ -1217,6 +1363,12 @@
 
 
 
+###  http://xmlns.com/foaf/0.1/Person
+
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+
 [ rdf:type :Restriction
 ] .
 [ rdf:type :Restriction
@@ -1243,6 +1395,13 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenFoodAnimal
+                :AllergenFoodFungi
+                :AllergenFoodInsect
+                :AllergenFoodPlant
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Alcohol
                 :Alkaloid
                 :Fiber
@@ -1251,42 +1410,11 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1261
-                :B1297
-                :B1301
-                :B1347
-                :B2345
-                :B2846
-                :B2974
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenNonFoodAero
-                :AllergenNonFoodBacteria
-                :AllergenNonFoodContact
-                :AllergenNonFoodGliadin
-                :AllergenNonFoodProtozoan
-                :AllergenNonFoodVaccine
-                :AllergenNonFoodVenomSalivary
-                :AllergenNonFoodWorm
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :B1140
                 :B1174
                 :B1213
                 :B1324
                 :B1579
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Aminoacid
-                :Carbohydrate
-                :Fat
-                :Mineral
-                :Protein
-                :Vitamin
-                :Water
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1302,10 +1430,34 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenFoodAnimal
-                :AllergenFoodFungi
-                :AllergenFoodInsect
-                :AllergenFoodPlant
+  owl:members ( :Aminoacid
+                :Carbohydrate
+                :Fat
+                :Mineral
+                :Protein
+                :Vitamin
+                :Water
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenNonFoodAero
+                :AllergenNonFoodBacteria
+                :AllergenNonFoodContact
+                :AllergenNonFoodGliadin
+                :AllergenNonFoodProtozoan
+                :AllergenNonFoodVaccine
+                :AllergenNonFoodVenomSalivary
+                :AllergenNonFoodWorm
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :B1261
+                :B1297
+                :B1301
+                :B1347
+                :B2345
+                :B2846
+                :B2974
               )
 ] .
 
