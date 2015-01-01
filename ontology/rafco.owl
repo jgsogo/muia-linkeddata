@@ -19,18 +19,17 @@
     <Prefix name="" IRI="http://rafco.jgsogo.es/linkeddata/def/rafco#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.ontologydesignpatterns.org/cp/owl/list.owl</Import>
-    <Declaration>
-        <Class IRI="http://dbpedia.org/ontology/PopulatedPlace"/>
-    </Declaration>
     <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://qudt.org/schema/qudt#VolumeUnit"/>
@@ -249,12 +248,6 @@
         <Class IRI="http://xmlns.com/foaf/0.1/Image"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://rafco.com/household#isUsedAt"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://rafco.com/household#usesHouseholdUnit"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#partOf"/>
     </Declaration>
     <Declaration>
@@ -390,9 +383,6 @@
     <EquivalentClasses>
         <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
         <Class IRI="http://www.bbc.co.uk/ontologies/fo/Ingredient"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="linkeddata/def/rafco#Nutrient"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="linkeddata/def/rafco#Recipe"/>
@@ -687,22 +677,6 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="linkeddata/def/rafco#Restriction"/>
-        <AnonymousIndividual nodeID="_:genid23"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
-        <AnonymousIndividual nodeID="_:genid24"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
-        <AnonymousIndividual nodeID="_:genid25"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
-        <AnonymousIndividual nodeID="_:genid26"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="linkeddata/def/rafco#Restriction"/>
         <AnonymousIndividual nodeID="_:genid27"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -716,6 +690,22 @@
     <ClassAssertion>
         <Class IRI="linkeddata/def/rafco#Restriction"/>
         <AnonymousIndividual nodeID="_:genid30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <AnonymousIndividual nodeID="_:genid31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <AnonymousIndividual nodeID="_:genid32"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <AnonymousIndividual nodeID="_:genid33"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="linkeddata/def/rafco#Restriction"/>
+        <AnonymousIndividual nodeID="_:genid34"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="linkeddata/def/rafco#cuisine"/>
@@ -738,10 +728,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://rafco.com/household#usesHouseholdUnit"/>
-        <ObjectProperty IRI="http://rafco.com/household#isUsedAt"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
         <ObjectProperty IRI="linkeddata/def/rafco#causes"/>
     </InverseObjectProperties>
@@ -757,10 +743,6 @@
         <ObjectProperty IRI="linkeddata/def/rafco#isProduced"/>
         <ObjectProperty IRI="linkeddata/def/rafco#produces"/>
     </InverseObjectProperties>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://rafco.com/household#usesHouseholdUnit"/>
-        <Class IRI="http://dbpedia.org/ontology/PopulatedPlace"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#partOf"/>
         <Class IRI="linkeddata/def/rafco#Nutrient"/>
@@ -883,10 +865,6 @@
         <Class IRI="linkeddata/def/rafco#IngredientWithAmount"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://rafco.com/household#isUsedAt"/>
-        <Class IRI="http://dbpedia.org/ontology/PopulatedPlace"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#partOf"/>
         <Class IRI="linkeddata/def/rafco#B1564"/>
     </ObjectPropertyRange>
@@ -971,10 +949,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="linkeddata/def/rafco#hasUnit"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
+        <Class IRI="http://qudt.org/schema/qudt#Unit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="linkeddata/def/rafco#isCausedBy"/>
