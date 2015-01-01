@@ -17,3 +17,4 @@ r2rml
 virtuoso/*.nt
 webapp/recipes.json
 webapp/.idea
+ontology/specgen
