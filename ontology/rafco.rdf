@@ -94,6 +94,21 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#description -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#description">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Langual"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#diseaseDesc -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#diseaseDesc">
@@ -205,16 +220,6 @@
     
 
 
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasNutrientPer100g -->
-
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasNutrientPer100g">
-        <rdfs:label>has nutrient per 100g</rdfs:label>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#B1564"/>
-        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasRole -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasRole">
@@ -271,6 +276,30 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#langual -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#langual">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Langual"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#longDesc -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#longDesc">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#numDec -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#numDec">
@@ -307,7 +336,7 @@
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#nutrient">
         <rdfs:label>nutrient</rdfs:label>
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g"/>
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount"/>
     </owl:ObjectProperty>
     
 
@@ -317,6 +346,15 @@
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientCauses">
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientWithAmount -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientWithAmount">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#B1564"/>
+        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount"/>
     </owl:ObjectProperty>
     
 
@@ -340,11 +378,41 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#sciName -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#sciName">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#seeAlso -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#seeAlso">
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Recipe"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#shrtDesc -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#shrtDesc">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&owl;topDataProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -406,6 +474,15 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#weightPerAmount -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#weightPerAmount">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.bbc.co.uk/ontologies/fo/cuisine -->
 
     <owl:ObjectProperty rdf:about="http://www.bbc.co.uk/ontologies/fo/cuisine"/>
@@ -435,6 +512,33 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#amount -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#amount">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#foodAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#foodAmount">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
+        <rdfs:range rdf:resource="&xsd;unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#gramWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#gramWeight">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#hasText -->
 
     <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#hasText">
@@ -454,11 +558,11 @@
     
 
 
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#quantity -->
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc -->
 
-    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#quantity">
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g"/>
-        <rdfs:range rdf:resource="&xsd;float"/>
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -996,6 +1100,12 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#Langual -->
+
+    <owl:Class rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Langual"/>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#Mineral -->
 
     <owl:Class rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Mineral">
@@ -1023,11 +1133,9 @@
     
 
 
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g -->
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount -->
 
-    <owl:Class rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientPer100g">
-        <rdfs:label>NUTRIENT PER 100G</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount"/>
     
 
 
@@ -1081,6 +1189,12 @@
         <rdfs:label rdf:datatype="&xsd;string">Water</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Essential"/>
     </owl:Class>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount -->
+
+    <owl:Class rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
     
 
 
