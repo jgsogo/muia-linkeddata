@@ -731,35 +731,35 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
+        <AnonymousIndividual nodeID="_:genid25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Restriction"/>
         <AnonymousIndividual nodeID="_:genid26"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid27"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid28"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid29"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid30"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid31"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid32"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid33"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="cuisine"/>
@@ -1205,7 +1205,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasRating"/>
-        <Datatype abbreviatedIRI="xsd:int"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="hasText"/>

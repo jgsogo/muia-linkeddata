@@ -557,7 +557,7 @@
            
            rdfs:domain <http://www.bbc.co.uk/ontologies/fo/Recipe> ;
            
-           rdfs:range xsd:int .
+           rdfs:range xsd:float .
 
 
 
@@ -1395,26 +1395,13 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenFoodAnimal
-                :AllergenFoodFungi
-                :AllergenFoodInsect
-                :AllergenFoodPlant
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Alcohol
-                :Alkaloid
-                :Fiber
-                :Inorganic
-                :Sterol
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1140
-                :B1174
-                :B1213
-                :B1324
-                :B1579
+  owl:members ( :B1261
+                :B1297
+                :B1301
+                :B1347
+                :B2345
+                :B2846
+                :B2974
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1430,16 +1417,6 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Aminoacid
-                :Carbohydrate
-                :Fat
-                :Mineral
-                :Protein
-                :Vitamin
-                :Water
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :AllergenNonFoodAero
                 :AllergenNonFoodBacteria
                 :AllergenNonFoodContact
@@ -1451,13 +1428,36 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1261
-                :B1297
-                :B1301
-                :B1347
-                :B2345
-                :B2846
-                :B2974
+  owl:members ( :Aminoacid
+                :Carbohydrate
+                :Fat
+                :Mineral
+                :Protein
+                :Vitamin
+                :Water
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alcohol
+                :Alkaloid
+                :Fiber
+                :Inorganic
+                :Sterol
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenFoodAnimal
+                :AllergenFoodFungi
+                :AllergenFoodInsect
+                :AllergenFoodPlant
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :B1140
+                :B1174
+                :B1213
+                :B1324
+                :B1579
               )
 ] .
 
