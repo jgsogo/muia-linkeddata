@@ -154,7 +154,7 @@ rafco:weight-per-amount-msre
     rr:logicalTable [ rr:tableName "food_weight"; ];
     rr:subjectMap [ 
         rr:template 'http://qudt.org/vocab/unit/{"Msre_Desc"}';
-        rr:class <http://qudt.org/schema/qudt#VolumeUnit>;
+        rr:class <http://qudt.org/schema/qudt#Unit>;
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
     rr:predicateObjectMap [

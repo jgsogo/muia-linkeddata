@@ -281,9 +281,6 @@
         <ObjectProperty IRI="description"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="diseaseDesc"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="doid"/>
     </Declaration>
     <Declaration>
@@ -291,9 +288,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="group"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasDescription"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasDisease"/>
@@ -333,9 +327,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="numDec"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="nutDesc"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="nutrient"/>
@@ -819,11 +810,12 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="description"/>
-        <Class IRI="Langual"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="diseaseDesc"/>
-        <Class IRI="Disease"/>
+        <ObjectUnionOf>
+            <Class IRI="Disease"/>
+            <Class IRI="Langual"/>
+            <Class IRI="Nutrient"/>
+            <Class IRI="http://www.bbc.co.uk/ontologies/fo/Recipe"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="doid"/>
@@ -836,10 +828,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="group"/>
         <Class IRI="Allergen"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasDescription"/>
-        <Class IRI="Recipe"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasDisease"/>
@@ -891,10 +879,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="numDec"/>
-        <Class IRI="Nutrient"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="nutDesc"/>
         <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -984,13 +968,6 @@
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="diseaseDesc"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="doid"/>
         <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
     </ObjectPropertyRange>
@@ -1000,13 +977,6 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="group"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataExactCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasDescription"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:string"/>
@@ -1071,13 +1041,6 @@
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
             <Datatype abbreviatedIRI="xsd:positiveInteger"/>
-        </DataExactCardinality>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="nutDesc"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>

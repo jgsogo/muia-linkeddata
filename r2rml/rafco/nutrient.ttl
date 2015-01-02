@@ -25,7 +25,7 @@ rafco:nutrient
       rr:objectMap [rr:column "Description";];
     ];
     rr:predicateObjectMap [
-      rr:predicate rafco:nutDesc;
+      rr:predicate rafco:description;
       rr:objectMap [ rr:column "Description" ] ;
     ] ;
 
@@ -45,7 +45,7 @@ rafco:nutrient
     ] ;
       
     rr:predicateObjectMap [
-      rr:predicate rafco:units;
+      rr:predicate rafco:unit;
       rr:objectMap [ 
         rr:template 'http://qudt.org/vocab/unit/{"Units"}' 
       ] ;
@@ -55,5 +55,16 @@ rafco:nutrient
       rr:predicate rafco:numDec;
       rr:objectMap [ rr:column "Num_Dec" ] ;
     ] .
+    
+rafco:nutrient-unit
+    rr:logicalTable [ rr:tableName "nutrients_nutrient"; ];
+    rr:subjectMap [ 
+        rr:template 'http://qudt.org/vocab/unit/{"Units"}';
+        rr:class <http://qudt.org/schema/qudt#Unit>;
+        ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [  rr:column "Units";];
+        ].
     
     

@@ -23,7 +23,7 @@ rafco:disease
       rr:objectMap [rr:column "DiseaseName";];
     ];
     rr:predicateObjectMap [
-      rr:predicate rafco:diseaseDesc;
+      rr:predicate rafco:description;
       rr:objectMap [ rr:column "Description" ] ;
     ] ;
                       

@@ -90,27 +90,19 @@
 
 :description rdf:type owl:ObjectProperty ;
              
-             rdfs:domain :Langual ;
-             
              rdfs:range [ rdf:type owl:Restriction ;
                           owl:onProperty owl:topDataProperty ;
                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
-                        ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#diseaseDesc
-
-:diseaseDesc rdf:type owl:ObjectProperty ;
+                        ] ;
              
-             rdfs:domain :Disease ;
-             
-             rdfs:range [ rdf:type owl:Restriction ;
-                          owl:onProperty owl:topDataProperty ;
-                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onDataRange xsd:string
-                        ] .
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Disease
+                                         :Langual
+                                         :Nutrient
+                                         <http://www.bbc.co.uk/ontologies/fo/Recipe>
+                                       )
+                         ] .
 
 
 
@@ -147,20 +139,6 @@
                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                     owl:onDataRange xsd:string
                   ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasDescription
-
-:hasDescription rdf:type owl:ObjectProperty ;
-                
-                rdfs:domain :Recipe ;
-                
-                rdfs:range [ rdf:type owl:Restriction ;
-                             owl:onProperty owl:topDataProperty ;
-                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onDataRange xsd:string
-                           ] .
 
 
 
@@ -319,20 +297,6 @@
                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                      owl:onDataRange xsd:positiveInteger
                    ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutDesc
-
-:nutDesc rdf:type owl:ObjectProperty ;
-         
-         rdfs:domain :Nutrient ;
-         
-         rdfs:range [ rdf:type owl:Restriction ;
-                      owl:onProperty owl:topDataProperty ;
-                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                      owl:onDataRange xsd:string
-                    ] .
 
 
 
@@ -1395,6 +1359,14 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :B1140
+                :B1174
+                :B1213
+                :B1324
+                :B1579
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :B1261
                 :B1297
                 :B1301
@@ -1402,6 +1374,14 @@
                 :B2345
                 :B2846
                 :B2974
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alcohol
+                :Alkaloid
+                :Fiber
+                :Inorganic
+                :Sterol
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1414,6 +1394,13 @@
                 :B1563
                 :B1624
                 :B1625
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenFoodAnimal
+                :AllergenFoodFungi
+                :AllergenFoodInsect
+                :AllergenFoodPlant
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1435,29 +1422,6 @@
                 :Protein
                 :Vitamin
                 :Water
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Alcohol
-                :Alkaloid
-                :Fiber
-                :Inorganic
-                :Sterol
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenFoodAnimal
-                :AllergenFoodFungi
-                :AllergenFoodInsect
-                :AllergenFoodPlant
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1140
-                :B1174
-                :B1213
-                :B1324
-                :B1579
               )
 ] .
 

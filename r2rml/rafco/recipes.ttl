@@ -59,7 +59,7 @@ rafco:recipe
         rr:objectMap [rr:column "Title"];
         ];
     rr:predicateObjectMap [
-        rr:predicate rafco:hasDescription;
+        rr:predicate rafco:description;
         rr:objectMap [  rr:column "Description"];
         ];
     rr:predicateObjectMap [
@@ -234,7 +234,7 @@ rafco:ingredient-with-amount
                         rr:termType rr:Literal;];
         ];
     rr:predicateObjectMap [
-        rr:predicate rafco:unit;
+        rr:predicate rafco:units;
         rr:objectMap [  rr:template 'http://qudt.org/vocab/unit/{"Units"}';];
         ].
 
