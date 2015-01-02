@@ -531,6 +531,22 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#main -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#main">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc -->
 
     <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc">
@@ -545,6 +561,22 @@
     <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#recipeYields">
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Recipe"/>
         <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#type -->
+
+    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#type">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 

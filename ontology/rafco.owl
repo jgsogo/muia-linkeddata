@@ -395,10 +395,16 @@
         <DataProperty IRI="hasTitle"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="main"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="msreDesc"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="recipeYields"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="type"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="value"/>
@@ -1143,12 +1149,26 @@
         <Class IRI="Recipe"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="main"/>
+        <ObjectUnionOf>
+            <Class IRI="Allergen"/>
+            <Class IRI="Nutrient"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="msreDesc"/>
         <Class IRI="WeightPerAmount"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="recipeYields"/>
         <Class IRI="Recipe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="type"/>
+        <ObjectUnionOf>
+            <Class IRI="Allergen"/>
+            <Class IRI="Nutrient"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="value"/>
@@ -1179,12 +1199,20 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="main"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="msreDesc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="recipeYields"/>
         <Datatype abbreviatedIRI="xsd:positiveInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="value"/>

@@ -547,6 +547,20 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#main
+
+:main rdf:type owl:DatatypeProperty ;
+      
+      rdfs:range xsd:string ;
+      
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Allergen
+                                  :Nutrient
+                                )
+                  ] .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc
 
 :msreDesc rdf:type owl:DatatypeProperty ;
@@ -564,6 +578,20 @@
               rdfs:domain :Recipe ;
               
               rdfs:range xsd:positiveInteger .
+
+
+
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#type
+
+:type rdf:type owl:DatatypeProperty ;
+      
+      rdfs:range xsd:string ;
+      
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Allergen
+                                  :Nutrient
+                                )
+                  ] .
 
 
 
