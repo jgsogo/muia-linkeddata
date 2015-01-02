@@ -41,11 +41,19 @@
     
 
 
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#allergenCauses -->
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#causes -->
 
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#allergenCauses">
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#causes">
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen"/>
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
+                    <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -123,15 +131,6 @@
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#doid">
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/DOID_4"/>
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#foodCauses -->
-
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#foodCauses">
-        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
     </owl:ObjectProperty>
     
 
@@ -224,7 +223,6 @@
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#isProduced">
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Recipe"/>
-        <owl:inverseOf rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#produces"/>
     </owl:ObjectProperty>
     
 
@@ -279,6 +277,22 @@
     
 
 
+    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc -->
+
+    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc">
+        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+                    <rdf:Description rdf:about="http://qudt.org/schema/qudt#Unit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#numDec -->
 
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#numDec">
@@ -301,15 +315,6 @@
         <rdfs:label>nutrient</rdfs:label>
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientCauses -->
-
-    <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientCauses">
-        <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Disease"/>
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient"/>
     </owl:ObjectProperty>
     
 
@@ -337,6 +342,7 @@
     <owl:ObjectProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#produces">
         <rdfs:range rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Food"/>
         <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#Recipe"/>
+        <owl:inverseOf rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#isProduced"/>
         <owl:equivalentProperty rdf:resource="http://www.bbc.co.uk/ontologies/fo/produces"/>
     </owl:ObjectProperty>
     
@@ -543,15 +549,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc -->
-
-    <owl:DatatypeProperty rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc">
-        <rdfs:domain rdf:resource="http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1322,16 +1319,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1140"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1174"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1213"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1324"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1579"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1261"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1297"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1301"/>
@@ -1349,6 +1336,29 @@
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Fiber"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Inorganic"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#Sterol"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1140"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1174"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1213"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1324"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#B1579"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodAero"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodBacteria"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodContact"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodGliadin"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodProtozoan"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVaccine"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVenomSalivary"/>
+            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodWorm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1372,19 +1382,6 @@
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodFungi"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodInsect"/>
             <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodPlant"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodAero"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodBacteria"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodContact"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodGliadin"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodProtozoan"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVaccine"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVenomSalivary"/>
-            <rdf:Description rdf:about="http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodWorm"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

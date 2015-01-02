@@ -44,7 +44,7 @@ rafco:food_causes_disease
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate rafco:foodCauses ;
+      rr:predicate rafco:causes ;
       rr:objectMap [ 
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
@@ -62,7 +62,7 @@ rafco:nutrient_causes_disease
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate rafco:nutrientCauses ;
+      rr:predicate rafco:causes ;
       rr:objectMap [ 
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
@@ -79,7 +79,7 @@ rafco:allergen_causes_disease
     ] ;
     
     rr:predicateObjectMap [
-      rr:predicate rafco:allergenCauses ;
+      rr:predicate rafco:causes ;
       rr:objectMap [ 
         rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;

@@ -263,7 +263,7 @@
         <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="allergenCauses"/>
+        <ObjectProperty IRI="causes"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="common"/>
@@ -282,9 +282,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="doid"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="foodCauses"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="group"/>
@@ -326,13 +323,13 @@
         <ObjectProperty IRI="longDesc"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="msreDesc"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="numDec"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="nutrient"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="nutrientCauses"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="nutrientWithAmount"/>
@@ -396,9 +393,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="main"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="msreDesc"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="recipeYields"/>
@@ -787,16 +781,20 @@
         <ObjectProperty IRI="hasRole"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="isProduced"/>
         <ObjectProperty IRI="produces"/>
+        <ObjectProperty IRI="isProduced"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
         <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="allergenCauses"/>
-        <Class IRI="Allergen"/>
+        <ObjectProperty IRI="causes"/>
+        <ObjectUnionOf>
+            <Class IRI="Allergen"/>
+            <Class IRI="Food"/>
+            <Class IRI="Nutrient"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="common"/>
@@ -826,10 +824,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="doid"/>
         <Class IRI="Disease"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="foodCauses"/>
-        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="group"/>
@@ -884,16 +878,16 @@
         <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="msreDesc"/>
+        <Class IRI="WeightPerAmount"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="numDec"/>
         <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="nutrient"/>
         <Class IRI="NutrientWithAmount"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="nutrientCauses"/>
-        <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="nutrientWithAmount"/>
@@ -944,7 +938,7 @@
         <Class IRI="B1564"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="allergenCauses"/>
+        <ObjectProperty IRI="causes"/>
         <Class IRI="Disease"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -976,10 +970,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="doid"/>
         <Class IRI="http://purl.obolibrary.org/obo/DOID_4"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="foodCauses"/>
-        <Class IRI="Disease"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="group"/>
@@ -1043,6 +1033,13 @@
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="msreDesc"/>
+        <ObjectUnionOf>
+            <Class IRI="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
+            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="numDec"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -1052,10 +1049,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="nutrient"/>
         <Class IRI="Nutrient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="nutrientCauses"/>
-        <Class IRI="Disease"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="nutrientWithAmount"/>
@@ -1156,10 +1149,6 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="msreDesc"/>
-        <Class IRI="WeightPerAmount"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="recipeYields"/>
         <Class IRI="Recipe"/>
     </DataPropertyDomain>
@@ -1200,10 +1189,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="main"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="msreDesc"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>

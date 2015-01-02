@@ -28,13 +28,18 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#allergenCauses
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#causes
 
-:allergenCauses rdf:type owl:ObjectProperty ;
-                
-                rdfs:domain :Allergen ;
-                
-                rdfs:range :Disease .
+:causes rdf:type owl:ObjectProperty ;
+        
+        rdfs:range :Disease ;
+        
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Allergen
+                                    :Food
+                                    :Nutrient
+                                  )
+                    ] .
 
 
 
@@ -113,16 +118,6 @@
       rdfs:range <http://purl.obolibrary.org/obo/DOID_4> ;
       
       rdfs:domain :Disease .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#foodCauses
-
-:foodCauses rdf:type owl:ObjectProperty ;
-            
-            rdfs:range :Disease ;
-            
-            rdfs:domain :Food .
 
 
 
@@ -226,9 +221,7 @@
             
             rdfs:domain :Food ;
             
-            rdfs:range :Recipe ;
-            
-            owl:inverseOf :produces .
+            rdfs:range :Recipe .
 
 
 
@@ -284,6 +277,20 @@
 
 
 
+###  http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc
+
+:msreDesc rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :WeightPerAmount ;
+          
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( <http://qudt.org/schema/qudt#NotUsedWithSIUnit>
+                                     <http://qudt.org/schema/qudt#Unit>
+                                   )
+                     ] .
+
+
+
 ###  http://rafco.jgsogo.es/linkeddata/def/rafco#numDec
 
 :numDec rdf:type owl:ObjectProperty ;
@@ -309,16 +316,6 @@
           rdfs:range :Nutrient ;
           
           rdfs:domain :NutrientWithAmount .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientCauses
-
-:nutrientCauses rdf:type owl:ObjectProperty ;
-                
-                rdfs:range :Disease ;
-                
-                rdfs:domain :Nutrient .
 
 
 
@@ -349,6 +346,8 @@
           rdfs:range :Food ;
           
           rdfs:domain :Recipe ;
+          
+          owl:inverseOf :isProduced ;
           
           owl:equivalentProperty <http://www.bbc.co.uk/ontologies/fo/produces> .
 
@@ -558,16 +557,6 @@
                                   :Nutrient
                                 )
                   ] .
-
-
-
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc
-
-:msreDesc rdf:type owl:DatatypeProperty ;
-          
-          rdfs:domain :WeightPerAmount ;
-          
-          rdfs:range xsd:string .
 
 
 
@@ -1387,14 +1376,6 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :B1140
-                :B1174
-                :B1213
-                :B1324
-                :B1579
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :B1261
                 :B1297
                 :B1301
@@ -1410,6 +1391,25 @@
                 :Fiber
                 :Inorganic
                 :Sterol
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :B1140
+                :B1174
+                :B1213
+                :B1324
+                :B1579
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AllergenNonFoodAero
+                :AllergenNonFoodBacteria
+                :AllergenNonFoodContact
+                :AllergenNonFoodGliadin
+                :AllergenNonFoodProtozoan
+                :AllergenNonFoodVaccine
+                :AllergenNonFoodVenomSalivary
+                :AllergenNonFoodWorm
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1429,17 +1429,6 @@
                 :AllergenFoodFungi
                 :AllergenFoodInsect
                 :AllergenFoodPlant
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AllergenNonFoodAero
-                :AllergenNonFoodBacteria
-                :AllergenNonFoodContact
-                :AllergenNonFoodGliadin
-                :AllergenNonFoodProtozoan
-                :AllergenNonFoodVaccine
-                :AllergenNonFoodVenomSalivary
-                :AllergenNonFoodWorm
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
