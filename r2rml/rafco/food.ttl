@@ -147,13 +147,13 @@ rafco:weight-per-amount
     
     rr:predicateObjectMap [
       rr:predicate rafco:msreDesc ;
-      rr:objectMap [ rr:template 'http://qudt.org/vocab/unit/{"Msre_Desc"}' ] ;
+      rr:objectMap [ rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}' ] ;
     ] .
 
 rafco:weight-per-amount-msre
     rr:logicalTable [ rr:tableName "food_weight"; ];
     rr:subjectMap [ 
-        rr:template 'http://qudt.org/vocab/unit/{"Msre_Desc"}';
+        rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}';
         rr:class <http://qudt.org/schema/qudt#Unit>;
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
