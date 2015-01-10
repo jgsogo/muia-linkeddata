@@ -1,7 +1,7 @@
-@base <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
+@base <http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
 
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix rafco: <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
+@prefix rafco: <http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -15,7 +15,7 @@
 rafco:disease
     rr:logicalTable [ rr:tableName "diseases_disease"; ];
     rr:subjectMap [
-      rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey"}' ;
+      rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/disease/{"DiseaseKey"}' ;
       rr:class rafco:Disease ;
     ];
     rr:predicateObjectMap [
@@ -40,13 +40,13 @@ rafco:food_causes_disease
     rr:logicalTable [ rr:tableName "diseases_foodcausesdisease" ];
     
     rr:subjectMap [
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/food/{"NDB_No_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/food/{"NDB_No_id"}' ;
     ] ;
     
     rr:predicateObjectMap [
       rr:predicate rafco:causes ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
     
@@ -58,13 +58,13 @@ rafco:nutrient_causes_disease
     rr:logicalTable [ rr:tableName "diseases_nutrientcausesdisease" ];
 
     rr:subjectMap [
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/nutrient/{"NutrientID_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/nutrient/{"NutrientID_id"}' ;
     ] ;
     
     rr:predicateObjectMap [
       rr:predicate rafco:causes ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
 
@@ -75,13 +75,13 @@ rafco:allergen_causes_disease
     rr:logicalTable [ rr:tableName "diseases_allergencausesdisease" ];
 
     rr:subjectMap [
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/allergen/{"GI_No_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/allergen/{"GI_No_id"}' ;
     ] ;
     
     rr:predicateObjectMap [
       rr:predicate rafco:causes ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/linkeddata/recurso/disease/{"DiseaseKey_id"}' ;
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/disease/{"DiseaseKey_id"}' ;
       ] ;
     ] .
 
