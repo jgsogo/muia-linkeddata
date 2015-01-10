@@ -30,11 +30,11 @@ class OntologyRedirect(RedirectView):
 
             for media_type in media_type_set:
                 if media_type_matches('text/turtle', media_type):
-                    return "/linkeddata/def/rafco.ttl"
+                    return "/datosabiertos/def/rafco.ttl"
                 elif media_type_matches('application/rdf+xml', media_type):
-                    return "/linkeddata/def/rafco.rdf"
+                    return "/datosabiertos/def/rafco.rdf"
                 elif media_type_matches('application/owl+xml', media_type):
-                    return "/linkeddata/def/rafco.owl"
+                    return "/datosabiertos/def/rafco.owl"
                 """
                 ... y otros que ahora no tenemos
                 elif media_type_matches('application/n-triples', media_type):

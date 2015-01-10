@@ -1,12 +1,12 @@
-@prefix : <http://rafco.jgsogo.es/linkeddata/def/rafco#> .
+@prefix : <http://rafco.jgsogo.es/datosabiertos/def/rafco#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://rafco.jgsogo.es/linkeddata/def/rafco#> .
+@base <http://rafco.jgsogo.es/datosabiertos/def/rafco#> .
 
-<http://rafco.jgsogo.es/linkeddata/def/rafco#> rdf:type owl:Ontology ;
+<http://rafco.jgsogo.es/datosabiertos/def/rafco#> rdf:type owl:Ontology ;
                                                
                                                owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> .
 
@@ -28,7 +28,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#causes
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#causes
 
 :causes rdf:type owl:ObjectProperty ;
         
@@ -43,7 +43,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#common
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#common
 
 :common rdf:type owl:ObjectProperty ;
         
@@ -57,7 +57,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#contains
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#contains
 
 :contains rdf:type owl:ObjectProperty ;
           
@@ -69,7 +69,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#cookTime
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#cookTime
 
 :cookTime rdf:type owl:ObjectProperty ;
           
@@ -79,7 +79,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#cuisine
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#cuisine
 
 :cuisine rdf:type owl:ObjectProperty ;
          
@@ -91,7 +91,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#description
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#description
 
 :description rdf:type owl:ObjectProperty ;
              
@@ -111,7 +111,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#doid
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#doid
 
 :doid rdf:type owl:ObjectProperty ;
       
@@ -121,7 +121,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#group
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#group
 
 :group rdf:type owl:ObjectProperty ;
        
@@ -137,7 +137,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasDisease
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasDisease
 
 :hasDisease rdf:type owl:ObjectProperty ;
             
@@ -149,7 +149,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasImage
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasImage
 
 :hasImage rdf:type owl:ObjectProperty ;
           
@@ -159,7 +159,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasIngredient
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasIngredient
 
 :hasIngredient rdf:type owl:ObjectProperty ;
                
@@ -171,7 +171,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasIngredientWithAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasIngredientWithAmount
 
 :hasIngredientWithAmount rdf:type owl:ObjectProperty ;
                          
@@ -181,7 +181,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasInstructions
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasInstructions
 
 :hasInstructions rdf:type owl:ObjectProperty ;
                  
@@ -191,7 +191,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasRole
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasRole
 
 :hasRole rdf:type owl:ObjectProperty ;
          
@@ -203,7 +203,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#isPartOf
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#isPartOf
 
 :isPartOf rdf:type owl:ObjectProperty ;
           
@@ -215,7 +215,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#isProduced
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#isProduced
 
 :isProduced rdf:type owl:ObjectProperty ;
             
@@ -225,7 +225,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#isRoleAt
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#isRoleAt
 
 :isRoleAt rdf:type owl:ObjectProperty ;
           
@@ -239,7 +239,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#iuis
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#iuis
 
 :iuis rdf:type owl:ObjectProperty ;
       
@@ -253,7 +253,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#langual
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#langual
 
 :langual rdf:type owl:ObjectProperty ;
          
@@ -263,7 +263,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#longDesc
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#longDesc
 
 :longDesc rdf:type owl:ObjectProperty ;
           
@@ -277,7 +277,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#msreDesc
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#msreDesc
 
 :msreDesc rdf:type owl:ObjectProperty ;
           
@@ -291,7 +291,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#numDec
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#numDec
 
 :numDec rdf:type owl:ObjectProperty ;
         
@@ -307,7 +307,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutrient
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#nutrient
 
 :nutrient rdf:type owl:ObjectProperty ;
           
@@ -319,7 +319,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#nutrientWithAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#nutrientWithAmount
 
 :nutrientWithAmount rdf:type owl:ObjectProperty ;
                     
@@ -329,7 +329,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#prepTime
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#prepTime
 
 :prepTime rdf:type owl:ObjectProperty ;
           
@@ -339,7 +339,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#produces
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#produces
 
 :produces rdf:type owl:ObjectProperty ;
           
@@ -353,7 +353,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#sciName
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#sciName
 
 :sciName rdf:type owl:ObjectProperty ;
          
@@ -367,7 +367,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#seeAlso
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#seeAlso
 
 :seeAlso rdf:type owl:ObjectProperty ;
          
@@ -377,7 +377,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#shrtDesc
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#shrtDesc
 
 :shrtDesc rdf:type owl:ObjectProperty ;
           
@@ -391,7 +391,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#species
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#species
 
 :species rdf:type owl:ObjectProperty ;
          
@@ -407,7 +407,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#tagname
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#tagname
 
 :tagname rdf:type owl:ObjectProperty ;
          
@@ -421,7 +421,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#unit
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#unit
 
 :unit rdf:type owl:ObjectProperty ;
       
@@ -435,7 +435,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#units
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#units
 
 :units rdf:type owl:ObjectProperty ;
        
@@ -447,7 +447,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#weightPerAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#weightPerAmount
 
 :weightPerAmount rdf:type owl:ObjectProperty ;
                  
@@ -484,7 +484,7 @@
 #################################################################
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#amount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#amount
 
 :amount rdf:type owl:DatatypeProperty ;
         
@@ -494,7 +494,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#foodAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#foodAmount
 
 :foodAmount rdf:type owl:DatatypeProperty ;
             
@@ -504,7 +504,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#gramWeight
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#gramWeight
 
 :gramWeight rdf:type owl:DatatypeProperty ;
             
@@ -514,7 +514,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasRating
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasRating
 
 :hasRating rdf:type owl:DatatypeProperty ;
            
@@ -524,7 +524,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasText
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasText
 
 :hasText rdf:type owl:DatatypeProperty ;
          
@@ -536,7 +536,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#hasTitle
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#hasTitle
 
 :hasTitle rdf:type owl:DatatypeProperty ;
           
@@ -546,7 +546,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#main
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#main
 
 :main rdf:type owl:DatatypeProperty ;
       
@@ -560,7 +560,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#recipeYields
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#recipeYields
 
 :recipeYields rdf:type owl:DatatypeProperty ;
               
@@ -570,7 +570,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#type
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#type
 
 :type rdf:type owl:DatatypeProperty ;
       
@@ -584,7 +584,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#value
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#value
 
 :value rdf:type owl:DatatypeProperty ;
        
@@ -641,7 +641,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Alcohol
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Alcohol
 
 :Alcohol rdf:type owl:Class ;
          
@@ -651,7 +651,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Alkaloid
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Alkaloid
 
 :Alkaloid rdf:type owl:Class ;
           
@@ -661,7 +661,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Allergen
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Allergen
 
 :Allergen rdf:type owl:Class ;
           
@@ -669,7 +669,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFood
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenFood
 
 :AllergenFood rdf:type owl:Class ;
               
@@ -681,7 +681,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodAnimal
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenFoodAnimal
 
 :AllergenFoodAnimal rdf:type owl:Class ;
                     
@@ -691,7 +691,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodFungi
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenFoodFungi
 
 :AllergenFoodFungi rdf:type owl:Class ;
                    
@@ -701,7 +701,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodInsect
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenFoodInsect
 
 :AllergenFoodInsect rdf:type owl:Class ;
                     
@@ -711,7 +711,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenFoodPlant
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenFoodPlant
 
 :AllergenFoodPlant rdf:type owl:Class ;
                    
@@ -721,7 +721,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFood
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFood
 
 :AllergenNonFood rdf:type owl:Class ;
                  
@@ -731,7 +731,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodAero
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodAero
 
 :AllergenNonFoodAero rdf:type owl:Class ;
                      
@@ -741,7 +741,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodBacteria
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodBacteria
 
 :AllergenNonFoodBacteria rdf:type owl:Class ;
                          
@@ -751,7 +751,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodContact
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodContact
 
 :AllergenNonFoodContact rdf:type owl:Class ;
                         
@@ -761,7 +761,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodGliadin
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodGliadin
 
 :AllergenNonFoodGliadin rdf:type owl:Class ;
                         
@@ -771,7 +771,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodProtozoan
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodProtozoan
 
 :AllergenNonFoodProtozoan rdf:type owl:Class ;
                           
@@ -781,7 +781,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVaccine
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodVaccine
 
 :AllergenNonFoodVaccine rdf:type owl:Class ;
                         
@@ -791,7 +791,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodVenomSalivary
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodVenomSalivary
 
 :AllergenNonFoodVenomSalivary rdf:type owl:Class ;
                               
@@ -801,7 +801,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#AllergenNonFoodWorm
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#AllergenNonFoodWorm
 
 :AllergenNonFoodWorm rdf:type owl:Class ;
                      
@@ -811,7 +811,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Aminoacid
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Aminoacid
 
 :Aminoacid rdf:type owl:Class ;
            
@@ -823,7 +823,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1134
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1134
 
 :B1134 rdf:type owl:Class ;
        
@@ -833,7 +833,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1140
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1140
 
 :B1140 rdf:type owl:Class ;
        
@@ -843,7 +843,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1142
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1142
 
 :B1142 rdf:type owl:Class ;
        
@@ -853,7 +853,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1174
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1174
 
 :B1174 rdf:type owl:Class ;
        
@@ -863,7 +863,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1213
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1213
 
 :B1213 rdf:type owl:Class ;
        
@@ -873,7 +873,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1217
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1217
 
 :B1217 rdf:type owl:Class ;
        
@@ -885,7 +885,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1220
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1220
 
 :B1220 rdf:type owl:Class ;
        
@@ -895,7 +895,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1222
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1222
 
 :B1222 rdf:type owl:Class ;
        
@@ -905,7 +905,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1261
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1261
 
 :B1261 rdf:type owl:Class ;
        
@@ -915,7 +915,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1297
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1297
 
 :B1297 rdf:type owl:Class ;
        
@@ -925,7 +925,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1301
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1301
 
 :B1301 rdf:type owl:Class ;
        
@@ -935,7 +935,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1324
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1324
 
 :B1324 rdf:type owl:Class ;
        
@@ -945,7 +945,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1347
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1347
 
 :B1347 rdf:type owl:Class ;
        
@@ -955,7 +955,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1374
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1374
 
 :B1374 rdf:type owl:Class ;
        
@@ -965,7 +965,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1433
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1433
 
 :B1433 rdf:type owl:Class ;
        
@@ -975,7 +975,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1563
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1563
 
 :B1563 rdf:type owl:Class ;
        
@@ -985,7 +985,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1564
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1564
 
 :B1564 rdf:type owl:Class ;
        
@@ -995,7 +995,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1579
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1579
 
 :B1579 rdf:type owl:Class ;
        
@@ -1005,7 +1005,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1624
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1624
 
 :B1624 rdf:type owl:Class ;
        
@@ -1015,7 +1015,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B1625
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B1625
 
 :B1625 rdf:type owl:Class ;
        
@@ -1025,7 +1025,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B2345
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B2345
 
 :B2345 rdf:type owl:Class ;
        
@@ -1035,7 +1035,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B2846
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B2846
 
 :B2846 rdf:type owl:Class ;
        
@@ -1045,7 +1045,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B2974
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B2974
 
 :B2974 rdf:type owl:Class ;
        
@@ -1055,7 +1055,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#B3324
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#B3324
 
 :B3324 rdf:type owl:Class ;
        
@@ -1065,7 +1065,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Carbohydrate
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Carbohydrate
 
 :Carbohydrate rdf:type owl:Class ;
               
@@ -1077,7 +1077,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Cuisine
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Cuisine
 
 :Cuisine rdf:type owl:Class ;
          
@@ -1087,13 +1087,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Disease
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Disease
 
 :Disease rdf:type owl:Class .
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Essential
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Essential
 
 :Essential rdf:type owl:Class ;
            
@@ -1105,7 +1105,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Fat
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Fat
 
 :Fat rdf:type owl:Class ;
      
@@ -1117,7 +1117,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Fiber
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Fiber
 
 :Fiber rdf:type owl:Class ;
        
@@ -1127,7 +1127,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Food
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Food
 
 :Food rdf:type owl:Class ;
       
@@ -1138,13 +1138,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Ingredient
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Ingredient
 
 :Ingredient rdf:type owl:Class .
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#IngredientWithAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#IngredientWithAmount
 
 :IngredientWithAmount rdf:type owl:Class ;
                       
@@ -1152,7 +1152,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Inorganic
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Inorganic
 
 :Inorganic rdf:type owl:Class ;
            
@@ -1162,13 +1162,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Langual
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Langual
 
 :Langual rdf:type owl:Class .
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Mineral
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Mineral
 
 :Mineral rdf:type owl:Class ;
          
@@ -1178,7 +1178,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#NonEssential
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#NonEssential
 
 :NonEssential rdf:type owl:Class ;
               
@@ -1188,7 +1188,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Nutrient
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Nutrient
 
 :Nutrient rdf:type owl:Class ;
           
@@ -1197,13 +1197,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#NutrientWithAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#NutrientWithAmount
 
 :NutrientWithAmount rdf:type owl:Class .
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Protein
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Protein
 
 :Protein rdf:type owl:Class ;
          
@@ -1215,7 +1215,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Recipe
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Recipe
 
 :Recipe rdf:type owl:Class ;
         
@@ -1226,13 +1226,13 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Restriction
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Restriction
 
 :Restriction rdf:type owl:Class .
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Sterol
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Sterol
 
 :Sterol rdf:type owl:Class ;
         
@@ -1242,7 +1242,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Vitamin
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Vitamin
 
 :Vitamin rdf:type owl:Class ;
          
@@ -1252,7 +1252,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#Water
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#Water
 
 :Water rdf:type owl:Class ;
        
@@ -1262,7 +1262,7 @@
 
 
 
-###  http://rafco.jgsogo.es/linkeddata/def/rafco#WeightPerAmount
+###  http://rafco.jgsogo.es/datosabiertos/def/rafco#WeightPerAmount
 
 :WeightPerAmount rdf:type owl:Class .
 
