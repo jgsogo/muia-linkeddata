@@ -21,8 +21,8 @@
 @prefix elda:               <http://www.epimorphics.com/vocabularies/lda#> .
 
 # Prefix for rafco entities.
-@prefix rafco:		<http://rafco.jgsogo.es/linkeddata/def/rafco#>.
-@prefix spec:       <http://rafco.jgsogo.es/linkeddata/def/rafco#>.
+@prefix rafco:		<http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
+@prefix spec:       <http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
 
 # ---------------------------------------------------------------------
 # API config
@@ -52,7 +52,7 @@ rafco:recipes a api:ListEndpoint
 spec:recipe a api:ItemEndpoint 
   	; rdfs:label "Recipe" 
   	; api:uriTemplate "/recurso/recipe/{number}"
-  	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/recipe/{number}" 
+  	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{number}" 
   	; api:defaultViewer rafco:RecipeViewer 
   	; api:viewer rafco:RecipeViewer
 	.
@@ -68,7 +68,7 @@ rafco:foods a api:ListEndpoint
 rafco:food a api:ItemEndpoint
 	; rdfs:label "Food"
 	; api:uriTemplate "/recurso/food/{number}"
-	; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/food/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/food/{number}"
 	; api:defaultViewer rafco:FoodViewer
 	; api:viewer rafco:FoodViewer
 	.
@@ -84,7 +84,7 @@ rafco:diseases a api:ListEndpoint
 rafco:disease a api:ItemEndpoint
         ; rdfs:label "Disease"
         ; api:uriTemplate "/recurso/disease/{number}"
-        ; api:itemTemplate "http://rafco.jgsogo.es/linkeddata/recurso/disease/{number}"
+        ; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/disease/{number}"
         ; api:defaultViewer rafco:DiseaseViewer
         ; api:viewer rafco:DiseaseViewer
         .

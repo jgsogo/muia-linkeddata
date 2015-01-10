@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     url(r'^about/$', About.as_view(), name='about'),
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^linkeddata/def/rafco$', OntologyRedirect.as_view(), name='ontology-redirect'),
+    url(r'^datosabiertos/def/rafco$', OntologyRedirect.as_view(), name='ontology-redirect'),
     url(r'^ontology/$', Ontology.as_view(), name='ontology'),
 )

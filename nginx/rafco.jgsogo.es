@@ -29,21 +29,21 @@ server {
         }
 
     # Ontology
-    location =/linkeddata/def/rafco.rdf { alias /home/javi/projects/muia_linkeddata/ontology/rafco.rdf;	}
-    location =/linkeddata/def/rafco.owl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.owl; }
-    location =/linkeddata/def/rafco.ttl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.ttl; }
+    location =/datosabiertos/def/rafco.rdf { alias /home/javi/projects/muia_linkeddata/ontology/rafco.rdf;	}
+    location =/datosabiertos/def/rafco.owl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.owl; }
+    location =/datosabiertos/def/rafco.ttl { alias /home/javi/projects/muia_linkeddata/ontology/rafco.ttl; }
 
     # Django resolves content negotiation for the ontology file
-    location =/linkeddata/def/rafco {
+    location =/datosabiertos/def/rafco {
 	proxy_pass http://127.0.0.1:9011;
         include /etc/nginx/proxy.conf;
         }
 
     # Elda
     location /standalone/ {
-	rewrite ^/standalone/(.*)$ /linkeddata/$1 permanent;
+	rewrite ^/standalone/(.*)$ /datosabiertos/$1 permanent;
 	}
-    location /linkeddata/ {
+    location /datosabiertos/ {
 	proxy_set_header Host $http_host;
         proxy_pass http://localhost:8891/standalone/;
 	proxy_set_header X-Real-IP $remote_addr;
