@@ -295,18 +295,20 @@ rafco:diseaseDesc api:label "Description"
 	; rdfs:range rdfs:Resource .
 
 
-# Allergen --- group,main,type,species,common,IUIS,seeAlso
+# Allergen 
 rafco:Allergen a rdfs:Class
     ; rdfs:label "Allergen"
     ; api:label "Allergen"
     .
+rafco:group api:label "Group"
+    ; rdfs:range rdfs:Recource .
 rafco:main api:label "Main"
     ; rdfs:range rdfs:Resource .
 rafco:type api:label "Type"
     ; rdfs:range rdfs:Resource .
-rafco:Species api:label "Species"
+rafco:species api:label "Species"
     ; rdfs:range rdfs:Resource .
-rafco:Common api:label "Common"
+rafco:common api:label "Common"
     ; rdfs:range rdfs:Resource .
 rafco:IUIS api:label "IUIS"
     ; rdfs:range rdfs:Resource .
