@@ -243,7 +243,7 @@ rafco:ingredient-with-amount-unit
     rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
     rr:subjectMap [ 
         rr:template 'http://qudt.org/vocab/unit#{"Units"}';
-        rr:class <http://qudt.org/schema/qudt#VolumeUnit>;
+        # rr:class <http://qudt.org/schema/qudt#VolumeUnit>; #! TODO: Pensar si aquí podríamos poner algún tipo o no.
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
     rr:predicateObjectMap [
