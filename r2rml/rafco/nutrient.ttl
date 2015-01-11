@@ -7,7 +7,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/TR/owl-time#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-
+@prefix qudt: <http://qudt.org/1.1/schema/qudt#>
 
 
 #########
@@ -47,7 +47,7 @@ rafco:nutrient
     rr:predicateObjectMap [
       rr:predicate rafco:unit;
       rr:objectMap [ 
-        rr:template 'http://qudt.org/vocab/unit/{"Units"}' 
+        rr:template 'http://qudt.org/vocab/unit#{"Units"}' 
       ] ;
     ] ;
 
@@ -65,8 +65,8 @@ rafco:nutrient
 rafco:nutrient-unit
     rr:logicalTable [ rr:tableName "nutrients_nutrient"; ];
     rr:subjectMap [ 
-        rr:template 'http://qudt.org/vocab/unit/{"Units"}';
-        rr:class <http://qudt.org/schema/qudt#Unit>;
+        rr:template 'http://qudt.org/vocab/unit#{"Units"}';
+        rr:class qudt:Unit;
         ];
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
