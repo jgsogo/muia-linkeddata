@@ -10,7 +10,7 @@
 
 @prefix list: <http://www.ontologydesignpatterns.org/cp/owl/list.owl#>.
 @prefix bag:  <http://www.ontologydesignpatterns.org/cp/owl/bag.owl>.
-@prefix qudt: <http://qudt.org/1.1/schema/qudt#>
+@prefix qudt: <http://qudt.org/1.1/schema/qudt#>.
 
 #########
 # Recipes
@@ -19,11 +19,13 @@ rafco:ingredient
     # Ingredients -- Food
     #   Meto todos los de la tabla foods, es cierto que no todos ellos se utilizarán en
     #   las recetas, pero no sé cómo discriminarlos en esta importación.
-    rr:logicalTable [ rr:tableName '"food_food"'; ];
+    rr:logicalTable [ rr:tableName "food_food"; ];
+    
     rr:subjectMap [
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{"NDB_no"}';
         rr:class rafco:Ingredient;
         ];
+    
     rr:predicateObjectMap [
         rr:predicate rdfs:label;
         rr:objectMap [rr:column "Long_Desc";];
@@ -31,7 +33,7 @@ rafco:ingredient
 
 rafco:ingredient-isProduced
     # Recipe
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{"Produces_id"}';
         ];
@@ -42,7 +44,7 @@ rafco:ingredient-isProduced
 
 rafco:recipe
     # Recipe
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}';
         rr:class rafco:Recipe;
@@ -104,7 +106,7 @@ rafco:recipe
          ].
 
  rafco:recipe-cooktime
-     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+     rr:logicalTable [ rr:tableName "recipes_recipe"; ];
      rr:subjectMap [ 
          rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#cookTime';
          rr:class time:DurationDescription;
@@ -119,7 +121,7 @@ rafco:recipe
          ].
 
  rafco:recipe-preptime
-     rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+     rr:logicalTable [ rr:tableName "recipes_recipe"; ];
      rr:subjectMap [ 
          rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#prepTime';
          rr:class time:DurationDescription;
@@ -134,7 +136,7 @@ rafco:recipe
          ].
 
 rafco:recipe-url
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template '{"URL"}';
         rr:class foaf:Document;
@@ -145,7 +147,7 @@ rafco:recipe-url
         ].
 
 rafco:recipe-image
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template '{"Image"}';
         rr:class foaf:Image;
@@ -156,7 +158,7 @@ rafco:recipe-image
         ].
 
 rafco:recipe-author
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/author/{"Author"}';
         rr:class foaf:Person;
@@ -167,7 +169,7 @@ rafco:recipe-author
         ].
 
 rafco:recipe-instructions
-    rr:logicalTable [ rr:tableName '"recipes_recipe"'; ];
+    rr:logicalTable [ rr:tableName "recipes_recipe"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#Instructions';
         rr:class list:List;
@@ -177,7 +179,7 @@ rafco:recipe-instructions
 # Directions
 ############
 rafco:directions
-    rr:logicalTable [ rr:tableName '"recipes_direction"'; ];
+    rr:logicalTable [ rr:tableName "recipes_direction"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/direction/{"id"}';
         rr:class list:ListItem;
@@ -193,7 +195,7 @@ rafco:directions
     #! TODO: Realmente no sé cómo poner el firstItem, lastItem, nextItem,...
 
 rafco:directions
-    rr:logicalTable [ rr:tableName '"recipes_direction"'; ];
+    rr:logicalTable [ rr:tableName "recipes_direction"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"Recipe_id"}#Instructions';
         ];
@@ -206,7 +208,7 @@ rafco:directions
 # IngredientWithAmount
 ######################
 rafco:recipe-ingredient-with-amount
-    rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
+    rr:logicalTable [ rr:tableName "recipes_ingredientwithamount"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"Recipe_id"}';
         ];
@@ -216,7 +218,7 @@ rafco:recipe-ingredient-with-amount
         ].
 
 rafco:ingredient-with-amount
-    rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
+    rr:logicalTable [ rr:tableName "recipes_ingredientwithamount"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredientwithamount/{"id"}';
         rr:class rafco:IngredientWithAmount;
@@ -242,7 +244,7 @@ rafco:ingredient-with-amount
 
 
 rafco:ingredient-with-amount-unit
-    rr:logicalTable [ rr:tableName '"recipes_ingredientwithamount"'; ];
+    rr:logicalTable [ rr:tableName "recipes_ingredientwithamount"; ];
     rr:subjectMap [ 
         rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Msre_Desc"}';
         rr:class qudt:NotUsedWithSIUnit;
