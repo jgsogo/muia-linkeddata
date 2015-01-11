@@ -34,7 +34,7 @@ rafco:rafco a api:API
 	; api:defaultPageSize 10
 	; api:defaultViewer api:labelledDescribeViewer
 	; api:defaultFormatter spec:HtmlFormatter 
-	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food, rafco:diseases, rafco:disease
+	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food, rafco:diseases, rafco:disease, rafco:allergen, rafco:allergens
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
 	#; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
@@ -89,6 +89,22 @@ rafco:disease a api:ItemEndpoint
         ; api:viewer rafco:DiseaseViewer
         .
 
+rafco:allergens a api:ListEndpoint
+        ; rdfs:label "Allergens"
+        ; api:uriTemplate "/recurso/allergens"
+        ; api:selector [api:filter "type=Allergen"]
+        ; api:defaultViewer rafco:AllergenListViewer
+        ; api:viewer rafco:AllergenListViewer
+        .
+
+rafco:allergen a api:ItemEndpoint
+        ; rdfs:label "Allergen"
+        ; api:uriTemplate "/recurso/allergen/{number}"
+        ; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/allergen/{number}"
+        ; api:defaultViewer rafco:AllergenViewer
+        ; api:viewer rafco:AllergenViewer
+        .
+
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
 <http://rafco.jgsogo.es/sparql/> elda:supportsNestedSelect true.
@@ -135,6 +151,16 @@ rafco:DiseaseListViewer a api:Viewer
 rafco:DiseaseViewer a api:Viewer
         ; api:name "diseaseviewer"
         ; api:properties "label,doid,diseaseDesc"
+        .
+
+rafco:AllergenListViewer a api:Viewer
+        ; api:name "allergenlistviwer"
+        ; api:properties "label,main,type,seeAlso"
+        .
+
+rafco:AllergenViewer a api:Viewer
+        ; api:name "allergenviewer"
+        ; api:properties "label,group,main,type,species,common,IUIS,seeAlso"
         .
 
 
@@ -267,3 +293,20 @@ rafco:doid api:label "DOID"
 
 rafco:diseaseDesc api:label "Description"
 	; rdfs:range rdfs:Resource .
+
+
+# Allergen --- group,main,type,species,common,IUIS,seeAlso
+rafco:Allergen a rdfs:Class
+    ; rdfs:label "Allergen"
+    ; api:label "Allergen"
+    .
+rafco:main api:label "Main"
+    ; rdfs:range rdfs:Resource .
+rafco:type api:label "Type"
+    ; rdfs:range rdfs:Resource .
+rafco:Species api:label "Species"
+    ; rdfs:range rdfs:Resource .
+rafco:Common api:label "Common"
+    ; rdfs:range rdfs:Resource .
+rafco:IUIS api:label "IUIS"
+    ; rdfs:range rdfs:Resource .
