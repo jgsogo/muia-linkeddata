@@ -114,7 +114,7 @@ rafco:RecipeListViewer a api:Viewer
 
 rafco:RecipeViewer a api:Viewer
 	; api:name "recipeviewer"
-	; api:properties "label,hasTitle"
+	; api:properties "label,hasTitle,hasDescription,hasAuthor"
 	.
 
 rafco:FoodListViewer a api:Viewer
