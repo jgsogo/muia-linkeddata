@@ -53,7 +53,13 @@ rafco:nutrient
 
     rr:predicateObjectMap [
       rr:predicate rafco:numDec;
-      rr:objectMap [ rr:column "Num_Dec" ] ;
+      rr:objectMap [ rr:column "Num_Dec"
+      ] ;
+    ] ;
+
+    rr:predicateObjectMap [
+      rr:predicate rdfs:sameAs;
+      rr:objectMap [ rr:template 'http://dbpedia.org/resource/{"Description"}'] ;
     ] .
     
 rafco:nutrient-unit
