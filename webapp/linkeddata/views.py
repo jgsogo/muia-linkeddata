@@ -24,7 +24,7 @@ class OntologyRedirect(RedirectView):
     #! TODO: Como no sé hacer el content-negotiation en Nginx lo meto aquí :/
     def get_redirect_url(self, *args, **kwargs):
         try:
-            header = self.request.META.get('HTTP_ACCEPT', '*/*')
+	    header = self.request.META.get('HTTP_ACCEPT', '*/*')
             accepts = [token.strip() for token in header.split(',')]
             media_type_set = order_by_precedence(accepts)
 
@@ -45,3 +45,8 @@ class OntologyRedirect(RedirectView):
             pass
         # by default, return html view
         return super(OntologyRedirect, self).get_redirect_url(*args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+	response = super(OntologyRedirect, self).get(request, *args, **kwargs)
+	response.status_code = 303
+	return response

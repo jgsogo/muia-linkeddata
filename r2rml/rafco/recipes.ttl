@@ -239,14 +239,14 @@ rafco:ingredient-with-amount
     rr:predicateObjectMap [
         rr:predicate rafco:units;
         rr:objectMap [  
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Msre_Desc"}';];
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Units"}';];
         ].
 
 
 rafco:ingredient-with-amount-unit
     rr:logicalTable [ rr:tableName "recipes_ingredientwithamount"; ];
     rr:subjectMap [ 
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Msre_Desc"}';
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Units"}';
         rr:class qudt:NotUsedWithSIUnit;
         ];
     rr:predicateObjectMap [
