@@ -119,7 +119,8 @@ rafco:langual-desc
 rafco:weight-per-amount
     rr:logicalTable [ rr:tableName "food_weight"; ];
     rr:subjectMap [ 
-        rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}';
+        # rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}';
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Msre_Desc"}';
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
         
