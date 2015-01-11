@@ -7,6 +7,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/TR/owl-time#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix qudt: <http://www.qudt.org/qudt/owl/1.0.0/qudt/Properties.html#>
 
 
 #########
@@ -115,50 +116,25 @@ rafco:langual-desc
 #########
 # Weight - N ary relation
 #########
-rafco:food-weight
-    rr:logicalTable [ rr:tableName "food_weight" ];
-    
-    rr:subjectMap [
-      rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/food/{"NDB_No_id"}' ;
-    ] ;
-    
-    rr:predicateObjectMap [
-      rr:predicate rafco:weightPerAmount;
-      rr:objectMap [ rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/weightperamount/{"id"}' ] ;
-    ] .
-
 rafco:weight-per-amount
-    rr:logicalTable [ rr:tableName "food_weight" ];
-    
-    rr:subjectMap [
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/weightperamount/{"id"}' ;
-        rr:class rafco:WeightPerAmount ;
-    ] ;
-    
-    rr:predicateObjectMap [
-      rr:predicate rafco:foodAmount ;
-      rr:objectMap [ rr:column "Amount" ] ;
-    ] ;    
-
-    rr:predicateObjectMap [
-      rr:predicate rafco:gramWeight ;
-      rr:objectMap [ rr:column "Gm_Wgt" ] ;
-    ] ;    
-    
-    rr:predicateObjectMap [
-      rr:predicate rafco:msreDesc ;
-      rr:objectMap [ rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}' ] ;
-    ] .
-
-rafco:weight-per-amount-msre
     rr:logicalTable [ rr:tableName "food_weight"; ];
     rr:subjectMap [ 
         rr:template 'http://qudt.org/vocab/unit#{"Msre_Desc"}';
-        rr:class <http://qudt.org/schema/qudt#Unit>;
         rr:class <http://qudt.org/schema/qudt#NotUsedWithSIUnit>;
         ];
+        
     rr:predicateObjectMap [
-        rr:predicate rdfs:label;
-        rr:objectMap [  rr:column "Msre_Desc";];
+        rr:predicate qudt:description;
+        rr:objectMap [  rr:column "Msre_Desc" ];
+        ];
+    
+    rr:predicateObjectMap [
+        rr:predicate qudt:unitFor;
+        rr:objectMap [  rr:column "NDB_No" ];
+        ];
+        
+    rr:predicateObjectMap [
+        rr:predicate qudt:conversionMultiplier;
+        rr:objectMap [  rr:column "Gm_Wgt" ];
         ].
 

@@ -224,9 +224,6 @@
         <Class IRI="Water"/>
     </Declaration>
     <Declaration>
-        <Class IRI="WeightPerAmount"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="http://schema.org/Recipe"/>
     </Declaration>
     <Declaration>
@@ -323,9 +320,6 @@
         <ObjectProperty IRI="longDesc"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="msreDesc"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="numDec"/>
     </Declaration>
     <Declaration>
@@ -362,9 +356,6 @@
         <ObjectProperty IRI="units"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="weightPerAmount"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://www.bbc.co.uk/ontologies/fo/cuisine"/>
     </Declaration>
     <Declaration>
@@ -375,12 +366,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="amount"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="foodAmount"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="gramWeight"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasRating"/>
@@ -722,35 +707,35 @@
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid19"/>
+        <AnonymousIndividual nodeID="_:genid34"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid20"/>
+        <AnonymousIndividual nodeID="_:genid35"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid21"/>
+        <AnonymousIndividual nodeID="_:genid36"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid22"/>
+        <AnonymousIndividual nodeID="_:genid37"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid23"/>
+        <AnonymousIndividual nodeID="_:genid38"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid24"/>
+        <AnonymousIndividual nodeID="_:genid39"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid25"/>
+        <AnonymousIndividual nodeID="_:genid40"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Restriction"/>
-        <AnonymousIndividual nodeID="_:genid26"/>
+        <AnonymousIndividual nodeID="_:genid41"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
         <ObjectProperty IRI="cuisine"/>
@@ -878,10 +863,6 @@
         <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="msreDesc"/>
-        <Class IRI="WeightPerAmount"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="numDec"/>
         <Class IRI="Nutrient"/>
     </ObjectPropertyDomain>
@@ -928,10 +909,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="units"/>
         <Class IRI="Nutrient"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="weightPerAmount"/>
-        <Class IRI="Food"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://rafco.jgsogo.es/#partOf"/>
@@ -1033,13 +1010,6 @@
         </DataExactCardinality>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="msreDesc"/>
-        <ObjectUnionOf>
-            <Class IRI="http://qudt.org/schema/qudt#NotUsedWithSIUnit"/>
-            <Class IRI="http://qudt.org/schema/qudt#Unit"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="numDec"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -1105,10 +1075,6 @@
         <ObjectProperty IRI="units"/>
         <Class IRI="http://qudt.org/schema/qudt#Unit"/>
     </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="weightPerAmount"/>
-        <Class IRI="WeightPerAmount"/>
-    </ObjectPropertyRange>
     <EquivalentDataProperties>
         <DataProperty IRI="hasText"/>
         <DataProperty IRI="http://www.bbc.co.uk/ontologies/fo/instruction"/>
@@ -1120,14 +1086,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="amount"/>
         <Class IRI="NutrientWithAmount"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="foodAmount"/>
-        <Class IRI="WeightPerAmount"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="gramWeight"/>
-        <Class IRI="WeightPerAmount"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="hasRating"/>
@@ -1165,14 +1123,6 @@
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="amount"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="foodAmount"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="gramWeight"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
