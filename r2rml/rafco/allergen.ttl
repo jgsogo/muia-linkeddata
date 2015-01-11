@@ -51,4 +51,9 @@ rafco:allergen
     rr:predicateObjectMap [
       rr:predicate rafco:iuis;
       rr:objectMap [ rr:column "IUIS" ] ;  
+    ];
+
+    rr:predicateObjectMap [
+      rr:predicate rdfs:seeAlso;
+      rr:objectMap [ rr:template 'http://www.ncbi.nlm.nih.gov/protein/{"GI_No"}'] ;
     ].
