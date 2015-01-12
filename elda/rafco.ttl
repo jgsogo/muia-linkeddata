@@ -34,7 +34,7 @@ rafco:rafco a api:API
 	; api:defaultPageSize 10
 	; api:defaultViewer api:labelledDescribeViewer
 	; api:defaultFormatter spec:HtmlFormatter 
-	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food, rafco:diseases, rafco:disease, rafco:allergen, rafco:allergens
+	; api:endpoint rafco:recipes, rafco:recipe, rafco:foods, rafco:food, rafco:diseases, rafco:disease, rafco:allergen, rafco:allergens, rafco:ingredientwithamount, rafco:ingredient, rafco:unit, rafco:nutrientwithamount, rafco:nutrient, rafco:author
 	; api:variable [api:name "visibleSparqlForm"; api:value "http://rafco.jgsogo.es/sparql/"]
 	#; api:variable [api:name "_stagePattern"; api:value "^/recipes$"]
 	.
@@ -49,7 +49,7 @@ rafco:recipes a api:ListEndpoint
 	; api:viewer rafco:RecipeListViewer
 	.
 
-spec:recipe a api:ItemEndpoint 
+rafco:recipe a api:ItemEndpoint 
   	; rdfs:label "Recipe" 
   	; api:uriTemplate "/recurso/recipe/{number}"
   	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{number}" 
@@ -105,6 +105,41 @@ rafco:allergen a api:ItemEndpoint
         ; api:viewer rafco:AllergenViewer
         .
 
+rafco:ingredientwithamount a api:ItemEndpoint
+	; rdfs:label "IngredientWithAmount"
+	; api:uriTemplate "/recurso/ingredientwithamount/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/ingredientwithamount/{number}"
+	.
+
+rafco:ingredient a api:ItemEndpoint
+	; rdfs:label "Ingredient"
+	; api:uriTemplate "/recurso/ingredient/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{number}"
+	.
+
+rafco:unit a api:ItemEndpoint
+	; rdfs:label "Unit"
+	; api:uriTemplate "/recurso/unit/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/unit/{number}"
+	.
+
+rafco:nutrientwithamount a api:ItemEndpoint
+	; rdfs:label "NutrientWithAmount"
+	; api:uriTemplate "/recurso/nutrientwithamount/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/nutrientwithamount/{number}"
+	.
+
+rafco:nutrient a api:ItemEndpoint
+	; rdfs:label "Nutrient"
+	; api:uriTemplate "/recurso/nutrient/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/nutrient/{number}"
+	.
+
+rafco:author a api:ItemEndpoint
+	; rdfs:label "Author"
+	; api:uriTemplate "/recurso/author/{number}"
+	; api:itemTemplate "http://rafco.jgsogo.es/datosabiertos/recurso/author/{number}"
+	.
 
 # Oscar: this is very useful to avoid unnecessarily long and slow SPARQL queries from being generated, given the type of triple store that you have made available	
 <http://rafco.jgsogo.es/sparql/> elda:supportsNestedSelect true.
@@ -125,12 +160,12 @@ spec:HtmlFormatter a api:XsltFormatter
 
 rafco:RecipeListViewer a api:Viewer
 	; api:name "recipelistviewer"
-	; api:properties "label,hasTitle,hasDescription,hasAuthor"
+	; api:properties "label,hasTitle,description,hasAuthor"
 	.
 
 rafco:RecipeViewer a api:Viewer
 	; api:name "recipeviewer"
-	; api:properties "label,hasTitle,hasDescription,hasAuthor"
+	; api:properties "label,hasTitle,description,hasAuthor,produces,hasRating,recipeYields,hasImage,hasInstructions"
 	.
 
 rafco:FoodListViewer a api:Viewer
@@ -254,11 +289,32 @@ rafco:Recipe a rdfs:Class
 rafco:hasTitle api:label "Title"  
 	; rdfs:range rdfs:Resource .
 
-rafco:hasDescription api:label "Description"
+rafco:description api:label "Description"
 	; rdfs:range rdfs:Resource .
 
 rafco:hasAuthor api:label "Author"
 	; rdfs:range foaf:Person .
+
+#rafco:seeAlso api:label "Related resource"
+#	; rdfs:range rdfs:Resource .
+
+rafco:hasRating api:label "Rating"
+	; rdfs:range rdfs:Resource .
+
+rafco:recipeYields api:label "Yields"
+        ; rdfs:range rdfs:Resource .
+
+rafco:produces api:label "Produces"
+        ; rdfs:range rdfs:Resource .
+
+rafco:hasImage api:label "Image"
+        ; rdfs:range rdfs:Resource .
+
+rafco:hasInstructions api:label "Instructions"
+        ; rdfs:range rdfs:Resource .
+
+rafco:minutes api:label "Minutes"
+	; rdfs:range rdfs:Resource .
 
 # Food
 rafco:Food a rdfs:Class
