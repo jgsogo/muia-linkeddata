@@ -39,7 +39,7 @@ rafco:ingredient-isProduced
         ];
     rr:predicateObjectMap [
         rr:predicate rafco:isProduced;
-        rr:objectMap [rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}';];
+        rr:objectMap [rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{id}> ];
         ].
 
 rafco:recipe
@@ -55,7 +55,7 @@ rafco:recipe
         ];
     rr:predicateObjectMap [
         rr:predicate rafco:produces;
-        rr:objectMap [rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{"Produces_id"}';];
+        rr:objectMap [rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{Produces_id}> ];
         ];
     rr:predicateObjectMap [
         rr:predicate rafco:hasTitle;
@@ -77,12 +77,12 @@ rafco:recipe
      # CookTime
      rr:predicateObjectMap [
          rr:predicate rafco:cookTime;
-         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#cookTime' ]
+         rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{id}#cookTime> ]
          ];
      # PrepTime
      rr:predicateObjectMap [
          rr:predicate rafco:prepTime;
-         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#prepTime' ]
+         rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{id}#prepTime> ]
          ];
      # URL
      rr:predicateObjectMap [
@@ -97,12 +97,12 @@ rafco:recipe
      # Author
      rr:predicateObjectMap [
          rr:predicate rafco:hasAuthor; #! TODO: Cambiar por foaf:isAuthor o schema:isAuthor (buscar)
-         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/author/{"Author"}'];
+         rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/author/{Author}> ];
          ];
      # List
      rr:predicateObjectMap [
          rr:predicate rafco:hasInstructions; 
-         rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"id"}#Instructions'];
+         rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{id}#Instructions> ];
          ].
 
  rafco:recipe-cooktime
@@ -190,7 +190,7 @@ rafco:directions
         ];
     rr:predicateObjectMap [
         rr:predicate bag:itemOf;
-        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{"Recipe_id"}#Instructions';];
+        rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/recipe/{Recipe_id}#Instructions> ];
         ].
     #! TODO: Realmente no sé cómo poner el firstItem, lastItem, nextItem,...
 
@@ -201,7 +201,7 @@ rafco:directions
         ];
     rr:predicateObjectMap [
         rr:predicate bag:hasItem;
-        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/direction/{"id"}';];
+        rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/direction/{id}> ];
         ].
 
 ######################
@@ -214,7 +214,7 @@ rafco:recipe-ingredient-with-amount
         ];
     rr:predicateObjectMap [
         rr:predicate rafco:hasIngredientWithAmount;
-        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredientwithamount/{"id"}'];
+        rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/ingredientwithamount/{id}> ];
         ].
 
 rafco:ingredient-with-amount
@@ -229,7 +229,7 @@ rafco:ingredient-with-amount
         ];        
     rr:predicateObjectMap [
         rr:predicate rafco:hasIngredient;
-        rr:objectMap [  rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{"Ingredient_id"}'];
+        rr:objectMap [  rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{Ingredient_id}> ];
         ];
     rr:predicateObjectMap [
         rr:predicate rafco:value;
@@ -239,7 +239,7 @@ rafco:ingredient-with-amount
     rr:predicateObjectMap [
         rr:predicate rafco:units;
         rr:objectMap [  
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/resource/unit/{"Units"}';];
+        rr:template <http://rafco.jgsogo.es/datosabiertos/resource/unit/{Units}> ];
         ].
 
 

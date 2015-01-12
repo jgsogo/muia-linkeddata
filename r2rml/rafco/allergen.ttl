@@ -55,5 +55,5 @@ rafco:allergen
 
     rr:predicateObjectMap [
       rr:predicate rdfs:seeAlso;
-      rr:objectMap [ rr:template 'http://www.ncbi.nlm.nih.gov/protein/{"GI_No"}'] ;
+      rr:objectMap [ rr:template <http://www.ncbi.nlm.nih.gov/protein/{GI_No}>] ;
     ].

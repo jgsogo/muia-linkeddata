@@ -47,7 +47,7 @@ rafco:nutrient
     rr:predicateObjectMap [
       rr:predicate rafco:unit;
       rr:objectMap [ 
-        rr:template 'http://qudt.org/vocab/unit#{"Units"}' 
+        rr:template <http://qudt.org/vocab/unit#{Units}> 
       ] ;
     ] ;
 
@@ -59,7 +59,7 @@ rafco:nutrient
 
     rr:predicateObjectMap [
       rr:predicate rdfs:sameAs;
-      rr:objectMap [ rr:template 'http://dbpedia.org/resource/{"Description"}'] ;
+      rr:objectMap [ rr:template <http://dbpedia.org/resource/{Description}>] ;
     ] .
     
 rafco:nutrient-unit

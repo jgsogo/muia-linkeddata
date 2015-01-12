@@ -52,7 +52,7 @@ rafco:food-nutrient-with-amount
     rr:predicateObjectMap [
       rr:predicate rafco:nutrientWithAmount ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/nutrientwithamount/{"id"}' ;
+        rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/nutrientwithamount/{id}> ;
       ] ;
     ] .
 
@@ -67,7 +67,7 @@ rafco:nutrient-with-amount
     rr:predicateObjectMap [
       rr:predicate rafco:nutrient ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/nutrient/{"Nutr_No_id"}' ;
+        rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/nutrient/{Nutr_No_id}> ;
       ] ;
     ] ;    
     
@@ -89,7 +89,7 @@ rafco:langual
     rr:predicateObjectMap [
       rr:predicate rafco:langual ;
       rr:objectMap [ 
-        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/langual/{"Factor_Code_id"}' ;
+        rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/langual/{Factor_Code_id}> ;
       ] ;
     ] .
 
