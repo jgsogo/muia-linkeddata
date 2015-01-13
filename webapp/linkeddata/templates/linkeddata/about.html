@@ -26,43 +26,85 @@
 
     <h2>Example queries</h2>
     <div class="indent">
-        <h3>All food containing "tomato"</h3>
+        <h3>Nutrients and their amount on the different foods containing tomato</h3>
         <pre><code>
-            PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-            PREFIX spec: &lt;http://rafco.jgsogo.es/datosabiertos/def/rafco#&gt;
+PREFIX rafco: &lt;http://rafco.jgsogo.es/datosabiertos/def/rafco#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 
-            SELECT DISTINCT ?shrtDesc ?food
+SELECT DISTINCT ?shrtDesc  ?nutr ?amount
+{
+   ?food rdf:type rafco:Food.
+   ?nutrient rdf:type rafco:Nutrient.
 
-            WHERE {
-            ?item rdf:type spec:Food .
+   ?food rafco:longDesc ?desc;
+             rafco:shrtDesc ?shrtDesc
+        FILTER(regex(?desc, "tomato")).
 
-            ?item spec:longDesc ?food ;
-                     spec:shrtDesc ?shrtDesc
-                     FILTER(regex(?food, "tomato")).
-            } 
-            ORDER BY (?food)
+   ?food rafco:nutrientWithAmount ?x.
+   ?x rafco:nutrient ?nutrient.
+   ?x rafco:amount ?amount
+        FILTER(?amount > 0).
+   ?nutrient rafco:description ?nutr.
+}
+
+GROUP BY (?shrtDesc)
+ORDER BY (?shrtDesc)
         </code></pre>
 
         <h3>Select all the foods causing the same disease (allergy) as the Allergen contained in Peanuts:</h3>
         <code><pre>
-            PREFIX rdf:   &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-            PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-            PREFIX rafco: &lt;http://rafco.jgsogo.es/datosabiertos/def/rafco#&gt;
+PREFIX rdf:   &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rafco: &lt;http://rafco.jgsogo.es/datosabiertos/def/rafco#&gt;
 
-            SELECT DISTINCT ?food_name as ?FOOD_DESCRIPTION
-            WHERE { 
+SELECT DISTINCT ?food_name as ?FOOD_DESCRIPTION
+WHERE { 
+   ?allergen  rdf:type      rafco:Allergen ;
+   rafco:common  ?common ;
+   rafco:causes  ?disease .
 
-            ?allergen  rdf:type      rafco:Allergen ;
-                       rafco:common  ?common ;
-                       rafco:causes  ?disease .
+   ?food      rdf:type      rafco:Food ;
+   rdfs:label    ?food_name ;
+   rafco:causes  ?disease .
 
-            ?food      rdf:type      rafco:Food ;
-                       rdfs:label    ?food_name ;
-                       rafco:causes  ?disease .
-
-            FILTER(regex(?common, "Peanut")) .
-            }
+   FILTER(regex(?common, "Peanut")) .
+   }
         </pre></code>
+
+	<h3>Recipes with cayenne AND carrots</h3>
+	<code><pre>
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+PREFIX rafco: &lt;http://rafco.jgsogo.es/datosabiertos/def/rafco#&gt;
+
+SELECT DISTINCT ?recipe_label ?recipe
+
+WHERE {
+        ?recipe rdf:type rafco:Recipe.
+        ?recipe rdfs:label ?recipe_label.        
+        { 
+              ?recipe rafco:hasIngredientWithAmount ?ing1.
+              ?ing1 rafco:hasIngredient ?ingredient1.
+              ?ingredient1 owl:sameAs ?food1.                         
+              ?food1 rdfs:label ?food_label1.
+              ?food1 rafco:longDesc ?desc1
+              FILTER(regex(?desc1, "cayenne", "i")).                
+        }        
+        { 
+              ?recipe rafco:hasIngredientWithAmount ?ing2.
+              ?ing2 rafco:hasIngredient ?ingredient2.                
+              ?ingredient2 owl:sameAs ?food2.                         
+              ?food2 rdfs:label ?food_label2.
+              ?food2 rafco:longDesc ?desc2
+              FILTER(regex(?desc2, "carrot", "i")).                 
+        }
+    }
+LIMIT 10
+	</pre></code>
+
     </div>
 </div>
 {% endblock %}
