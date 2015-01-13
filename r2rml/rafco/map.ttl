@@ -1,0 +1,32 @@
+@base <http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
+
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rafco: <http://rafco.jgsogo.es/datosabiertos/def/rafco#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/TR/owl-time#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix list: <http://www.ontologydesignpatterns.org/cp/owl/list.owl#>.
+@prefix bag:  <http://www.ontologydesignpatterns.org/cp/owl/bag.owl>.
+@prefix qudt: <http://qudt.org/1.1/schema/qudt#>.
+
+#########
+# Recipes
+#########
+rafco:ingredient
+    # Ingredients -- Food
+    #   Meto todos los de la tabla foods, es cierto que no todos ellos se utilizarán en
+    #   las recetas, pero no sé cómo discriminarlos en esta importación.
+    rr:logicalTable [ rr:tableName "food_food"; ];
+    
+    rr:subjectMap [
+        rr:template 'http://rafco.jgsogo.es/datosabiertos/recurso/ingredient/{"NDB_no"}';
+        ];
+    
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [rr:template <http://rafco.jgsogo.es/datosabiertos/recurso/food/{NDB_no}>];
+        ].
