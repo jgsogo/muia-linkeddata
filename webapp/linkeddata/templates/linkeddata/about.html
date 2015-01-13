@@ -1,5 +1,7 @@
 {% extends 'linkeddata/base.html' %}
 
+{% load staticfiles %}
+
 {% block content %}
 <div class="indent">
     <h2>Authors</h2>
@@ -19,8 +21,8 @@
 
         <p>This project was developed during the <b>Ontology Engineering</b> course from the <b>Msc. in Artificial Intelligence</b> at the Technical University of Madrid. Different resources are available with more information about RAFCO: </p>
         <ul>
-            <li> RAFCO Ontology development <a href="#">document</a>. </li>
-            <li> RAFCO Linked Data application <a href="#">report</a>. </li>
+            <li> RAFCO Ontology development (<a href="{% static "doc/RAFCO_Ontology.pdf" %}">document</a> [3.7Mb]). </li>
+            <li> RAFCO Linked Data application (<a href="{% static "doc/RAFCO_LinkedData.pdf" %}">document</a> [0.9Mb] | <a href="{% static "doc/RAFCO_LinkedData_slides.pdf" %}">slides</a> [1.8Mb]). </li>
         </ul>      
     </div>
 
